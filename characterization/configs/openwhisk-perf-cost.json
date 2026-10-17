@@ -1,0 +1,53 @@
+{
+  "experiments": {
+    "deployment": "openwhisk",
+    "update_code": false,
+    "update_storage": false,
+    "download_results": true,
+    "architecture": "x64",
+    "system_variant": "container",
+    "runtime": {
+      "language": "python",
+      "version": "3.11"
+    },
+    "type": "perf-cost",
+    "perf-cost": {
+      "benchmark": "110.dynamic-html",
+      "experiments": ["cold", "warm"],
+      "input-size": "small",
+      "repetitions": 30,
+      "concurrent-invocations": 1,
+      "memory-sizes": [2048]
+    }
+  },
+  "deployment": {
+    "name": "openwhisk",
+    "openwhisk": {
+      "shutdownStorage": false,
+      "removeCluster": false,
+      "wskBypassSecurity": "true",
+      "wskExec": "wsk",
+      "experimentalManifest": false,
+      "dockerhubRepository": null,
+      "docker_registry": {
+        "registry": "",
+        "username": "",
+        "password": ""
+      },
+      "storage": {
+        "object": {
+          "type": "minio",
+          "minio": {
+            "address": "",
+            "mapped_port": -1,
+            "access_key": "",
+            "secret_key": "",
+            "instance_id": "",
+            "input_buckets": [],
+            "output_buckets": []
+          }
+        }
+      }
+    }
+  }
+}

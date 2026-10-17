@@ -192,3 +192,7 @@ cache
 .vscode/
 # MacOS Finder
 **/.DS_Store
+
+# Characterization runs are regenerated from the pipeline.
+# Published, credential-free reports live in characterization/published/.
+characterization/results/

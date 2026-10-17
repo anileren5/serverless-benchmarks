@@ -1,0 +1,34 @@
+{
+  "experiments": {
+    "deployment": "aws",
+    "update_code": false,
+    "update_storage": false,
+    "download_results": true,
+    "architecture": "x64",
+    "system_variant": "package",
+    "runtime": {
+      "language": "python",
+      "version": "3.11"
+    },
+    "type": "perf-cost",
+    "perf-cost": {
+      "benchmark": "110.dynamic-html",
+      "experiments": ["cold", "warm"],
+      "input-size": "small",
+      "repetitions": 30,
+      "concurrent-invocations": 1,
+      "memory-sizes": [2048]
+    }
+  },
+  "deployment": {
+    "name": "aws",
+    "aws": {
+      "region": "us-east-1",
+      "lambda-role": "",
+      "resources": {
+        "use-function-url": true,
+        "function-url-auth-type": "NONE"
+      }
+    }
+  }
+}

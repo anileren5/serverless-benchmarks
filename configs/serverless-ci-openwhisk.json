@@ -1,0 +1,41 @@
+{
+  "experiments": {
+    "update_code": false,
+    "update_storage": false,
+    "download_results": true,
+    "deployment": "openwhisk",
+    "architecture": "x64",
+    "container_deployment": true,
+    "runtime": {
+      "language": "nodejs",
+      "version": "20"
+    },
+    "perf-cost": {
+      "benchmark": "313.serverless-ci",
+      "experiments": ["cold", "warm"],
+      "input-size": "large",
+      "repetitions": 5,
+      "concurrent-invocations": 1,
+      "memory-sizes": [512, 1024, 2048, 3008, 4096]
+    }
+  },
+  "deployment": {
+    "name": "openwhisk",
+    "openwhisk": {
+      "shutdownStorage": false,
+      "removeCluster": false,
+      "wskBypassSecurity": "true",
+      "wskExec": "wsk",
+      "experimentalManifest": false,
+      "removeStaleContainers": true,
+      "kubectlExec": "kubectl",
+      "kubernetesNamespace": "openwhisk",
+      "dockerhubRepository": null,
+      "docker_registry": {
+        "registry": "",
+        "username": "",
+        "password": ""
+      }
+    }
+  }
+}

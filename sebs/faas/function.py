@@ -421,6 +421,8 @@ class Trigger(ABC, LoggingBase):
         c.setopt(pycurl.HTTPHEADER, ["Content-Type: application/json"])
         c.setopt(pycurl.POST, 1)
         c.setopt(pycurl.URL, url)
+        c.setopt(pycurl.CONNECTTIMEOUT, 60)
+        c.setopt(pycurl.TIMEOUT, 930)
         if not verify_ssl:
             c.setopt(pycurl.SSL_VERIFYHOST, 0)
             c.setopt(pycurl.SSL_VERIFYPEER, 0)

@@ -178,9 +178,17 @@ class AWS(System):
             boto3.client: Lambda client
         """
         if not hasattr(self, "client"):
+            import botocore.config
+
+            client_cfg = botocore.config.Config(
+                connect_timeout=60,
+                read_timeout=930,
+                retries={"max_attempts": 0},
+            )
             self.client = self.session.client(
                 service_name="lambda",
                 region_name=self.config.region,
+                config=client_cfg,
             )
         return self.client
 

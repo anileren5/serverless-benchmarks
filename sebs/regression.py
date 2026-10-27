@@ -59,6 +59,7 @@ benchmarks_nodejs = [
     # FIXME: Reenable after merging PR 312
     # "220.video-processing",
     "311.compression",
+    "313.serverless-ci",
     "501.graph-pagerank",
 ]
 

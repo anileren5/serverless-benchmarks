@@ -3,6 +3,15 @@ whisk:
     type: NodePort
     apiHostName: <api_host_name>
     apiHostPort: <api_host_port>
+  limits:
+    actions:
+      memory:
+        max: "4096m"
+      time:
+        max: "900s"
+    activation:
+      payload:
+        max: "10485760"
 
 invoker:
   containerFactory:

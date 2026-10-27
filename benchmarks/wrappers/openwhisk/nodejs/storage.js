@@ -73,7 +73,7 @@ class minio_storage {
 
   static get_instance() {
     if(!this.instance) {
-      this.instance = new storage();
+      this.instance = new minio_storage();
     }
     return this.instance;
   }

@@ -1,0 +1,7 @@
+{
+  "name": "313.serverless-ci",
+  "version": "1.0.0",
+  "dependencies": {
+    "tar": "6.2.1"
+  }
+}

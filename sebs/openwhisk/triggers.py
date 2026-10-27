@@ -12,7 +12,9 @@ Classes:
 import concurrent.futures
 import datetime
 import json
+import re
 import subprocess
+import time
 from typing import Dict, List, Optional, Any  # noqa
 
 from sebs.faas.function import ExecutionResult, Trigger
@@ -104,9 +106,50 @@ class LibraryTrigger(Trigger):
             params.append(json.dumps(value))
         return params
 
+    def _poll_activation(
+        self, activation_id: str, timeout_seconds: int = 930, poll_interval: float = 2.0
+    ) -> Optional[Dict[str, Any]]:
+        """
+        Poll OpenWhisk for an activation result when a long-running action
+        exceeds the controller's HTTP blocking window (~60s).
+
+        Args:
+            activation_id: 32-character hex OpenWhisk activation ID
+            timeout_seconds: Maximum time to wait for activation completion
+            poll_interval: Seconds between poll attempts
+
+        Returns:
+            Parsed result dictionary from the completed activation, or None on timeout/error
+        """
+        wsk_prefix = self.wsk_cmd[:-4]
+        deadline = time.monotonic() + timeout_seconds
+        while time.monotonic() < deadline:
+            res = subprocess.run(
+                [*wsk_prefix, "activation", "get", activation_id],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+            )
+            if res.returncode == 0:
+                output = res.stdout.decode("utf-8").strip()
+                lines = output.split("\n")
+                if len(lines) > 1:
+                    try:
+                        activation = json.loads("\n".join(lines[1:]))
+                        response_obj = activation.get("response", {})
+                        if "result" in response_obj and activation.get("end"):
+                            return response_obj["result"]
+                    except json.JSONDecodeError:
+                        pass
+            time.sleep(poll_interval)
+        return None
+
     def sync_invoke(self, payload: Dict[str, Any]) -> ExecutionResult:
         """
         Synchronously invoke the OpenWhisk function via CLI.
+
+        Supports both short-running actions (via --result blocking call) and
+        long-running actions (>60s) that exceed the OpenWhisk controller's
+        blocking timeout by polling the resulting activation ID until completion.
 
         Args:
             payload: Dictionary of parameters to pass to the function
@@ -115,28 +158,49 @@ class LibraryTrigger(Trigger):
             ExecutionResult containing timing information and function output
         """
         command = self.wsk_cmd + self.get_command(payload)
-        error = None
+        error: Optional[Exception] = None
+        return_content: Optional[Dict[str, Any]] = None
         try:
             begin = datetime.datetime.now()
             response = subprocess.run(
                 command,
                 stdout=subprocess.PIPE,
-                stderr=subprocess.DEVNULL,
+                stderr=subprocess.PIPE,
                 check=True,
             )
             end = datetime.datetime.now()
             parsed_response = response.stdout.decode("utf-8")
-        except (subprocess.CalledProcessError, FileNotFoundError) as e:
+            return_content = json.loads(parsed_response)
+        except subprocess.CalledProcessError as e:
+            stdout_str = e.stdout.decode("utf-8", errors="replace") if e.stdout else ""
+            stderr_str = e.stderr.decode("utf-8", errors="replace") if e.stderr else ""
+            combined = f"{stdout_str}\n{stderr_str}"
+            match = re.search(r"\b([0-9a-f]{32})\b", combined)
+            if match:
+                activation_id = match.group(1)
+                self.logging.info(
+                    f"Action {self.fname} exceeded blocking window; "
+                    f"polling activation {activation_id} until completion..."
+                )
+                polled = self._poll_activation(activation_id)
+                end = datetime.datetime.now()
+                if polled is not None:
+                    return_content = polled
+                else:
+                    error = e
+            else:
+                end = datetime.datetime.now()
+                error = e
+        except FileNotFoundError as e:
             end = datetime.datetime.now()
             error = e
 
         openwhisk_result = ExecutionResult.from_times(begin, end)
-        if error is not None:
+        if error is not None or return_content is None:
             self.logging.error("Invocation of {} failed!".format(self.fname))
             openwhisk_result.stats.failure = True
             return openwhisk_result
 
-        return_content = json.loads(parsed_response)
         # The function wrapper returns the activation ID, used to download metrics.
         openwhisk_result.request_id = return_content.get("request_id", "")
         openwhisk_result.parse_benchmark_output(return_content)

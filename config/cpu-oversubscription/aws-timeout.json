@@ -1,0 +1,27 @@
+{
+  "benchmark": "505.cpu-oversubscription",
+  "configurations": [
+    {
+      "name": "e4-timeout-fine-baseline",
+      "description": "Many short iterations (frequent barriers), about 60% of the 300 s timeout on one thread at 128 MB.",
+      "input-size": "small",
+      "input": {"iterations": 8000, "threads": [1]},
+      "memory-sizes": [128],
+      "omp-wait-policies": [null],
+      "cold-starts": true,
+      "repetitions": 4,
+      "concurrent-invocations": 4
+    },
+    {
+      "name": "e4-timeout-fine-oversubscribed",
+      "description": "The same work on two threads, the CPU count the sandbox reports.",
+      "input-size": "small",
+      "input": {"iterations": 8000, "threads": [2]},
+      "memory-sizes": [128],
+      "omp-wait-policies": [null, "active", "passive"],
+      "cold-starts": true,
+      "repetitions": 4,
+      "concurrent-invocations": 4
+    }
+  ]
+}

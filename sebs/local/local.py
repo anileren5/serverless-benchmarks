@@ -148,10 +148,11 @@ class Local(System):
         self, code_package: Benchmark, func_name: str, func: Optional[LocalFunction]
     ) -> LocalFunction:
 
-        container_name = "{}:run.local.{}.{}".format(
+        container_name = "{}:run.local.{}.{}-{}".format(
             self._system_config.docker_repository(),
             code_package.language_name,
             code_package.language_version,
+            self._system_config.version(),
         )
 
         environment = {
@@ -316,7 +317,7 @@ class Local(System):
         There's only one trigger - HTTP.
     """
 
-    def create_trigger(self, func: Function, trigger_type: Trigger.TriggerType) -> Trigger:
+    def create_function_trigger(self, func: Function, trigger_type: Trigger.TriggerType) -> Trigger:
         from sebs.local.function import HTTPTrigger
 
         function = cast(LocalFunction, func)

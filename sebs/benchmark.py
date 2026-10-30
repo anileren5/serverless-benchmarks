@@ -385,6 +385,9 @@ class Benchmark(LoggingBase):
             handler_path = os.path.join(output_dir, "handler.py")
             handler_function_path = os.path.join(output_dir, "handler_function.py")
             handler_workflow_path = os.path.join(output_dir, "handler_workflow.py")
+            # Local and OpenWhisk wrappers have no separate function/workflow handlers.
+            if not os.path.exists(handler_function_path):
+                return
             if is_workflow:
                 os.rename(handler_workflow_path, handler_path)
                 os.remove(handler_function_path)

@@ -7,7 +7,7 @@ import docker
 from sebs.benchmark import Benchmark
 from sebs.cache import Cache
 from sebs.faas import System
-from sebs.faas.function import CloudBenchmark, Function, ExecutionResult, Trigger
+from sebs.faas.function import CloudBenchmark, Function, ExecutionResult, Trigger, Workflow
 from sebs.openwhisk.container import OpenWhiskContainer
 from sebs.openwhisk.triggers import LibraryTrigger, HTTPTrigger
 from sebs.storage.resources import SelfHostedSystemResources
@@ -86,6 +86,18 @@ class OpenWhisk(System):
     @staticmethod
     def function_type() -> "Type[Function]":
         return OpenWhiskFunction
+
+    @staticmethod
+    def workflow_type() -> "Type[Workflow]":
+        raise NotImplementedError()
+
+    def create_workflow(self, code_package: Benchmark, workflow_name: str) -> Workflow:
+        raise NotImplementedError()
+
+    def create_workflow_trigger(
+        self, workflow: Workflow, trigger_type: Trigger.TriggerType
+    ) -> Trigger:
+        raise NotImplementedError()
 
     def get_wsk_cmd(self) -> List[str]:
         cmd = [self.config.wsk_exec]
@@ -365,7 +377,9 @@ class OpenWhisk(System):
     ):
         pass
 
-    def create_trigger(self, function: Function, trigger_type: Trigger.TriggerType) -> Trigger:
+    def create_function_trigger(
+        self, function: Function, trigger_type: Trigger.TriggerType
+    ) -> Trigger:
         if trigger_type == Trigger.TriggerType.LIBRARY:
             return function.triggers(Trigger.TriggerType.LIBRARY)[0]
         elif trigger_type == Trigger.TriggerType.HTTP:

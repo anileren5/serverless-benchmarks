@@ -15,11 +15,12 @@ This command builds, deploys, and executes serverless benchmarks in the cloud.
 The example below invokes the benchmark `110.dynamic-html` on AWS via the standard HTTP trigger.
 
 ```
-./sebs.py benchmark invoke 110.dynamic-html test --config config/example.json --deployment aws --verbose
+./sebs.py benchmark function 110.dynamic-html test --config config/example.json --deployment aws --verbose
 ```
 
 To configure your benchmark, change settings in the config file or use command-line options.
-The full list is available by running `./sebs.py benchmark invoke --help`.
+The full list is available by running `./sebs.py benchmark function --help`.
+Workflows are invoked with `./sebs.py benchmark workflow` (see [workflows](workflows.md)).
 
 ### Regression
 

@@ -135,7 +135,9 @@ def plot_penalty_heatmaps(summary: pd.DataFrame, output: str):
             continue
         matrix = cell.pivot_table(index="resources", columns="threads", values="penalty_vs_best")
         matrix = matrix.loc[resource_order(matrix.index)]
-        fig, ax = plt.subplots(figsize=(1 + 0.7 * matrix.shape[1], 1 + 0.45 * matrix.shape[0]))
+        fig, ax = plt.subplots(
+            figsize=(1 + 0.7 * matrix.shape[1], max(2.5, 1 + 0.45 * matrix.shape[0]))
+        )
         levels = np.log2(matrix.values)
         image = ax.imshow(levels, cmap="magma_r", vmin=0, aspect="auto")
         dark = 0.5 * np.nanmax(levels)

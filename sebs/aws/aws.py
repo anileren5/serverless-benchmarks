@@ -7,6 +7,7 @@ import uuid
 from typing import cast, Dict, List, Optional, Tuple, Type, Union  # noqa
 
 import boto3
+import botocore.config
 import docker
 
 from sebs.aws.dynamodb import DynamoDB
@@ -108,9 +109,12 @@ class AWS(System):
 
     def get_lambda_client(self):
         if not hasattr(self, "lambda_client"):
+            # Synchronous invocations last up to the 900 s function timeout; the default read
+            # timeout of 60 s would abort them, and botocore would invoke the function again.
             self.lambda_client = self.session.client(
                 service_name="lambda",
                 region_name=self.config.region,
+                config=botocore.config.Config(read_timeout=910),
             )
         return self.lambda_client
 

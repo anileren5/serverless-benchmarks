@@ -60,9 +60,17 @@ class FunctionLibraryTrigger(LibraryTrigger):
             aws_result.stats.failure = True
             return aws_result
         if "FunctionError" in ret:
+            error = json.loads(ret["Payload"].read().decode("utf-8"))
             self.logging.error("Invocation of {} failed!".format(self.name))
             self.logging.error("Input: {}".format(serialized_payload.decode("utf-8")))
+            self.logging.error("Error: {}".format(error.get("errorMessage")))
             aws_result.stats.failure = True
+            aws_result.output = {"error": error}
+            # The log tail may contain a traceback; only the REPORT line has the billing data.
+            log_lines = base64.b64decode(ret["LogResult"]).decode("utf-8").splitlines()
+            report = [line for line in log_lines if line.startswith("REPORT")]
+            if report:
+                AWS.parse_aws_report(report[-1], aws_result)
             return aws_result
         self.logging.debug(f"Invoke of function {self.name} was successful")
         log = base64.b64decode(ret["LogResult"])

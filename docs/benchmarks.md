@@ -14,6 +14,7 @@
 | Scientific      | 502.graph-mst    | Python    | x64, arm64 | Minimum spanning tree (MST)  implementation with igraph. |
 | Scientific      | 503.graph-bfs    | Python    | x64, arm64 | Breadth-first search (BFS) implementation with igraph. |
 | Scientific      | 504.dna-visualisation    | Python   | x64, arm64 | Creates a visualization data for DNA sequence. |
+| Scientific      | 505.cpu-oversubscription    | Python (C/OpenMP)   | x64 | OpenMP Jacobi stencil swept over thread counts, compared against the CPUs the sandbox grants. |
 
 Below, we discuss the most important implementation details of each benchmark. For more details on benchmark selection and their characterization, please refer to [our paper](../README.md#publication).
 
@@ -79,6 +80,10 @@ The benchmark represents scientific computations offloaded to serverless functio
 ### DNA Visualization
 
 This benchmark is inspired by the [DNAVisualization](https://github.com/Benjamin-Lee/DNAvisualization.org) project and it implements processing the `.fasta` file with the `squiggle` Python library.
+
+### CPU Oversubscription
+
+Runtimes such as OpenMP and BLAS size their thread pools from the CPUs the OS reports, not from the CPU share the sandbox grants. The benchmark runs a 2D Jacobi stencil in C with OpenMP, with one barrier per sweep, for a range of thread counts within a single invocation. It reports the CPUs visible to the process, the cgroup CPU limits and throttling counters, and the effective number of CPUs measured with a busy-loop probe. [Details →](../benchmarks/500.scientific/505.cpu-oversubscription/README.md)
 
 ## Serverless Workflows
 

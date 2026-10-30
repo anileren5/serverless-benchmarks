@@ -25,6 +25,7 @@ benchmarks_python = [
     "502.graph-mst",
     "503.graph-bfs",
     "504.dna-visualisation",
+    "505.cpu-oversubscription",
 ]
 benchmarks_nodejs = ["110.dynamic-html", "120.uploader", "210.thumbnailer"]
 

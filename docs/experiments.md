@@ -214,3 +214,6 @@ Each run creates a directory `results/cpu-oversubscription/<timestamp>_<platform
 `processed.csv` and `summary.csv` are derived from `raw.jsonl` and can be regenerated with
 `sebs.py experiment process cpu-oversubscription --output-dir results` or
 `python -m sebs.experiments.cpu_oversubscription <run-directory>`.
+`scripts/cpu_oversubscription_plots.py --output <dir> <run-directory>...` draws the figures
+(effective CPUs, speedup, penalty heatmaps, wait policies, cost, throttling) and tables
+of CPU models, failures, and timeouts; it requires `matplotlib`.

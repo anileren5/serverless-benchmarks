@@ -1,0 +1,18 @@
+{
+  "benchmark": "505.cpu-oversubscription",
+  "configurations": [
+    {
+      "name": "smoke",
+      "description": "Quick end-to-end check of the experiment pipeline.",
+      "input-size": "test",
+      "input": {"threads": [1, 2, 8]},
+      "cpu-limits": [
+        {"name": "unlimited"},
+        {"name": "quota-2", "cpus": 2},
+        {"name": "shares-contended", "cpu-shares": 64, "competitor": {"cpu-shares": 1024}}
+      ],
+      "omp-wait-policies": [null, "passive"],
+      "repetitions": 2
+    }
+  ]
+}

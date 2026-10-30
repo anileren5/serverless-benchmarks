@@ -1,0 +1,35 @@
+{
+  "benchmark": "505.cpu-oversubscription",
+  "configurations": [
+    {
+      "name": "ow-idle",
+      "description": "One action at a time on an otherwise idle invoker.",
+      "input-size": "small",
+      "input": {"threads": [1, 2, 4, 8, 16, 32, 64], "order": "shuffled"},
+      "memory-sizes": [256, 1024, 4096],
+      "omp-wait-policies": [null],
+      "repetitions": 16,
+      "concurrent-invocations": 1
+    },
+    {
+      "name": "ow-colocated-8x1024",
+      "description": "8 concurrent actions fill the 8 GB invoker; each sees all CPUs.",
+      "input-size": "small",
+      "input": {"threads": [1, 2, 4, 8, 16, 32, 64], "order": "shuffled"},
+      "memory-sizes": [1024],
+      "omp-wait-policies": [null, "passive"],
+      "repetitions": 32,
+      "concurrent-invocations": 8
+    },
+    {
+      "name": "ow-colocated-32x256",
+      "description": "32 concurrent small actions; invocations must stay below the 60 s blocking limit.",
+      "input-size": "test",
+      "input": {"threads": [1, 2, 4, 8, 32], "order": "shuffled"},
+      "memory-sizes": [256],
+      "omp-wait-policies": [null],
+      "repetitions": 64,
+      "concurrent-invocations": 32
+    }
+  ]
+}

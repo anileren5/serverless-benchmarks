@@ -28,6 +28,7 @@ We implemented four types of experiments:
 * [Network Ping-pong](#network-ping-pong) evaluates the network performance and latency profile of the connection between the benchmarking machine and serverless function.
 * [Invocation Overhead](#invocation-overhead) estimates the invocation latency by running a clock-drift protocol and comparing timestamps between the benchmarking machine and serverless function.
 * [Eviction](#eviction-model) runs functions with various configurations, invokes them after a specified time, and checks if the function is still running in a warm container. The experiment verifies how different parameters affect container eviction.
+* [CPU Oversubscription](#cpu-oversubscription) sweeps the CPU resources granted to the `505.cpu-oversubscription` benchmark and records how thread counts perform against them.
 
 ### Perf-Cost
 
@@ -141,3 +142,75 @@ Requirement: public IP.
 The result helps to estimate the analytical models describing cold startups.
 Currently supported only on AWS.
 
+
+#### CPU Oversubscription
+
+Runs the [`505.cpu-oversubscription`](../benchmarks/500.scientific/505.cpu-oversubscription/README.md)
+benchmark over a matrix of resource settings, OpenMP wait policies, and repetitions.
+The resource setting depends on the deployment:
+
+* cloud platforms sweep the function memory (`memory-sizes`), which determines the CPU share;
+* the local deployment applies Docker CPU limits to the function container (`cpu-limits`):
+  CFS quota (`cpus`), cpuset (`cpuset`), and CPU shares (`cpu-shares`), optionally against a
+  `competitor` container that keeps busy loops running on all host CPUs.
+  These runs are the ground truth for interpreting the cloud measurements.
+
+Every combination of resource setting and wait policy starts on fresh sandboxes: a forced cold
+start in the cloud, a container restart locally. Warm configurations then discard one warm-up batch;
+with `cold-starts`, a cold start is enforced before every batch.
+
+The experiment settings are a list of configurations and an optional `label` for the run;
+see `config/cpu-oversubscription/` for the plans for AWS, OpenWhisk, and the local deployment.
+
+```json
+"cpu-oversubscription": {
+  "benchmark": "505.cpu-oversubscription",
+  "label": "pilot",
+  "configurations": [
+    {
+      "name": "e2-thread-sweep-small",
+      "input-size": "small",
+      "input": {"threads": [1, 2, 4, 8, 16, 32, 64], "order": "shuffled"},
+      "memory-sizes": [128, 1769, 3008],
+      "omp-wait-policies": [null, "passive"],
+      "cold-starts": false,
+      "repetitions": 32,
+      "concurrent-invocations": 8
+    }
+  ]
+}
+```
+
+`input` overrides fields of the benchmark input of the given size.
+The local deployment has a single function container and always uses one concurrent invocation.
+On OpenWhisk, concurrent invocations are co-located on the invoker and compete for CPUs;
+`tools/openwhisk_standalone.sh` starts a single-node OpenWhisk with a local image registry.
+OpenWhisk invocations are blocking for at most 60 seconds, so keep each invocation shorter.
+New AWS accounts are limited to 3008 MB of function memory and 10 concurrent executions.
+
+`tools/cpu_oversubscription.sh` generates the configuration from `config/example.json` and a plan,
+and runs the experiment:
+
+```
+tools/cpu_oversubscription.sh aws config/cpu-oversubscription/aws.json
+REGION=us-east-1 tools/cpu_oversubscription.sh aws config/cpu-oversubscription/aws-regions.json
+REPETITIONS=2 CONCURRENCY=2 tools/cpu_oversubscription.sh aws config/cpu-oversubscription/aws.json pilot
+tools/cpu_oversubscription.sh local config/cpu-oversubscription/local.json
+tools/cpu_oversubscription.sh openwhisk config/cpu-oversubscription/openwhisk.json
+```
+
+Each run creates a directory `results/cpu-oversubscription/<timestamp>_<platform>[_<label>]/` with:
+
+* `config.json`: experiment settings, deployment name and region, runtime, and architecture;
+* `meta.json`: SeBS version, git commit and modified files, benchmark hash, command line,
+  client machine and its load average, Docker version and cgroup setup (local only),
+  begin and end time;
+* `raw.jsonl`: one line per invocation with the configuration, the invocation result
+  (client time, billed time, cold start, sandbox ID, failure), and the complete benchmark output;
+* `processed.csv`: one row per invocation and thread count;
+* `summary.csv`: median kernel time, speedup, and penalty against the best thread count, per
+  configuration, resource setting, wait policy, and thread count.
+
+`processed.csv` and `summary.csv` are derived from `raw.jsonl` and can be regenerated with
+`sebs.py experiment process cpu-oversubscription --output-dir results` or
+`python -m sebs.experiments.cpu_oversubscription <run-directory>`.

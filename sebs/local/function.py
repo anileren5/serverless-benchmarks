@@ -117,6 +117,16 @@ class LocalFunction(Function):
         except docker.errors.NotFound:
             raise RuntimeError(f"Cached container {instance_id} not available anymore!")
 
+    def restart(self):
+        """Restarts the function process; on Linux, Docker may assign a new address."""
+        self._instance.restart(timeout=0)
+        self._instance.reload()
+        if is_linux():
+            networks = self._instance.attrs["NetworkSettings"]["Networks"]
+            self._url = "{IPAddress}:{Port}".format(
+                IPAddress=networks["bridge"]["IPAddress"], Port=self._port
+            )
+
     def stop(self):
         self.logging.info(f"Stopping function container {self._instance_id}")
         self._instance.stop(timeout=0)

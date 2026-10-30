@@ -10,6 +10,8 @@ cache*
 
 minio-volume
 scylladb-volume
+out_benchmark.json
+out_storage.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -190,3 +192,6 @@ cache
 
 # MacOS Finder
 **/.DS_Store
+
+# Experiment results; archive them in the project repository
+results/

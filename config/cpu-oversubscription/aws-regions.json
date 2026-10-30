@@ -1,0 +1,25 @@
+{
+  "benchmark": "505.cpu-oversubscription",
+  "configurations": [
+    {
+      "name": "e1-resources",
+      "description": "Reported versus effective CPUs across the memory range.",
+      "input-size": "test",
+      "input": {"threads": [1], "order": "shuffled"},
+      "memory-sizes": [128, 256, 512, 768, 1024, 1536, 1769, 2048, 2560, 3008],
+      "omp-wait-policies": [null],
+      "repetitions": 32,
+      "concurrent-invocations": 8
+    },
+    {
+      "name": "e2-thread-sweep-small",
+      "description": "Oversubscription penalty across thread counts.",
+      "input-size": "small",
+      "input": {"threads": [1, 2, 3, 4, 6, 8, 16, 32, 64], "order": "shuffled"},
+      "memory-sizes": [128, 1769],
+      "omp-wait-policies": [null],
+      "repetitions": 32,
+      "concurrent-invocations": 8
+    }
+  ]
+}

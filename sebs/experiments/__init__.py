@@ -4,3 +4,4 @@ from .perf_cost import PerfCost  # noqa
 from .network_ping_pong import NetworkPingPong  # noqa
 from .eviction_model import EvictionModel  # noqa
 from .invocation_overhead import InvocationOverhead  # noqa
+from .cpu_oversubscription import CPUOversubscription  # noqa

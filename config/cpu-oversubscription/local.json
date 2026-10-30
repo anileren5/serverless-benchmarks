@@ -1,0 +1,59 @@
+{
+  "benchmark": "505.cpu-oversubscription",
+  "configurations": [
+    {
+      "name": "gt-mechanisms",
+      "description": "Two CPUs granted through each Linux mechanism, compared with no limit.",
+      "input-size": "small",
+      "input": {"threads": [1, 2, 3, 4, 6, 8, 16, 32, 64], "order": "shuffled"},
+      "cpu-limits": [
+        {"name": "unlimited"},
+        {"name": "quota-2", "cpus": 2},
+        {"name": "cpuset-2", "cpuset": "0-1"},
+        {"name": "shares-idle", "cpu-shares": 64},
+        {"name": "shares-contended", "cpu-shares": 64, "competitor": {"cpu-shares": 1024}}
+      ],
+      "omp-wait-policies": [null],
+      "repetitions": 16
+    },
+    {
+      "name": "gt-mechanisms-large",
+      "description": "Quota against no limit with the large grid, for comparison with e2-thread-sweep-large.",
+      "input-size": "large",
+      "input": {"threads": [1, 2, 3, 4, 6, 8, 16, 32, 64], "order": "shuffled"},
+      "cpu-limits": [
+        {"name": "unlimited"},
+        {"name": "quota-2", "cpus": 2}
+      ],
+      "omp-wait-policies": [null],
+      "repetitions": 8
+    },
+    {
+      "name": "gt-aws-model",
+      "description": "Lambda as two visible CPUs with the effective CPUs measured on AWS (e1-resources).",
+      "input-size": "small",
+      "input": {"threads": [1, 2, 3, 4, 6, 8, 16, 32, 64], "order": "shuffled"},
+      "cpu-limits": [
+        {"name": "model-128MB", "cpuset": "0-1", "cpus": 0.079},
+        {"name": "model-512MB", "cpuset": "0-1", "cpus": 0.31},
+        {"name": "model-1769MB", "cpuset": "0-1", "cpus": 1.01},
+        {"name": "model-3008MB", "cpuset": "0-1", "cpus": 1.71}
+      ],
+      "omp-wait-policies": [null],
+      "repetitions": 16
+    },
+    {
+      "name": "gt-wait-policy",
+      "description": "Spin-waiting OpenMP workers with and without a CPU quota.",
+      "input-size": "small",
+      "input": {"threads": [2, 32], "order": "shuffled"},
+      "cpu-limits": [
+        {"name": "unlimited"},
+        {"name": "quota-2", "cpus": 2},
+        {"name": "model-128MB", "cpuset": "0-1", "cpus": 0.079}
+      ],
+      "omp-wait-policies": [null, "active", "passive"],
+      "repetitions": 16
+    }
+  ]
+}

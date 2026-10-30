@@ -39,6 +39,11 @@ if [[ -n "${USER_CPUS}" ]]; then
 fi
 
 docker rm -f openwhisk >/dev/null 2>&1 || true
+# Action containers of a previous instance would otherwise keep running.
+ACTION_CONTAINERS=$(docker ps -aq --filter "name=^wsk[0-9]+_")
+if [[ -n "${ACTION_CONTAINERS}" ]]; then
+  docker rm -f ${ACTION_CONTAINERS} >/dev/null
+fi
 docker run -d --name openwhisk --network host \
   -v /var/run/docker.sock:/var/run/docker.sock \
   -v "${STATE_DIR}/docker:/usr/bin/docker:ro" \

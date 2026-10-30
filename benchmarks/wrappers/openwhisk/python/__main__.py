@@ -1,6 +1,7 @@
 import logging
 import datetime
 import os
+import uuid
 
 def main(args):
     logging.getLogger().setLevel(logging.INFO)
@@ -33,7 +34,12 @@ def main(args):
         fname = "cold_run"
         if not os.path.exists(fname):
             is_cold = True
-            open(fname, "a").close()
+            container_id = str(uuid.uuid4())[0:8]
+            with open(fname, "a") as f:
+                f.write(container_id)
+        else:
+            with open(fname, "r") as f:
+                container_id = f.read()
 
         return {
             "begin": begin.strftime("%s.%f"),
@@ -42,6 +48,7 @@ def main(args):
             "results_time": results_time,
             "is_cold": is_cold,
             "result": log_data,
+            "container_id": container_id,
         }
     except Exception as e:
         end = datetime.datetime.now()

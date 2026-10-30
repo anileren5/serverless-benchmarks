@@ -191,9 +191,10 @@ class OpenWhisk(System):
 
             function_cfg = OpenWhiskFunctionConfig.from_benchmark(code_package)
             function_cfg.object_storage = cast(Minio, self.system_resources.get_storage()).config
-            function_cfg.nosql_storage = cast(
-                ScyllaDB, self.system_resources.get_nosql_storage()
-            ).config
+            if code_package.uses_nosql:
+                function_cfg.nosql_storage = cast(
+                    ScyllaDB, self.system_resources.get_nosql_storage()
+                ).config
             if function_found:
                 # docker image is overwritten by the update
                 res = OpenWhiskFunction(
@@ -211,6 +212,7 @@ class OpenWhisk(System):
                         code_package.language_name,
                         code_package.language_version,
                         code_package.architecture,
+                        self.config.resources.docker_registry,
                     )
                     subprocess.run(
                         [
@@ -268,6 +270,7 @@ class OpenWhisk(System):
             code_package.language_name,
             code_package.language_version,
             code_package.architecture,
+            self.config.resources.docker_registry,
         )
         try:
             subprocess.run(
@@ -304,6 +307,12 @@ class OpenWhisk(System):
 
     def update_function_configuration(self, function: Function, code_package: Benchmark):
         self.logging.info(f"Update configuration of an existing OpenWhisk action {function.name}.")
+        self._update_action_configuration(function, code_package, [])
+
+    def _update_action_configuration(
+        self, function: Function, code_package: Benchmark, extra_parameters: List[str]
+    ):
+        # wsk replaces the whole parameter set on update, so storage parameters are always passed.
         try:
             subprocess.run(
                 [
@@ -312,10 +321,11 @@ class OpenWhisk(System):
                     "update",
                     function.name,
                     "--memory",
-                    str(code_package.benchmark_config.memory),
+                    str(function.config.memory),
                     "--timeout",
-                    str(code_package.benchmark_config.timeout * 1000),
+                    str(function.config.timeout * 1000),
                     *self.storage_arguments(code_package),
+                    *extra_parameters,
                 ],
                 stderr=subprocess.PIPE,
                 stdout=subprocess.PIPE,
@@ -343,6 +353,9 @@ class OpenWhisk(System):
             changed = True
             function.config.object_storage = storage.config
 
+        if not benchmark.uses_nosql:
+            return changed
+
         nosql_storage = cast(ScyllaDB, self.system_resources.get_nosql_storage())
         function = cast(OpenWhiskFunction, cached_function)
         # check if now we're using a new storage
@@ -365,7 +378,13 @@ class OpenWhisk(System):
         )
 
     def enforce_cold_start(self, functions: List[Function], code_package: Benchmark):
-        raise NotImplementedError()
+        # Invokers reuse a warm container only for an identical action, parameters included.
+        self.cold_start_counter += 1
+        for func in functions:
+            self._update_action_configuration(
+                func, code_package, ["-p", "COLD_START_COUNTER", str(self.cold_start_counter)]
+            )
+        self.logging.info("Updated actions to enforce cold starts.")
 
     def download_metrics(
         self,

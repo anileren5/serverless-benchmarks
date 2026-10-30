@@ -469,6 +469,11 @@ class Benchmark(LoggingBase):
                     "thus skipping the Docker-based installation of dependencies."
                 ).format(deployment=self._deployment_name, language=self.language_name)
             )
+            # Platforms without a build image build the function image directly;
+            # their Dockerfile runs the benchmark's package.sh.
+            package_script = os.path.join(self._benchmark_path, self.language_name, "package.sh")
+            if os.path.exists(package_script):
+                shutil.copy2(package_script, output_dir)
         else:
             repo_name = self._system_config.docker_repository()
             unversioned_image_name = "build.{deployment}.{language}.{runtime}".format(

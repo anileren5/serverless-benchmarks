@@ -204,6 +204,12 @@ kubectl get pods -n openwhisk --watch
 To change the maximum memory allocation per function, edit the `max` value under `memory` in file `helm/openwhisk/values.yaml`.
 To run all benchmarks, we recommend of at least "2048m".
 
+For a single machine, `tools/openwhisk_standalone.sh` starts
+[standalone OpenWhisk](https://github.com/apache/openwhisk/tree/master/core/standalone)
+with the Docker container factory and a local image registry at `localhost:5000`.
+Set `docker_registry.registry` to `localhost:5000` and run SeBS with `--container-deployment`.
+Standalone OpenWhisk keeps actions in memory; remove the SeBS cache entries after restarting it.
+
 ### Toolchain
 
 We use OpenWhisk's CLI tool [wsk](https://github.com/apache/openwhisk-cli)

@@ -23,7 +23,8 @@ class OpenWhiskFunctionConfig(FunctionConfig):
         data = {k: v for k, v in data.items() if k in keys}
         data["runtime"] = Runtime.deserialize(data["runtime"])
         data["object_storage"] = MinioConfig.deserialize(data["object_storage"])
-        data["nosql_storage"] = ScyllaDBConfig.deserialize(data["nosql_storage"])
+        if data.get("nosql_storage") is not None:
+            data["nosql_storage"] = ScyllaDBConfig.deserialize(data["nosql_storage"])
         return OpenWhiskFunctionConfig(**data)
 
     def serialize(self) -> dict:

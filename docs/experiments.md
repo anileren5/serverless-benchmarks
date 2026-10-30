@@ -21,11 +21,12 @@ Then, each benchmark has its own JSON object containing parameters specific to t
 }
 ```
 
-We implemented four types of experiments:
+We implemented five types of experiments:
 * [Perf-Cost](#perf-cost) evaluates the performance of specified functions and estimates the cost of running them in the cloud. It supports four types of invoking functions and creates timing results involving various parts of the serverless stack.
 * [Network Ping-pong](#network-ping-pong) evaluates the network performance and latency profile of the connection between the benchmarking machine and serverless function.
 * [Invocation Overhead](#invocation-overhead) estimates the invocation latency by running a clock-drift protocol and comparing timestamps between the benchmarking machine and serverless function.
 * [Eviction](#eviction-model) runs functions with various configurations, invokes them after a specified time, and checks if the function is still running in a warm container. The experiment verifies how different parameters affect container eviction.
+* [Agent Sessions](#agent-sessions) replays the sessions of an AI agent against an MCP tool benchmark, turning every HTTP request of the official MCP client into one function invocation.
 
 ## Perf-Cost
 
@@ -139,3 +140,29 @@ Requirement: public IP.
 The result helps to estimate the analytical models describing cold startups.
 Currently supported only on AWS.
 
+## Agent Sessions
+
+An AI agent rarely sends a single request to a tool. The MCP client first sends the setup requests of its protocol revision, lists the tools, and then calls a tool, often several times: the reference fetch server returns a long page in slices and asks for another call from a later `start_index`. On a FaaS platform, each of these HTTP requests is a separate invocation.
+
+The experiment drives a deployed MCP benchmark of the `700.agents` category, such as `710.mcp-fetch`, with the official MCP Python client. The client's HTTP requests never reach the network: each one is sent as one invocation of the function, and the function's answer is returned to the client as the HTTP response. A session lists the tools, then calls the tool from the benchmark input until its output is no longer truncated. The experiment runs the configured number of sessions in each client mode: `legacy` (the `initialize` handshake), `auto` (`server/discover`, then the newest revision) or a pinned protocol version such as `2026-07-28`.
+
+Requirement: the MCP client, installed with the `agents` extra (`pip install -e '.[agents]'` or `uv sync --extra agents`).
+
+```json
+"experiments": {
+  "type": "agent-sessions",
+  "agent-sessions": {
+    "benchmark": "710.mcp-fetch",
+    "input-size": "test",
+    "modes": ["2026-07-28", "auto", "legacy"],
+    "repetitions": 5
+  }
+}
+```
+
+```
+sebs experiment invoke agent-sessions --config configs/example.json --output-dir experiments-result
+sebs experiment process agent-sessions --config configs/example.json --output-dir experiments-result
+```
+
+Each mode writes `agent-sessions/<mode>_results.json`, with all invocations in SeBS's result format and, under `sessions`, every session with its duration, number of tool calls and invocations. Each invocation records its JSON-RPC method, HTTP status, cold start flag, client time and the measurements returned by the benchmark. The `process` command writes one row per invocation to `agent-sessions/agent_sessions.csv`.

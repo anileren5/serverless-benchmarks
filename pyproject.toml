@@ -82,6 +82,10 @@ dev = [
     "interrogate==1.7.0",
     "boto3-stubs[lambda,s3,apigatewayv2,sts,logs,iam,ecr]"
 ]
+# MCP client for the agent-sessions experiment
+agents = [
+    "mcp==2.3.0"
+]
 docs = [
     # use 8.2.3 for doc builds, but remove it for 3.10 compatibility
     "Sphinx",

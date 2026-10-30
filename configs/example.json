@@ -40,6 +40,12 @@
       "function_copy_idx": 0,
       "repetitions": 5,
       "sleep": 1
+    },
+    "agent-sessions": {
+      "benchmark": "710.mcp-fetch",
+      "input-size": "test",
+      "modes": ["2026-07-28", "auto", "legacy"],
+      "repetitions": 5
     }
   },
   "deployment": {

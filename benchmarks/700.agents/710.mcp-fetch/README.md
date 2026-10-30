@@ -31,3 +31,24 @@ All times are in microseconds.
 - `compute_time`: content extraction and conversion to Markdown.
 - `protocol_time`: the rest of `request_time`: HTTP handling, JSON-RPC, argument validation and serialization.
 - `import_time`, `server_init_time`: importing the server and starting it. Reported only by the first request of a container.
+
+## Agent sessions
+
+An agent rarely sends a single request. With the default `max_length` of 5000 characters, reading a whole article takes several `tools/call` requests: each output ends by asking for another call from a later `start_index`, and the server fetches and extracts the whole page again for each of them. The requests around the tool calls depend on the client's protocol revision: `tools/list` only (`2026-07-28`), `server/discover` first (`auto`), or the `initialize` handshake (`legacy`).
+
+| Size | Tool calls to read the page | Invocations per session (`2026-07-28` / `auto` / `legacy`) |
+| :--- | ---: | :--- |
+| test | 2 | 3 / 4 / 5 |
+| small | 4 | 5 / 6 / 7 |
+| large | 13 | 14 / 15 / 16 |
+
+The `agent-sessions` experiment replays such sessions with the official MCP Python client, one function invocation per HTTP request. It needs the client from the `agents` extra (`pip install -e '.[agents]'` or `uv sync --extra agents`):
+
+```bash
+sebs experiment invoke agent-sessions --config configs/example.json --deployment local \
+    --storage-configuration out_storage.json --output-dir results
+sebs experiment process agent-sessions --config configs/example.json --deployment local \
+    --output-dir results
+```
+
+The input size, the client modes and the number of sessions per mode are set under `experiments.agent-sessions` in the configuration. Each mode's sessions and invocations are written to `agent-sessions/<mode>_results.json`, and `process` writes one CSV row per invocation to `agent-sessions/agent_sessions.csv`.

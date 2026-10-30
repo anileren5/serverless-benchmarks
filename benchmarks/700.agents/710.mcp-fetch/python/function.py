@@ -87,6 +87,8 @@ def handler(event):
     request_end = time.perf_counter()
 
     request_time = (request_end - request_begin) * 1e6
+    # Notifications are acknowledged with 202 and no body, even with a JSON content type.
+    is_json = response.content and response.headers.get('content-type', '').startswith('application/json')
     measurement = {
         'request_time': request_time,
         'download_time': timings.get('download_time', 0),
@@ -104,7 +106,8 @@ def handler(event):
     return {
         'result': {
             'status': response.status_code,
-            'body': response.json() if response.headers.get('content-type', '').startswith('application/json') else response.text
+            'headers': dict(response.headers),
+            'body': response.json() if is_json else response.text
         },
         'measurement': measurement
     }

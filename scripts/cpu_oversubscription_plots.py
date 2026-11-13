@@ -245,6 +245,42 @@ def plot_policy_curves(summary: pd.DataFrame, output: str):
         save(fig, output, f"policy_curves_{run}_{configuration}")
 
 
+def plot_barrier_storm(summary: pd.DataFrame, output: str):
+    """Slowdown against one thread as a function of the work between two barriers.
+
+    Configurations named storm-g<grid> keep the total work constant and vary the grid size."""
+    storm = summary[summary["configuration"].str.match(r"storm-g\d+$")].copy()
+    if storm.empty:
+        return
+    storm["grid"] = storm["configuration"].str.extract(r"storm-g(\d+)$")[0].astype(int)
+    single = storm[storm["threads"] == 1].set_index(["run", "resources", "grid"])["wall_median"]
+    storm["slowdown"] = (
+        storm["wall_median"].values
+        / single.reindex(pd.MultiIndex.from_frame(storm[["run", "resources", "grid"]])).values
+    )
+    fig, ax = plt.subplots(figsize=(6, 4))
+    for (run, resources, threads), rows in storm[storm["threads"] > 1].groupby(
+        ["run", "resources", "threads"]
+    ):
+        rows = rows.sort_values("grid")
+        platform = rows["platform"].iloc[0]
+        ax.plot(
+            rows["grid"] ** 2,
+            rows["slowdown"],
+            marker="o",
+            ms=3,
+            label=f"{platform} {resources}, {threads:.0f} threads",
+        )
+    ax.set_xscale("log", base=2)
+    ax.set_yscale("log", base=2)
+    ax.axhline(1, color="grey", lw=0.5)
+    ax.set_xlabel("Grid points updated between two barriers")
+    ax.set_ylabel("Time / time with 1 thread")
+    ax.legend(fontsize=6)
+    ax.set_title("Barrier storm: constant total work (1e8 point updates on AWS)", fontsize=9)
+    save(fig, output, "barrier_storm")
+
+
 def plot_cost(summary: pd.DataFrame, output: str):
     aws = default_policy(
         summary[(summary["platform"] == "aws") & summary["configuration"].str.startswith("e2")]
@@ -344,6 +380,7 @@ def main():
     plot_aws_against_model(summary, args.output)
     plot_wait_policies(summary, args.output)
     plot_policy_curves(summary, args.output)
+    plot_barrier_storm(summary, args.output)
     plot_cost(summary, args.output)
     plot_throttling(summary, args.output)
     write_tables(processed, args.output)

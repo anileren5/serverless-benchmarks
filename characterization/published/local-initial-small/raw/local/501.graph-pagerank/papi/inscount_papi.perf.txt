@@ -1,0 +1,8 @@
+# started on Sat Oct 17 16:37:38 2026
+
+1428990878;;cpu_core/instructions/;199136996;100.00;;
+<not counted>;;cpu_atom/instructions/;0;0.00;;
+440550973;;cpu_core/mem_inst_retired.all_loads/;199136996;100.00;;
+131245378;;cpu_core/mem_inst_retired.all_stores/;199136996;100.00;;
+251069593;;cpu_core/branch-instructions/;199136996;100.00;;
+<not counted>;;cpu_atom/branch-instructions/;0;0.00;;

@@ -1,0 +1,15 @@
+{
+  "set": "inscount_papi",
+  "columns": {
+    "PAPI_TOT_INS": 856242572.0,
+    "PAPI_LST_INS": 220719310.0,
+    "PAPI_BR_INS": 126994882.0
+  },
+  "notes": [],
+  "perf_events": [
+    "instructions",
+    "mem_inst_retired.all_loads",
+    "mem_inst_retired.all_stores",
+    "branch-instructions"
+  ]
+}

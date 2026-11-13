@@ -1,0 +1,14 @@
+{
+  "set": "cycles_papi",
+  "columns": {
+    "PAPI_TOT_CYC": 435843032.0,
+    "PAPI_TOT_INS": 855714618.0,
+    "PAPI_STL_ICY": 171002947.0
+  },
+  "notes": [],
+  "perf_events": [
+    "cycles",
+    "instructions",
+    "cycle_activity.stalls_total"
+  ]
+}

@@ -1,0 +1,7 @@
+# started on Sat Oct 17 16:49:50 2026
+
+5696626471;;cpu_core/instructions/;661852693;100.00;;
+<not counted>;;cpu_atom/instructions/;0;0.00;;
+37799;;cpu_core/fp_arith_inst_retired.scalar_double/;661852693;100.00;;
+1276;;cpu_core/fp_arith_inst_retired.128b_packed_double/;661852693;100.00;;
+0;;cpu_core/fp_arith_inst_retired.256b_packed_double/;661852693;100.00;;

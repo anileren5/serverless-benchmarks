@@ -1,0 +1,8 @@
+{
+  "uninstrumented": 0,
+  "cycles_papi": 0,
+  "inscount_papi": 0,
+  "cache_papi": 0,
+  "sp_flops_papi": 0,
+  "dp_flops_papi": 0
+}

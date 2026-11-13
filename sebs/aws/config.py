@@ -749,21 +749,48 @@ class AWSResources(Resources):
                 "WARNING: This function will have unrestricted public access. "
                 "Anyone with the URL can invoke this function."
             )
-            try:
-                lambda_client.add_permission(
-                    FunctionName=func.name,
-                    StatementId="FunctionURLAllowPublicAccess",
-                    Action="lambda:InvokeFunctionUrl",
-                    Principal="*",
-                    FunctionUrlAuthType="NONE",
-                )
-                self.logging.info(
-                    f"Applied public access permission for Function URL on {func.name}"
-                )
-            except lambda_client.exceptions.ResourceConflictException:
-                # Permission with this StatementId already exists on the function.
-                # This is expected if the permission was previously added.
-                self.logging.info(f"Public access permission already exists for {func.name}")
+            # Since October 2025 a public function URL needs both actions.
+            # InvokeFunctionUrl alone returns 403 Forbidden.
+            statements = (
+                (
+                    "FunctionURLAllowPublicAccess",
+                    "lambda:InvokeFunctionUrl",
+                    {"FunctionUrlAuthType": "NONE"},
+                ),
+                (
+                    "FunctionURLInvokeAllowPublicAccess",
+                    "lambda:InvokeFunction",
+                    {"InvokedViaFunctionUrl": True},
+                ),
+            )
+            for statement_id, action, extra in statements:
+                try:
+                    lambda_client.add_permission(
+                        FunctionName=func.name,
+                        StatementId=statement_id,
+                        Action=action,
+                        Principal="*",
+                        **extra,
+                    )
+                    self.logging.info(
+                        f"Applied {action} for the function URL on {func.name}"
+                    )
+                except lambda_client.exceptions.ResourceConflictException:
+                    self.logging.info(f"{action} permission already exists for {func.name}")
+                except lambda_client.exceptions.ClientError as exc:
+                    if extra.get("InvokedViaFunctionUrl") is not True:
+                        raise
+                    lambda_client.add_permission(
+                        FunctionName=func.name,
+                        StatementId=statement_id,
+                        Action=action,
+                        Principal="*",
+                        Condition={"Bool": {"lambda:InvokedViaFunctionUrl": "true"}},
+                    )
+                    self.logging.info(
+                        f"Applied {action} for the function URL on {func.name}"
+                    )
+                    self.logging.info(f"Retried after {exc.response['Error']['Code']}")
 
         function_url_obj = AWSResources.FunctionURL(url, func.name, auth_type)
         self._function_urls[func.name] = function_url_obj

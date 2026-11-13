@@ -1,0 +1,363 @@
+{
+  "provenance": {
+    "git_revision": "1050736392da7bbddce9a8ba7fd205bab2665474",
+    "created_utc": "2026-10-17T16:51:00Z",
+    "seed": 0,
+    "feature_set": "workload",
+    "log_size": true,
+    "origin": "measured",
+    "kaiser_components": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "variance_80_components": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "version_python": "3.14.2",
+    "version_numpy": "2.5.4",
+    "version_pandas": "3.0.6",
+    "version_scipy": "1.18.1",
+    "version_matplotlib": "3.11.2"
+  },
+  "notes": [
+    "Applied log1p to nonnegative size-like columns before z-scoring."
+  ],
+  "columns": [
+    "ipc",
+    "load_store_frac",
+    "branch_frac",
+    "l1d_miss_per_ins",
+    "l2_miss_per_ins",
+    "l3_miss_per_ins",
+    "stall_frac",
+    "sp_flop_per_ins",
+    "dp_flop_per_ins",
+    "cpu_util",
+    "peak_rss_kb",
+    "peak_pss_kb",
+    "peak_uss_kb",
+    "read_bytes",
+    "write_bytes",
+    "read_syscalls",
+    "write_syscalls",
+    "package_size_bytes"
+  ],
+  "benchmarks": [
+    "010.sleep",
+    "110.dynamic-html",
+    "120.uploader",
+    "130.crud-api",
+    "210.thumbnailer",
+    "220.video-processing",
+    "311.compression",
+    "411.image-recognition",
+    "501.graph-pagerank",
+    "502.graph-mst",
+    "503.graph-bfs",
+    "504.dna-visualisation"
+  ],
+  "eigenvalues": [
+    8.808445197727304,
+    2.7583708543228425,
+    1.577303945433578,
+    1.5537083518561212,
+    1.242455027998924,
+    0.9656531674063316,
+    0.4722979395725901,
+    0.32314868879355124,
+    0.1748252384027701,
+    0.1125545780191044,
+    0.011237010466875705,
+    3.622012706892967e-30
+  ],
+  "variance_ratio": [
+    0.489358066540406,
+    0.15324282524015798,
+    0.08762799696853214,
+    0.08631713065867344,
+    0.06902527933327358,
+    0.053647398189240664,
+    0.02623877442069946,
+    0.017952704932975076,
+    0.009712513244598342,
+    0.00625303211217247,
+    0.0006242783592708727,
+    2.0122292816072045e-31
+  ],
+  "kaiser_components": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "variance_80_components": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "bic": [
+    {
+      "k": 1,
+      "bic": -124.76303678756098,
+      "inertia": 175.34311715072656
+    },
+    {
+      "k": 2,
+      "bic": -115.83953058594659,
+      "inertia": 105.87074495982827
+    },
+    {
+      "k": 3,
+      "bic": -108.81543218280105,
+      "inertia": 68.10201457356719
+    },
+    {
+      "k": 4,
+      "bic": -107.8034432634836,
+      "inertia": 53.52764648562026
+    },
+    {
+      "k": 5,
+      "bic": -106.93413727342157,
+      "inertia": 42.27288469227537
+    },
+    {
+      "k": 6,
+      "bic": -104.13377694743687,
+      "inertia": 31.303344921467573
+    }
+  ],
+  "selected_k": 6,
+  "clusters": {
+    "0": [
+      "010.sleep"
+    ],
+    "1": [
+      "110.dynamic-html",
+      "120.uploader",
+      "210.thumbnailer",
+      "502.graph-mst",
+      "503.graph-bfs"
+    ],
+    "2": [
+      "130.crud-api"
+    ],
+    "3": [
+      "220.video-processing",
+      "411.image-recognition",
+      "504.dna-visualisation"
+    ],
+    "4": [
+      "311.compression"
+    ],
+    "5": [
+      "501.graph-pagerank"
+    ]
+  },
+  "hierarchical_rand": 1.0,
+  "sensitivity_rand": 0.9242424242424242,
+  "redundancy": {
+    "note": "A pair is redundant when both benchmarks share a k-means cluster and their distance is at or below the 25th percentile of pairwise distances (3.9834).",
+    "threshold": 3.9833595074271195,
+    "nearest": [
+      {
+        "benchmark": "010.sleep",
+        "neighbor": "130.crud-api",
+        "distance": 4.239144554376566,
+        "same_cluster": false
+      },
+      {
+        "benchmark": "110.dynamic-html",
+        "neighbor": "502.graph-mst",
+        "distance": 2.350935634911132,
+        "same_cluster": true
+      },
+      {
+        "benchmark": "120.uploader",
+        "neighbor": "210.thumbnailer",
+        "distance": 3.124902531503387,
+        "same_cluster": true
+      },
+      {
+        "benchmark": "130.crud-api",
+        "neighbor": "110.dynamic-html",
+        "distance": 4.001857556913565,
+        "same_cluster": false
+      },
+      {
+        "benchmark": "210.thumbnailer",
+        "neighbor": "502.graph-mst",
+        "distance": 2.3412574815744818,
+        "same_cluster": true
+      },
+      {
+        "benchmark": "220.video-processing",
+        "neighbor": "504.dna-visualisation",
+        "distance": 3.006725540063966,
+        "same_cluster": true
+      },
+      {
+        "benchmark": "311.compression",
+        "neighbor": "220.video-processing",
+        "distance": 3.5600930491218636,
+        "same_cluster": false
+      },
+      {
+        "benchmark": "411.image-recognition",
+        "neighbor": "220.video-processing",
+        "distance": 3.0502852234242086,
+        "same_cluster": true
+      },
+      {
+        "benchmark": "501.graph-pagerank",
+        "neighbor": "503.graph-bfs",
+        "distance": 2.656677037844673,
+        "same_cluster": false
+      },
+      {
+        "benchmark": "502.graph-mst",
+        "neighbor": "503.graph-bfs",
+        "distance": 1.0447646369393,
+        "same_cluster": true
+      },
+      {
+        "benchmark": "503.graph-bfs",
+        "neighbor": "502.graph-mst",
+        "distance": 1.0447646369393,
+        "same_cluster": true
+      },
+      {
+        "benchmark": "504.dna-visualisation",
+        "neighbor": "220.video-processing",
+        "distance": 3.006725540063966,
+        "same_cluster": true
+      }
+    ],
+    "pairs": [
+      {
+        "a": "502.graph-mst",
+        "b": "503.graph-bfs",
+        "distance": 1.0447646369393
+      },
+      {
+        "a": "210.thumbnailer",
+        "b": "502.graph-mst",
+        "distance": 2.3412574815744818
+      },
+      {
+        "a": "110.dynamic-html",
+        "b": "502.graph-mst",
+        "distance": 2.350935634911132
+      },
+      {
+        "a": "210.thumbnailer",
+        "b": "503.graph-bfs",
+        "distance": 2.876394311341871
+      },
+      {
+        "a": "220.video-processing",
+        "b": "504.dna-visualisation",
+        "distance": 3.006725540063966
+      },
+      {
+        "a": "220.video-processing",
+        "b": "411.image-recognition",
+        "distance": 3.0502852234242086
+      },
+      {
+        "a": "110.dynamic-html",
+        "b": "503.graph-bfs",
+        "distance": 3.119131368796685
+      },
+      {
+        "a": "120.uploader",
+        "b": "210.thumbnailer",
+        "distance": 3.124902531503387
+      },
+      {
+        "a": "120.uploader",
+        "b": "502.graph-mst",
+        "distance": 3.3652901804778885
+      },
+      {
+        "a": "120.uploader",
+        "b": "503.graph-bfs",
+        "distance": 3.436377838064205
+      },
+      {
+        "a": "110.dynamic-html",
+        "b": "210.thumbnailer",
+        "distance": 3.778731931286381
+      },
+      {
+        "a": "411.image-recognition",
+        "b": "504.dna-visualisation",
+        "distance": 3.979935211007407
+      }
+    ]
+  },
+  "empty_regions": [
+    {
+      "row": 1,
+      "col": 1,
+      "pc1_center": -1.321617601402477,
+      "pc2_center": -0.644960602955885,
+      "pc1_side": "negative",
+      "pc2_side": "negative",
+      "pc1_features": [
+        "stall_frac",
+        "l2_miss_per_ins",
+        "l1d_miss_per_ins"
+      ],
+      "pc2_features": [
+        "read_syscalls",
+        "write_syscalls",
+        "l3_miss_per_ins"
+      ]
+    },
+    {
+      "row": 1,
+      "col": 2,
+      "pc1_center": -1.321617601402477,
+      "pc2_center": 0.6281964747517486,
+      "pc1_side": "negative",
+      "pc2_side": "positive",
+      "pc1_features": [
+        "stall_frac",
+        "l2_miss_per_ins",
+        "l1d_miss_per_ins"
+      ],
+      "pc2_features": [
+        "dp_flop_per_ins",
+        "cpu_util",
+        "ipc"
+      ]
+    },
+    {
+      "row": 2,
+      "col": 2,
+      "pc1_center": 1.1042436139584586,
+      "pc2_center": 0.6281964747517486,
+      "pc1_side": "positive",
+      "pc2_side": "positive",
+      "pc1_features": [
+        "ipc",
+        "peak_uss_kb",
+        "peak_pss_kb"
+      ],
+      "pc2_features": [
+        "dp_flop_per_ins",
+        "cpu_util",
+        "ipc"
+      ]
+    }
+  ]
+}

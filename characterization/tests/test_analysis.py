@@ -14,6 +14,7 @@ from characterization.analyze import infer_origin, main as analyze_main
 from characterization.cluster import cluster_space, empty_regions, pair_rand
 from characterization.features import prepare_matrix, subset_frame
 from characterization.ingest import (
+    container_image_uri,
     disk_features,
     ingest_tree,
     package_sizes_in_cache_config,
@@ -229,6 +230,24 @@ class IngestTests(unittest.TestCase):
     def test_cache_size_and_perf_median(self):
         sizes = package_sizes_in_cache_config({"aws": {"python": {"code_package": {"size": 12}}}})
         self.assertEqual(sizes, [12])
+        cache = {
+            "openwhisk": {
+                "python": {
+                    "containers": {
+                        "default": {
+                            "3.11": {
+                                "x64": {
+                                    "size": 863,
+                                    "image-uri": "registry.example/function:sleep",
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        self.assertEqual(container_image_uri(cache, "openwhisk"), "registry.example/function:sleep")
+        self.assertIsNone(container_image_uri(cache, "aws"))
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp) / "perf.json"
             path.write_text(

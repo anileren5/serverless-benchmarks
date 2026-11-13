@@ -1,0 +1,14 @@
+{
+  "set": "sp_flops_papi",
+  "columns": {
+    "PAPI_TOT_INS": 160792024.0,
+    "PAPI_SP_OPS": 0.0
+  },
+  "notes": [],
+  "perf_events": [
+    "instructions",
+    "fp_arith_inst_retired.scalar_single",
+    "fp_arith_inst_retired.128b_packed_single",
+    "fp_arith_inst_retired.256b_packed_single"
+  ]
+}

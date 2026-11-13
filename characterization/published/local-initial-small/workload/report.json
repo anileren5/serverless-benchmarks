@@ -1,0 +1,356 @@
+{
+  "provenance": {
+    "git_revision": "1050736392da7bbddce9a8ba7fd205bab2665474",
+    "created_utc": "2026-10-17T16:50:57Z",
+    "seed": 0,
+    "feature_set": "workload",
+    "log_size": false,
+    "origin": "measured",
+    "kaiser_components": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "variance_80_components": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "version_python": "3.14.2",
+    "version_numpy": "2.5.4",
+    "version_pandas": "3.0.6",
+    "version_scipy": "1.18.1",
+    "version_matplotlib": "3.11.2"
+  },
+  "notes": [],
+  "columns": [
+    "ipc",
+    "load_store_frac",
+    "branch_frac",
+    "l1d_miss_per_ins",
+    "l2_miss_per_ins",
+    "l3_miss_per_ins",
+    "stall_frac",
+    "sp_flop_per_ins",
+    "dp_flop_per_ins",
+    "cpu_util",
+    "peak_rss_kb",
+    "peak_pss_kb",
+    "peak_uss_kb",
+    "read_bytes",
+    "write_bytes",
+    "read_syscalls",
+    "write_syscalls",
+    "package_size_bytes"
+  ],
+  "benchmarks": [
+    "010.sleep",
+    "110.dynamic-html",
+    "120.uploader",
+    "130.crud-api",
+    "210.thumbnailer",
+    "220.video-processing",
+    "311.compression",
+    "411.image-recognition",
+    "501.graph-pagerank",
+    "502.graph-mst",
+    "503.graph-bfs",
+    "504.dna-visualisation"
+  ],
+  "eigenvalues": [
+    7.329306705913146,
+    4.193122995296121,
+    2.3960445230568137,
+    1.5268504560114997,
+    1.077611620988897,
+    0.6745293181790817,
+    0.4950172086638085,
+    0.20001666738275511,
+    0.08963381418548373,
+    0.017440755475985156,
+    0.0004259348464021323,
+    1.8684490676880664e-31
+  ],
+  "variance_ratio": [
+    0.4071837058840639,
+    0.2329512775164513,
+    0.1331135846142675,
+    0.08482502533397225,
+    0.05986731227716098,
+    0.037473851009949,
+    0.027500956036878264,
+    0.011112037076819735,
+    0.004979656343637988,
+    0.0009689308597769537,
+    2.3663047022340696e-05,
+    1.0380272598267042e-32
+  ],
+  "kaiser_components": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "variance_80_components": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "bic": [
+    {
+      "k": 1,
+      "bic": -125.84003809411162,
+      "inertia": 181.7522993139313
+    },
+    {
+      "k": 2,
+      "bic": -120.46505845998615,
+      "inertia": 123.52001717850737
+    },
+    {
+      "k": 3,
+      "bic": -110.90375310800995,
+      "inertia": 73.011538682613
+    },
+    {
+      "k": 4,
+      "bic": -98.14631946196647,
+      "inertia": 38.79510777679492
+    },
+    {
+      "k": 5,
+      "bic": -89.17584281697937,
+      "inertia": 23.38752377427256
+    },
+    {
+      "k": 6,
+      "bic": -78.09707384261166,
+      "inertia": 13.142284479634094
+    }
+  ],
+  "selected_k": 6,
+  "clusters": {
+    "0": [
+      "010.sleep",
+      "130.crud-api"
+    ],
+    "1": [
+      "110.dynamic-html",
+      "220.video-processing",
+      "311.compression",
+      "502.graph-mst",
+      "503.graph-bfs"
+    ],
+    "2": [
+      "120.uploader",
+      "210.thumbnailer"
+    ],
+    "3": [
+      "411.image-recognition"
+    ],
+    "4": [
+      "501.graph-pagerank"
+    ],
+    "5": [
+      "504.dna-visualisation"
+    ]
+  },
+  "hierarchical_rand": 1.0,
+  "sensitivity_rand": 1.0,
+  "redundancy": {
+    "note": "A pair is redundant when both benchmarks share a k-means cluster and their distance is at or below the 25th percentile of pairwise distances (3.4055).",
+    "threshold": 3.4055355623223234,
+    "nearest": [
+      {
+        "benchmark": "010.sleep",
+        "neighbor": "130.crud-api",
+        "distance": 2.2781121281379066,
+        "same_cluster": true
+      },
+      {
+        "benchmark": "110.dynamic-html",
+        "neighbor": "311.compression",
+        "distance": 1.8256605010198106,
+        "same_cluster": true
+      },
+      {
+        "benchmark": "120.uploader",
+        "neighbor": "210.thumbnailer",
+        "distance": 1.27748018012001,
+        "same_cluster": true
+      },
+      {
+        "benchmark": "130.crud-api",
+        "neighbor": "010.sleep",
+        "distance": 2.2781121281379066,
+        "same_cluster": true
+      },
+      {
+        "benchmark": "210.thumbnailer",
+        "neighbor": "120.uploader",
+        "distance": 1.27748018012001,
+        "same_cluster": true
+      },
+      {
+        "benchmark": "220.video-processing",
+        "neighbor": "311.compression",
+        "distance": 2.1937414864180367,
+        "same_cluster": true
+      },
+      {
+        "benchmark": "311.compression",
+        "neighbor": "110.dynamic-html",
+        "distance": 1.8256605010198106,
+        "same_cluster": true
+      },
+      {
+        "benchmark": "411.image-recognition",
+        "neighbor": "220.video-processing",
+        "distance": 7.586672448869615,
+        "same_cluster": false
+      },
+      {
+        "benchmark": "501.graph-pagerank",
+        "neighbor": "503.graph-bfs",
+        "distance": 3.407775951234981,
+        "same_cluster": false
+      },
+      {
+        "benchmark": "502.graph-mst",
+        "neighbor": "503.graph-bfs",
+        "distance": 0.13902479488100195,
+        "same_cluster": true
+      },
+      {
+        "benchmark": "503.graph-bfs",
+        "neighbor": "502.graph-mst",
+        "distance": 0.13902479488100195,
+        "same_cluster": true
+      },
+      {
+        "benchmark": "504.dna-visualisation",
+        "neighbor": "220.video-processing",
+        "distance": 5.071421757755719,
+        "same_cluster": false
+      }
+    ],
+    "pairs": [
+      {
+        "a": "502.graph-mst",
+        "b": "503.graph-bfs",
+        "distance": 0.13902479488100195
+      },
+      {
+        "a": "120.uploader",
+        "b": "210.thumbnailer",
+        "distance": 1.27748018012001
+      },
+      {
+        "a": "110.dynamic-html",
+        "b": "311.compression",
+        "distance": 1.8256605010198106
+      },
+      {
+        "a": "110.dynamic-html",
+        "b": "502.graph-mst",
+        "distance": 1.916610476917492
+      },
+      {
+        "a": "311.compression",
+        "b": "503.graph-bfs",
+        "distance": 1.9351016144011006
+      },
+      {
+        "a": "110.dynamic-html",
+        "b": "503.graph-bfs",
+        "distance": 1.9508417176946276
+      },
+      {
+        "a": "311.compression",
+        "b": "502.graph-mst",
+        "distance": 1.9789101928039456
+      },
+      {
+        "a": "220.video-processing",
+        "b": "311.compression",
+        "distance": 2.1937414864180367
+      },
+      {
+        "a": "010.sleep",
+        "b": "130.crud-api",
+        "distance": 2.2781121281379066
+      },
+      {
+        "a": "220.video-processing",
+        "b": "503.graph-bfs",
+        "distance": 2.5441823095197456
+      },
+      {
+        "a": "220.video-processing",
+        "b": "502.graph-mst",
+        "distance": 2.566652577356832
+      }
+    ]
+  },
+  "empty_regions": [
+    {
+      "row": 1,
+      "col": 2,
+      "pc1_center": -0.06895427064635506,
+      "pc2_center": 1.776517362112192,
+      "pc1_side": "negative",
+      "pc2_side": "positive",
+      "pc1_features": [
+        "stall_frac",
+        "l1d_miss_per_ins",
+        "l2_miss_per_ins"
+      ],
+      "pc2_features": [
+        "read_syscalls",
+        "sp_flop_per_ins",
+        "write_syscalls"
+      ]
+    },
+    {
+      "row": 2,
+      "col": 1,
+      "pc1_center": 2.365922395153794,
+      "pc2_center": -0.012681672175306025,
+      "pc1_side": "positive",
+      "pc2_side": "negative",
+      "pc1_features": [
+        "ipc",
+        "package_size_bytes",
+        "peak_rss_kb"
+      ],
+      "pc2_features": [
+        "ipc",
+        "cpu_util",
+        "dp_flop_per_ins"
+      ]
+    },
+    {
+      "row": 2,
+      "col": 2,
+      "pc1_center": 2.365922395153794,
+      "pc2_center": 1.776517362112192,
+      "pc1_side": "positive",
+      "pc2_side": "positive",
+      "pc1_features": [
+        "ipc",
+        "package_size_bytes",
+        "peak_rss_kb"
+      ],
+      "pc2_features": [
+        "read_syscalls",
+        "sp_flop_per_ins",
+        "write_syscalls"
+      ]
+    }
+  ]
+}

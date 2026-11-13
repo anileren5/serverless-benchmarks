@@ -354,6 +354,31 @@ def package_size_for_deployment(payload: dict, deployment: str) -> int | None:
     return sizes[-1] if sizes else None
 
 
+def container_image_uri(payload: dict, deployment: str) -> str | None:
+    """Return the deployed container image URI stored in a SeBS cache config.
+
+    OpenWhisk's cache ``size`` is the stub zip uploaded beside the image. The
+    image URI identifies the artifact that actually ran.
+    """
+    node = payload.get(deployment)
+    found: list[str] = []
+
+    def walk(value: object) -> None:
+        if isinstance(value, dict):
+            uri = value.get("image-uri")
+            if isinstance(uri, str) and uri:
+                found.append(uri)
+            for child in value.values():
+                walk(child)
+        elif isinstance(value, list):
+            for child in value:
+                walk(child)
+
+    if isinstance(node, dict):
+        walk(node)
+    return found[-1] if found else None
+
+
 def package_sizes_in_cache_config(payload: dict) -> list[int]:
     """Collect integer ``size`` fields from a SeBS cache ``config.json``."""
     found: list[int] = []
@@ -398,8 +423,22 @@ def _classify_file(path: Path) -> str | None:
     return None
 
 
-def features_from_benchmark_dir(directory: Path) -> dict[str, float]:
-    """Parse every recognized measurement file under one benchmark directory."""
+def _time_repetitions(paths: list[Path]) -> int:
+    """Handler calls in the uninstrumented timer, one row per call."""
+    count = 0
+    for path in paths:
+        _header, rows = _read_rows(path)
+        count += len(rows)
+    return count
+
+
+def features_from_benchmark_dir(directory: Path, per_call_io: bool = False) -> dict[str, float]:
+    """Parse every recognized measurement file under one benchmark directory.
+
+    ``per_call_io`` divides the cumulative disk counters by the number of
+    uninstrumented handler calls. Ratios and peaks are already per call.
+    The division matters when a tree mixes repetition counts.
+    """
     grouped: dict[str, list[Path]] = {}
     for path in directory.rglob("*"):
         if not path.is_file():
@@ -414,6 +453,12 @@ def features_from_benchmark_dir(directory: Path) -> dict[str, float]:
     features.update(time_features(grouped.get("time", [])))
     features.update(perf_cost_features(grouped.get("perf", [])))
     features.update(package_features(grouped.get("package", [])))
+    if per_call_io:
+        repetitions = _time_repetitions(grouped.get("time", []))
+        if repetitions > 0:
+            for key in ("read_bytes", "write_bytes", "read_syscalls", "write_syscalls"):
+                if key in features:
+                    features[key] = features[key] / repetitions
     return features
 
 
@@ -437,14 +482,14 @@ def iter_benchmark_dirs(root: Path):
         yield "local", benchmark_dir.name, benchmark_dir
 
 
-def ingest_tree(root: Path, manifest: dict | None = None) -> pd.DataFrame:
+def ingest_tree(root: Path, manifest: dict | None = None, per_call_io: bool = False) -> pd.DataFrame:
     """Build the feature table for a raw results tree."""
     meta = manifest or {}
     if (root / "manifest.json").is_file():
         meta = {**json.loads((root / "manifest.json").read_text()), **meta}
     rows = []
     for platform, benchmark, directory in iter_benchmark_dirs(root):
-        measured = features_from_benchmark_dir(directory)
+        measured = features_from_benchmark_dir(directory, per_call_io=per_call_io)
         if not measured:
             continue
         row = {
@@ -468,13 +513,18 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--out", required=True, type=Path, help="Destination features.csv.")
     parser.add_argument("--language", default=None)
     parser.add_argument("--input-size", default=None)
+    parser.add_argument(
+        "--per-call-io",
+        action="store_true",
+        help="Divide local disk counters by the uninstrumented repetition count.",
+    )
     args = parser.parse_args(argv)
     manifest = {}
     if args.language:
         manifest["language"] = args.language
     if args.input_size:
         manifest["input_size"] = args.input_size
-    frame = ingest_tree(args.results, manifest or None)
+    frame = ingest_tree(args.results, manifest or None, per_call_io=args.per_call_io)
     args.out.parent.mkdir(parents=True, exist_ok=True)
     frame.to_csv(args.out, index=False)
     print(f"Wrote {len(frame)} rows to {args.out}")

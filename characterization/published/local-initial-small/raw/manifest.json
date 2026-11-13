@@ -1,0 +1,52 @@
+{
+  "language": "python",
+  "input_size": "small",
+  "origin": "measured",
+  "platforms": [
+    "local"
+  ],
+  "container_memory": "2g",
+  "images": {
+    "measure": "sebs-char-measure:local",
+    "measure_id": "sha256:5de553c22291f2087dbe91468f8d43f5b8386c007d298a8657358ff031b6c933",
+    "minio": "pgsty/silo@sha256:aaac6bce13eb99316b3c88bd20143fc3c38ab607585256a411a095c44ee57f62",
+    "dynamodb": "amazon/dynamodb-local@sha256:6ada631ec7aa5fc83446855eb17233e3dad184fec47477e8140c6c569cfe0c86"
+  },
+  "repetitions": {
+    "110.dynamic-html": 3,
+    "120.uploader": 1,
+    "130.crud-api": 3,
+    "210.thumbnailer": 3,
+    "220.video-processing": 1,
+    "311.compression": 1,
+    "411.image-recognition": 1,
+    "501.graph-pagerank": 3,
+    "502.graph-mst": 3,
+    "503.graph-bfs": 3,
+    "504.dna-visualisation": 1,
+    "010.sleep": 1
+  },
+  "succeeded": [
+    "110.dynamic-html",
+    "501.graph-pagerank",
+    "502.graph-mst",
+    "503.graph-bfs",
+    "010.sleep",
+    "120.uploader",
+    "130.crud-api",
+    "210.thumbnailer",
+    "220.video-processing",
+    "411.image-recognition",
+    "504.dna-visualisation",
+    "311.compression"
+  ],
+  "method": "Privileged container pinned to one P-core. PAPI 7 and the bundled PAPI 5.5 report no PMU on this hybrid CPU (libpfm: no default PMU), so counts come from perf stat on cpu_core. Columns keep the PAPI names ingest expects: cycles, instructions, cycle_activity.stalls_total as PAPI_STL_ICY, mem_inst_retired loads+stores as PAPI_LST_INS, branch-instructions as PAPI_BR_INS, mem_load_retired l1/l2/l3 misses, and width-weighted fp_arith_inst_retired as SP/DP ops. Groups are separate runs and were checked to run at 100% (no multiplexing). Time, peak memory including child processes, and /proc/self/io come from an uninstrumented run. CPU time includes reaped children. Initial sample, not 30 repetitions.",
+  "host": {
+    "cpu_model": "Intel(R) Core(TM) i7-14700HX",
+    "pinned_cpu": 4,
+    "scaling_governor": "powersave",
+    "perf_event_paranoid": 1,
+    "git": "10507363",
+    "uname": "x86_64"
+  }
+}

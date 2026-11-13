@@ -456,7 +456,7 @@ class OpenWhisk(System):
                         "--docker",
                         docker_image_name,
                         "--memory",
-                        str(code_package.benchmark_config.memory),
+                        str(self._action_memory(None, code_package)),
                         "--timeout",
                         str(code_package.benchmark_config.timeout * 1000),
                         *self.storage_arguments(code_package),
@@ -556,7 +556,7 @@ class OpenWhisk(System):
                 "--docker",
                 docker_image,
                 "--memory",
-                str(code_package.benchmark_config.memory),
+                str(self._action_memory(function, code_package)),
                 "--timeout",
                 str(code_package.benchmark_config.timeout * 1000),
                 *self.storage_arguments(code_package),
@@ -604,7 +604,7 @@ class OpenWhisk(System):
                     "update",
                     function.name,
                     "--memory",
-                    str(code_package.benchmark_config.memory),
+                    str(self._action_memory(function, code_package)),
                     "--timeout",
                     str(code_package.benchmark_config.timeout * 1000),
                     *self.storage_arguments(code_package),
@@ -681,18 +681,75 @@ class OpenWhisk(System):
             f"{code_package.language_name}-{code_package.language_version}"
         )
 
+    @staticmethod
+    def _action_memory(function: Optional[Function], code_package: Benchmark) -> int:
+        """Memory the action should actually receive.
+
+        perf-cost writes the requested size onto the function. The benchmark
+        file keeps its own default (often 128), and passing that default makes
+        every sample run at the wrong size.
+        """
+        if function is not None and function.config.memory:
+            return int(function.config.memory)
+        return int(code_package.benchmark_config.memory)
+
     def enforce_cold_start(self, functions: List[Function], code_package: Benchmark) -> None:
-        """
-        Enforce cold start for functions (not implemented for OpenWhisk).
+        """Force the next invocation onto a new container.
 
-        Args:
-            functions: List of functions to enforce cold start for
-            code_package: Benchmark package configuration
-
-        Raises:
-            NotImplementedError: Cold start enforcement not implemented for OpenWhisk
+        OpenWhisk reuses a paused container until the action revision changes.
+        A new annotation bumps that revision, the same mechanism SeBS uses on
+        Lambda. The previous container is then removed so it does not keep
+        holding the invoker memory pool.
         """
-        raise NotImplementedError()
+        self.cold_start_counter = getattr(self, "cold_start_counter", 0) + 1
+        for func in functions:
+            try:
+                subprocess.run(
+                    [
+                        *self.get_wsk_cmd(),
+                        "action",
+                        "update",
+                        func.name,
+                        "--memory",
+                        str(self._action_memory(func, code_package)),
+                        "--timeout",
+                        str(code_package.benchmark_config.timeout * 1000),
+                        "--annotation",
+                        "sebs_coldstart",
+                        str(self.cold_start_counter),
+                    ],
+                    stderr=subprocess.PIPE,
+                    stdout=subprocess.PIPE,
+                    check=True,
+                )
+            except (FileNotFoundError, subprocess.CalledProcessError) as exc:
+                detail = exc.stderr.decode("utf-8") if isinstance(exc, subprocess.CalledProcessError) else str(exc)
+                raise RuntimeError(f"Could not mark {func.name} for a cold start: {detail}") from exc
+            self._delete_action_pods(func.name)
+        self.logging.info("Updated OpenWhisk actions to force a new container.")
+
+    def _delete_action_pods(self, function_name: str) -> None:
+        needle = function_name.replace("/", "-")
+        try:
+            listed = subprocess.run(
+                ["kubectl", "get", "pods", "-n", "openwhisk", "-o", "name"],
+                check=True,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True,
+            )
+        except (FileNotFoundError, subprocess.CalledProcessError) as exc:
+            self.logging.info(f"Could not list action pods for {function_name}: {exc}")
+            return
+        for line in listed.stdout.splitlines():
+            if needle not in line:
+                continue
+            subprocess.run(
+                ["kubectl", "delete", "-n", "openwhisk", line, "--wait=false"],
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+                check=False,
+            )
 
     def download_metrics(
         self,

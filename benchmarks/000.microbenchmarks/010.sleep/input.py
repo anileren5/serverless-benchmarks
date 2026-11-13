@@ -5,7 +5,10 @@ from math import isclose
 size_generators = {
     'test' : 1,
     'small' : 100,
-    'large': 1000
+    # OpenWhisk on this cluster caps an action at 5 minutes, and the timeout
+    # covers the whole handler. 280s leaves the same 20s margin this benchmark
+    # uses for the small input (100s sleep, 120s timeout).
+    'large': 280
 }
 
 def buckets_count():

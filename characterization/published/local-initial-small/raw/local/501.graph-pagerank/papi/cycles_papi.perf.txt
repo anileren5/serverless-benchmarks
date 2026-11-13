@@ -1,0 +1,7 @@
+# started on Sat Oct 17 16:37:37 2026
+
+693969391;;cpu_core/cycles/;197081036;100.00;;
+<not counted>;;cpu_atom/cycles/;0;0.00;;
+1432650163;;cpu_core/instructions/;197081036;100.00;;
+<not counted>;;cpu_atom/instructions/;0;0.00;;
+224869801;;cpu_core/cycle_activity.stalls_total/;197081036;100.00;;

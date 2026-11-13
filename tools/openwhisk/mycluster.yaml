@@ -1,0 +1,26 @@
+whisk:
+  ingress:
+    type: NodePort
+    apiHostName: localhost
+    apiHostPort: 31001
+    useInternally: false
+  limits:
+    actions:
+      memory:
+        min: "128m"
+        max: "2048m"
+        std: "256m"
+  containerPool:
+    userMemory: "3072m"
+
+nginx:
+  httpsNodePort: 31001
+
+affinity:
+  enabled: false
+toleration:
+  enabled: false
+invoker:
+  options: "-Dwhisk.kubernetes.user-pod-node-affinity.enabled=false"
+  containerFactory:
+    impl: "kubernetes"

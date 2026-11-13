@@ -1,0 +1,14 @@
+{
+  "set": "dp_flops_papi",
+  "columns": {
+    "PAPI_TOT_INS": 1138405548.0,
+    "PAPI_DP_OPS": 246.0
+  },
+  "notes": [],
+  "perf_events": [
+    "instructions",
+    "fp_arith_inst_retired.scalar_double",
+    "fp_arith_inst_retired.128b_packed_double",
+    "fp_arith_inst_retired.256b_packed_double"
+  ]
+}

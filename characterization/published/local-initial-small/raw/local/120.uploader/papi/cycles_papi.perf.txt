@@ -1,0 +1,7 @@
+# started on Sat Oct 17 16:48:25 2026
+
+518512402;;cpu_core/cycles/;162912149;100.00;;
+<not counted>;;cpu_atom/cycles/;0;0.00;;
+1154923750;;cpu_core/instructions/;162912149;100.00;;
+<not counted>;;cpu_atom/instructions/;0;0.00;;
+175388542;;cpu_core/cycle_activity.stalls_total/;162912149;100.00;;

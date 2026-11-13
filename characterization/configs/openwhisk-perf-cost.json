@@ -13,11 +13,16 @@
     "type": "perf-cost",
     "perf-cost": {
       "benchmark": "110.dynamic-html",
-      "experiments": ["cold", "warm"],
+      "experiments": [
+        "cold",
+        "warm"
+      ],
       "input-size": "small",
       "repetitions": 30,
       "concurrent-invocations": 1,
-      "memory-sizes": [2048]
+      "memory-sizes": [
+        2048
+      ]
     }
   },
   "deployment": {
@@ -30,7 +35,7 @@
       "experimentalManifest": false,
       "dockerhubRepository": null,
       "docker_registry": {
-        "registry": "",
+        "registry": "172.18.0.1:5000",
         "username": "",
         "password": ""
       },
@@ -38,13 +43,30 @@
         "object": {
           "type": "minio",
           "minio": {
-            "address": "",
-            "mapped_port": -1,
-            "access_key": "",
-            "secret_key": "",
-            "instance_id": "",
+            "address": "172.18.0.1:9011",
+            "mapped_port": 9011,
+            "access_key": "sebsaccess",
+            "secret_key": "sebssecret",
+            "instance_id": "aa545b46bc0bd1ef27960db68784a185de8f507a8c77967aedf375d64a79d8ef",
             "input_buckets": [],
             "output_buckets": []
+          }
+        },
+        "nosql": {
+          "type": "scylladb",
+          "scylladb": {
+            "address": "172.18.0.1:9012",
+            "mapped_port": 9012,
+            "alternator_port": 8000,
+            "access_key": "None",
+            "secret_key": "None",
+            "instance_id": "2ed434d605168abd461bce8089980f746dc6b47ea27dd549d7f7ac2703f94d17",
+            "region": "None",
+            "cpus": 1,
+            "memory": 750,
+            "version": "6.0",
+            "data_volume": "scylladb-volume",
+            "remove_containers": false
           }
         }
       }

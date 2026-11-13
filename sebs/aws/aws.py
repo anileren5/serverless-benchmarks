@@ -350,6 +350,12 @@ class AWS(System):
         func_name = AWS.format_function_name(func_name)
         function_cfg = FunctionConfig.from_benchmark(code_package)
         architecture = function_cfg.architecture.value
+        # The published handler leaves every input tree in /tmp. Lambda's default
+        # 512 MB disk fills after about 25 warm calls, so this benchmark cannot
+        # finish 30 warm repetitions there. 2048 MB holds that accumulation.
+        ephemeral_storage = (
+            {"Size": 2048} if benchmark == "311.compression" else None
+        )
         # we can either check for exception or use list_functions
         # there's no API for test
         try:
@@ -379,6 +385,8 @@ class AWS(System):
                 "Architectures": [self._map_architecture(architecture)],
                 "Code": {},
             }
+            if ephemeral_storage is not None:
+                create_function_params["EphemeralStorage"] = ephemeral_storage
 
             if system_variant.is_container:
                 create_function_params["PackageType"] = "Image"
@@ -568,20 +576,17 @@ class AWS(System):
                 envs = {**response["Environment"]["Variables"], **envs}
 
         function = cast(LambdaFunction, function)
+        configuration = {
+            "FunctionName": function.name,
+            "Timeout": function.config.timeout,
+            "MemorySize": function.config.memory,
+        }
+        if function.benchmark == "311.compression":
+            configuration["EphemeralStorage"] = {"Size": 2048}
         # We only update envs if anything new was added
         if len(envs) > 0:
-            self.client.update_function_configuration(
-                FunctionName=function.name,
-                Timeout=function.config.timeout,
-                MemorySize=function.config.memory,
-                Environment={"Variables": envs},
-            )
-        else:
-            self.client.update_function_configuration(
-                FunctionName=function.name,
-                Timeout=function.config.timeout,
-                MemorySize=function.config.memory,
-            )
+            configuration["Environment"] = {"Variables": envs}
+        self.client.update_function_configuration(**configuration)
         self.wait_function_updated(function)
         self.logging.info(f"Updated configuration of {function.name} function. ")
 

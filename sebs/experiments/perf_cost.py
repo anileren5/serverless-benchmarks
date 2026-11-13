@@ -120,6 +120,10 @@ class PerfCost(Experiment):
         self._benchmark = sebs_client.get_benchmark(
             settings["benchmark"], deployment_client, self.config
         )
+        # The benchmark JSON stores the timeout for the small input. A larger
+        # input can pass its own timeout in the experiment settings.
+        if settings.get("timeout") is not None:
+            self._benchmark.benchmark_config.timeout = int(settings["timeout"])
 
         # Prepare benchmark input
         self._benchmark_input = self._benchmark.prepare_input(
@@ -148,6 +152,44 @@ class PerfCost(Experiment):
         # Save clients for later use
         self._deployment_client = deployment_client
         self._sebs_client = sebs_client
+        self._storage_cleanup = None
+
+    def _release_uploaded_object(self, ret) -> None:
+        """Remove a MinIO object once its invocation has been recorded.
+
+        OpenWhisk storage is a local MinIO, and the large uploader writes a new
+        object on every call. The invocation timing is already captured.
+        """
+        if self._storage_cleanup is False:
+            return
+        output = getattr(ret, "output", None)
+        result = output.get("result") if isinstance(output, dict) else None
+        if not isinstance(result, dict):
+            return
+        # The OpenWhisk wrapper nests the handler body one level down.
+        nested = result.get("result")
+        if isinstance(nested, dict) and "bucket" in nested:
+            result = nested
+        bucket, key = result.get("bucket"), result.get("key")
+        if not isinstance(bucket, str) or not isinstance(key, str) or not bucket or not key:
+            return
+        if self._storage_cleanup is None:
+            try:
+                storage = self._deployment_client.system_resources.get_storage(
+                    replace_existing=False
+                )
+            except Exception:
+                self._storage_cleanup = False
+                return
+            connection = getattr(storage, "connection", None)
+            if connection is None or not hasattr(connection, "remove_object"):
+                self._storage_cleanup = False
+                return
+            self._storage_cleanup = connection
+        try:
+            self._storage_cleanup.remove_object(bucket, key)
+        except Exception:
+            self.logging.info("Could not remove the uploaded object after the sample")
 
     def run(self) -> None:
         """Run the experiment.
@@ -301,6 +343,7 @@ class PerfCost(Experiment):
                     for res in results:
                         try:
                             ret = res.get()
+                            self._release_uploaded_object(ret)
                             if first_iteration:
                                 continue
                             if run_type == PerfCost.RunType.COLD and not ret.stats.cold_start:

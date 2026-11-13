@@ -1,0 +1,15 @@
+{
+  "benchmark": "412.image-recognition-onnx",
+  "configurations": [
+    {
+      "name": "onnx-thread-sweep",
+      "description": "ResNet-50 inference in ONNX Runtime across intra-op thread counts, with and without spinning workers.",
+      "input-size": "small",
+      "input": {"threads": [1, 2, 3, 4, 8], "order": "shuffled"},
+      "memory-sizes": [640, 1024, 1769, 3008],
+      "omp-wait-policies": [null, "passive"],
+      "repetitions": 16,
+      "concurrent-invocations": 8
+    }
+  ]
+}

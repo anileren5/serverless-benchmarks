@@ -1,0 +1,3 @@
+# 1.16 is the last release with manylinux2014 wheels; the Lambda Python 3.11 runtime has glibc 2.26.
+onnxruntime==1.16.3
+numpy==1.26.4

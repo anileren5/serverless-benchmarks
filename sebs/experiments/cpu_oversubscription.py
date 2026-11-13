@@ -371,7 +371,10 @@ def benchmark_result(output: dict) -> dict:
 
 
 def flatten(record: dict) -> List[dict]:
-    """One row per Jacobi run; failed invocations become a single row without kernel data."""
+    """One row per kernel run; failed invocations become a single row without kernel data.
+
+    Kernel runs are the Jacobi sweeps of 505.cpu-oversubscription or the inference runs
+    of 412.image-recognition-onnx; only the former measures the effective CPUs."""
     invocation = {
         key: record.get(key)
         for key in (
@@ -402,7 +405,7 @@ def flatten(record: dict) -> List[dict]:
         return [invocation]
     env = benchmark["environment"]
     cgroup = env.get("cgroup", {})
-    effective = benchmark["effective_cpus"]
+    effective = benchmark.get("effective_cpus") or {}
     invocation.update(
         {
             "omp_wait_policy_effective": env.get("omp_wait_policy"),
@@ -413,11 +416,14 @@ def flatten(record: dict) -> List[dict]:
             "cpu_max": cgroup.get("/sys/fs/cgroup/cpu.max"),
             "cpu_weight": cgroup.get("/sys/fs/cgroup/cpu.weight"),
             "cpuset_effective": cgroup.get("/sys/fs/cgroup/cpuset.cpus.effective"),
-            "effective_cpus": effective["effective_cpus"],
+            "effective_cpus": effective.get("effective_cpus"),
+            "default_threads": env.get(
+                "onnxruntime_default_threads", env.get("omp_default_threads")
+            ),
         }
     )
     rows = []
-    for run in benchmark["jacobi"]:
+    for run in benchmark.get("jacobi", benchmark.get("runs", [])):
         throttling = run.get("cgroup_cpu_stat_delta") or {}
         periods = throttling.get("nr_periods")
         throttled = throttling.get("nr_throttled")

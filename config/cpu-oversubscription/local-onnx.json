@@ -1,0 +1,43 @@
+{
+  "benchmark": "412.image-recognition-onnx",
+  "configurations": [
+    {
+      "name": "onnx-mechanisms",
+      "description": "ONNX Runtime under each Linux CPU mechanism; is the default pool sized from the affinity mask?",
+      "input-size": "small",
+      "input": {
+        "threads": [
+          1,
+          2,
+          3,
+          4,
+          8
+        ],
+        "order": "shuffled"
+      },
+      "cpu-limits": [
+        {
+          "name": "unlimited"
+        },
+        {
+          "name": "cpuset-2",
+          "cpuset": "0-1"
+        },
+        {
+          "name": "quota-2",
+          "cpus": 2
+        },
+        {
+          "name": "model-640MB",
+          "cpuset": "0-1",
+          "cpus": 0.36
+        }
+      ],
+      "omp-wait-policies": [
+        null,
+        "passive"
+      ],
+      "repetitions": 8
+    }
+  ]
+}

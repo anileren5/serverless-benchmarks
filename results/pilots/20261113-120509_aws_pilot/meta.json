@@ -1,0 +1,42 @@
+{
+  "sebs_version": "1.1.0",
+  "git_commit": "d7a9e875ee80e2e778b3bc9cb6a7d88de5445d63",
+  "git_branch": "feature/cpu-quota-oversubscription",
+  "git_dirty_files": [
+    "M sebs/experiments/__init__.py",
+    " M sebs/experiments/config.py",
+    " M sebs/experiments/cpu_oversubscription.py",
+    " M sebs/sebs.py",
+    " M tools/cpu_oversubscription.sh",
+    "?? benchmarks/500.scientific/506.data-parallel-sgd/",
+    "?? config/gang-scheduling/",
+    "?? sebs/experiments/gang_scheduling.py",
+    "?? sebs/experiments/recorded_run.py"
+  ],
+  "benchmark_hash": "517067962f283babc67a924566482ad0",
+  "function_name": "sebs_65d44790_506_data_parallel_sgd_python_3_11_x64",
+  "command": [
+    "./sebs.py",
+    "experiment",
+    "invoke",
+    "gang-scheduling",
+    "--config",
+    "/tmp/tmp.5GI8KUol7O.json",
+    "--deployment",
+    "aws",
+    "--architecture",
+    "x64",
+    "--language-version",
+    "3.11",
+    "--output-dir",
+    "results"
+  ],
+  "client": {
+    "hostname": "emilio-desktop2",
+    "kernel": "7.0.0-43-generic",
+    "cpus": 32,
+    "python": "3.13.13"
+  },
+  "begin": "2026-11-13T12:05:09.084541",
+  "end": "2026-11-13T12:05:55.050205"
+}

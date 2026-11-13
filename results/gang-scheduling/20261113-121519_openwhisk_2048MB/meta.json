@@ -1,0 +1,33 @@
+{
+  "sebs_version": "1.1.0",
+  "git_commit": "f62e77ad74b528e03ed954973e415ecf4c446693",
+  "git_branch": "feature/cpu-quota-oversubscription",
+  "git_dirty_files": [],
+  "benchmark_hash": "b22f0bb8bcc70c2d54bfc702f6c6d5a8",
+  "function_name": "sebs-e94eca58-506.data-parallel-sgd-python-3.11",
+  "command": [
+    "./sebs.py",
+    "experiment",
+    "invoke",
+    "gang-scheduling",
+    "--config",
+    "/tmp/tmp.yjlqRdzbcc.json",
+    "--deployment",
+    "openwhisk",
+    "--architecture",
+    "x64",
+    "--language-version",
+    "3.11",
+    "--container-deployment",
+    "--output-dir",
+    "results"
+  ],
+  "client": {
+    "hostname": "emilio-desktop2",
+    "kernel": "7.0.0-43-generic",
+    "cpus": 32,
+    "python": "3.13.13"
+  },
+  "begin": "2026-11-13T12:15:19.921751",
+  "end": "2026-11-13T12:20:46.925706"
+}

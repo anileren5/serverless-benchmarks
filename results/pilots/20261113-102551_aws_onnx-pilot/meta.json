@@ -1,0 +1,46 @@
+{
+  "sebs_version": "1.1.0",
+  "git_commit": "ff275e90cef459f00f80d348799af0fbbf40045b",
+  "git_branch": "feature/cpu-quota-oversubscription",
+  "git_dirty_files": [
+    "M sebs/experiments/cpu_oversubscription.py",
+    "?? benchmarks/400.inference/412.image-recognition-onnx/",
+    "?? config/cpu-oversubscription/aws-onnx.json"
+  ],
+  "benchmark_hash": "995c026df2c180acf0906bba3d348c0b",
+  "function_name": "sebs_65d44790_412_image_recognition_onnx_python_3_11_x64",
+  "command": [
+    "./sebs.py",
+    "experiment",
+    "invoke",
+    "cpu-oversubscription",
+    "--config",
+    "/tmp/tmp.cRHZ9QqNfE.json",
+    "--deployment",
+    "aws",
+    "--architecture",
+    "x64",
+    "--language-version",
+    "3.11",
+    "--output-dir",
+    "results"
+  ],
+  "client": {
+    "hostname": "emilio-desktop2",
+    "kernel": "7.0.0-43-generic",
+    "cpus": 32,
+    "python": "3.13.13",
+    "load_average_begin": [
+      0.90185546875,
+      0.708984375,
+      0.33349609375
+    ],
+    "load_average_end": [
+      0.0751953125,
+      0.3017578125,
+      0.2578125
+    ]
+  },
+  "begin": "2026-11-13T10:25:51.029295",
+  "end": "2026-11-13T10:31:15.619116"
+}

@@ -1,0 +1,69 @@
+{
+  "experiment": {
+    "benchmark": "412.image-recognition-onnx",
+    "configurations": [
+      {
+        "name": "ow-onnx-idle",
+        "description": "One action at a time; with user-cpus each action gets a hard quota proportional to memory.",
+        "input-size": "small",
+        "input": {
+          "inferences": 2,
+          "threads": [
+            1,
+            2,
+            4,
+            8,
+            16,
+            32
+          ],
+          "order": "shuffled"
+        },
+        "memory-sizes": [
+          1024
+        ],
+        "omp-wait-policies": [
+          null,
+          "passive"
+        ],
+        "repetitions": 8,
+        "concurrent-invocations": 1
+      },
+      {
+        "name": "ow-onnx-colocated-8x1024",
+        "description": "8 concurrent actions fill the invoker; each sees all host CPUs.",
+        "input-size": "small",
+        "input": {
+          "inferences": 2,
+          "threads": [
+            1,
+            2,
+            4,
+            8,
+            16,
+            32
+          ],
+          "order": "shuffled"
+        },
+        "memory-sizes": [
+          1024
+        ],
+        "omp-wait-policies": [
+          null,
+          "passive"
+        ],
+        "repetitions": 16,
+        "concurrent-invocations": 8
+      }
+    ],
+    "label": "onnx_user-cpus"
+  },
+  "deployment": {
+    "name": "openwhisk",
+    "region": ""
+  },
+  "runtime": {
+    "language": "python",
+    "version": "3.11"
+  },
+  "architecture": "x64"
+}

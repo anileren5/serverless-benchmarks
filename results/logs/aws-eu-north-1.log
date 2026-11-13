@@ -1,0 +1,468 @@
+[14:57:26.295477] SeBS-6a55 Created experiment output at /home/emilio/projects/DPHPC/serverless-benchmarks/results
+[14:57:26.887508] AWS.Resources-f4cd Using cached resources for AWS
+[14:57:26.887666] AWS.Config-713f Using cached config for AWS
+[14:57:26.921606] AWS-ae5d Using existing resource name: 65d44790.
+[14:57:26.929170] AWS-ae5d Using existing resource name: 65d44790.
+[14:57:26.930667] AWS.SystemResources-e4a7 Initialize S3 storage instance.
+[14:57:26.948411] Benchmark-956f Using cached benchmark 505.cpu-oversubscription at /home/emilio/projects/DPHPC/serverless-benchmarks/cache/505.cpu-oversubscription/aws/python/3.11/x64/package/505.cpu-oversubscription.zip
+[14:57:26.948844] AWS-ae5d Using cached function sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 in /home/emilio/projects/DPHPC/serverless-benchmarks/cache/505.cpu-oversubscription/aws/python/3.11/x64/package/505.cpu-oversubscription.zip
+[14:57:26.949112] AWS-ae5d Updating function configuration due to changed attribute memory: cached function has value 256 whereas 1024 has been requested.
+[14:57:27.350793] AWS-ae5d Waiting for Lambda function to be updated...
+[14:57:28.627855] AWS-ae5d Lambda function has been updated.
+[14:57:28.627972] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[14:57:28.628865] Experiment.CPUOversubscription-c51d Results of this run will be stored in results/cpu-oversubscription/20261030-145728_aws
+[14:57:28.897219] AWS-ae5d Waiting for Lambda function to be updated...
+[14:57:30.155869] AWS-ae5d Lambda function has been updated.
+[14:57:30.155980] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[14:57:30.156382] Experiment.CPUOversubscription-c51d Configuration e1-resources: resources 128MB, policy None
+[14:57:30.582303] AWS-ae5d Waiting for Lambda function to be updated...
+[14:57:31.885433] AWS-ae5d Lambda function has been updated.
+[14:57:31.885552] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[14:57:31.885616] AWS-ae5d Sent function updates enforcing cold starts.
+[14:57:31.885670] AWS-ae5d Waiting for Lambda function to be updated...
+[14:57:32.016167] AWS-ae5d Lambda function has been updated.
+[14:57:32.016236] AWS-ae5d Finished function updates enforcing cold starts.
+[14:57:33.192945] Experiment.CPUOversubscription-c51d warmup batch 0: 8 invocations, 0 failed
+[14:57:33.915250] Experiment.CPUOversubscription-c51d measurement batch 0: 8 invocations, 0 failed
+[14:57:34.613441] Experiment.CPUOversubscription-c51d measurement batch 1: 8 invocations, 0 failed
+[14:57:35.334265] Experiment.CPUOversubscription-c51d measurement batch 2: 8 invocations, 0 failed
+[14:57:35.973039] Experiment.CPUOversubscription-c51d measurement batch 3: 8 invocations, 0 failed
+[14:57:36.241044] AWS-ae5d Waiting for Lambda function to be updated...
+[14:57:37.535516] AWS-ae5d Lambda function has been updated.
+[14:57:37.535634] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[14:57:37.535967] Experiment.CPUOversubscription-c51d Configuration e1-resources: resources 256MB, policy None
+[14:57:38.025357] AWS-ae5d Waiting for Lambda function to be updated...
+[14:57:39.279976] AWS-ae5d Lambda function has been updated.
+[14:57:39.280101] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[14:57:39.280175] AWS-ae5d Sent function updates enforcing cold starts.
+[14:57:39.280238] AWS-ae5d Waiting for Lambda function to be updated...
+[14:57:39.415480] AWS-ae5d Lambda function has been updated.
+[14:57:39.415554] AWS-ae5d Finished function updates enforcing cold starts.
+[14:57:40.269744] Experiment.CPUOversubscription-c51d warmup batch 0: 8 invocations, 0 failed
+[14:57:40.913267] Experiment.CPUOversubscription-c51d measurement batch 0: 8 invocations, 0 failed
+[14:57:41.498508] Experiment.CPUOversubscription-c51d measurement batch 1: 8 invocations, 0 failed
+[14:57:42.098646] Experiment.CPUOversubscription-c51d measurement batch 2: 8 invocations, 0 failed
+[14:57:42.677796] Experiment.CPUOversubscription-c51d measurement batch 3: 8 invocations, 0 failed
+[14:57:42.956644] AWS-ae5d Waiting for Lambda function to be updated...
+[14:57:44.200400] AWS-ae5d Lambda function has been updated.
+[14:57:44.200514] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[14:57:44.200895] Experiment.CPUOversubscription-c51d Configuration e1-resources: resources 512MB, policy None
+[14:57:44.695438] AWS-ae5d Waiting for Lambda function to be updated...
+[14:57:45.966013] AWS-ae5d Lambda function has been updated.
+[14:57:45.966135] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[14:57:45.966207] AWS-ae5d Sent function updates enforcing cold starts.
+[14:57:45.966270] AWS-ae5d Waiting for Lambda function to be updated...
+[14:57:46.097950] AWS-ae5d Lambda function has been updated.
+[14:57:46.098011] AWS-ae5d Finished function updates enforcing cold starts.
+[14:57:46.895979] Experiment.CPUOversubscription-c51d warmup batch 0: 8 invocations, 0 failed
+[14:57:47.464156] Experiment.CPUOversubscription-c51d measurement batch 0: 8 invocations, 0 failed
+[14:57:47.976848] Experiment.CPUOversubscription-c51d measurement batch 1: 8 invocations, 0 failed
+[14:57:48.495028] Experiment.CPUOversubscription-c51d measurement batch 2: 8 invocations, 0 failed
+[14:57:49.030912] Experiment.CPUOversubscription-c51d measurement batch 3: 8 invocations, 0 failed
+[14:57:49.273203] AWS-ae5d Waiting for Lambda function to be updated...
+[14:57:50.538037] AWS-ae5d Lambda function has been updated.
+[14:57:50.538146] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[14:57:50.538540] Experiment.CPUOversubscription-c51d Configuration e1-resources: resources 768MB, policy None
+[14:57:50.991424] AWS-ae5d Waiting for Lambda function to be updated...
+[14:57:52.217611] AWS-ae5d Lambda function has been updated.
+[14:57:52.217717] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[14:57:52.217789] AWS-ae5d Sent function updates enforcing cold starts.
+[14:57:52.217856] AWS-ae5d Waiting for Lambda function to be updated...
+[14:57:52.356005] AWS-ae5d Lambda function has been updated.
+[14:57:52.356095] AWS-ae5d Finished function updates enforcing cold starts.
+[14:57:53.482027] Experiment.CPUOversubscription-c51d warmup batch 0: 8 invocations, 0 failed
+[14:57:54.048692] Experiment.CPUOversubscription-c51d measurement batch 0: 8 invocations, 0 failed
+[14:57:54.533103] Experiment.CPUOversubscription-c51d measurement batch 1: 8 invocations, 0 failed
+[14:57:55.099032] Experiment.CPUOversubscription-c51d measurement batch 2: 8 invocations, 0 failed
+[14:57:55.592548] Experiment.CPUOversubscription-c51d measurement batch 3: 8 invocations, 0 failed
+[14:57:55.871025] AWS-ae5d Waiting for Lambda function to be updated...
+[14:57:57.139846] AWS-ae5d Lambda function has been updated.
+[14:57:57.139950] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[14:57:57.140330] Experiment.CPUOversubscription-c51d Configuration e1-resources: resources 1024MB, policy None
+[14:57:57.611943] AWS-ae5d Waiting for Lambda function to be updated...
+[14:57:58.882758] AWS-ae5d Lambda function has been updated.
+[14:57:58.882843] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[14:57:58.882895] AWS-ae5d Sent function updates enforcing cold starts.
+[14:57:58.882936] AWS-ae5d Waiting for Lambda function to be updated...
+[14:57:59.009195] AWS-ae5d Lambda function has been updated.
+[14:57:59.009266] AWS-ae5d Finished function updates enforcing cold starts.
+[14:57:59.680871] Experiment.CPUOversubscription-c51d warmup batch 0: 8 invocations, 0 failed
+[14:58:00.168798] Experiment.CPUOversubscription-c51d measurement batch 0: 8 invocations, 0 failed
+[14:58:00.655894] Experiment.CPUOversubscription-c51d measurement batch 1: 8 invocations, 0 failed
+[14:58:01.140503] Experiment.CPUOversubscription-c51d measurement batch 2: 8 invocations, 0 failed
+[14:58:01.628318] Experiment.CPUOversubscription-c51d measurement batch 3: 8 invocations, 0 failed
+[14:58:01.898223] AWS-ae5d Waiting for Lambda function to be updated...
+[14:58:03.169631] AWS-ae5d Lambda function has been updated.
+[14:58:03.169720] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[14:58:03.170044] Experiment.CPUOversubscription-c51d Configuration e1-resources: resources 1536MB, policy None
+[14:58:03.629831] AWS-ae5d Waiting for Lambda function to be updated...
+[14:58:04.856002] AWS-ae5d Lambda function has been updated.
+[14:58:04.856111] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[14:58:04.856166] AWS-ae5d Sent function updates enforcing cold starts.
+[14:58:04.856210] AWS-ae5d Waiting for Lambda function to be updated...
+[14:58:04.973140] AWS-ae5d Lambda function has been updated.
+[14:58:04.973222] AWS-ae5d Finished function updates enforcing cold starts.
+[14:58:05.664670] Experiment.CPUOversubscription-c51d warmup batch 0: 8 invocations, 0 failed
+[14:58:06.150814] Experiment.CPUOversubscription-c51d measurement batch 0: 8 invocations, 0 failed
+[14:58:06.630974] Experiment.CPUOversubscription-c51d measurement batch 1: 8 invocations, 0 failed
+[14:58:07.108468] Experiment.CPUOversubscription-c51d measurement batch 2: 8 invocations, 0 failed
+[14:58:07.591232] Experiment.CPUOversubscription-c51d measurement batch 3: 8 invocations, 0 failed
+[14:58:07.865893] AWS-ae5d Waiting for Lambda function to be updated...
+[14:58:09.109818] AWS-ae5d Lambda function has been updated.
+[14:58:09.109911] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[14:58:09.110252] Experiment.CPUOversubscription-c51d Configuration e1-resources: resources 1769MB, policy None
+[14:58:09.551235] AWS-ae5d Waiting for Lambda function to be updated...
+[14:58:10.810042] AWS-ae5d Lambda function has been updated.
+[14:58:10.810171] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[14:58:10.810228] AWS-ae5d Sent function updates enforcing cold starts.
+[14:58:10.810272] AWS-ae5d Waiting for Lambda function to be updated...
+[14:58:10.932021] AWS-ae5d Lambda function has been updated.
+[14:58:10.932155] AWS-ae5d Finished function updates enforcing cold starts.
+[14:58:11.970676] Experiment.CPUOversubscription-c51d warmup batch 0: 8 invocations, 0 failed
+[14:58:12.491241] Experiment.CPUOversubscription-c51d measurement batch 0: 8 invocations, 0 failed
+[14:58:13.003181] Experiment.CPUOversubscription-c51d measurement batch 1: 8 invocations, 0 failed
+[14:58:13.486876] Experiment.CPUOversubscription-c51d measurement batch 2: 8 invocations, 0 failed
+[14:58:13.970952] Experiment.CPUOversubscription-c51d measurement batch 3: 8 invocations, 0 failed
+[14:58:14.225584] AWS-ae5d Waiting for Lambda function to be updated...
+[14:58:15.473424] AWS-ae5d Lambda function has been updated.
+[14:58:15.473561] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[14:58:15.474019] Experiment.CPUOversubscription-c51d Configuration e1-resources: resources 2048MB, policy None
+[14:58:15.893337] AWS-ae5d Waiting for Lambda function to be updated...
+[14:58:17.146193] AWS-ae5d Lambda function has been updated.
+[14:58:17.146346] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[14:58:17.146403] AWS-ae5d Sent function updates enforcing cold starts.
+[14:58:17.146448] AWS-ae5d Waiting for Lambda function to be updated...
+[14:58:17.269965] AWS-ae5d Lambda function has been updated.
+[14:58:17.270095] AWS-ae5d Finished function updates enforcing cold starts.
+[14:58:17.972227] Experiment.CPUOversubscription-c51d warmup batch 0: 8 invocations, 0 failed
+[14:58:18.547763] Experiment.CPUOversubscription-c51d measurement batch 0: 8 invocations, 0 failed
+[14:58:19.032709] Experiment.CPUOversubscription-c51d measurement batch 1: 8 invocations, 0 failed
+[14:58:19.515768] Experiment.CPUOversubscription-c51d measurement batch 2: 8 invocations, 0 failed
+[14:58:19.997017] Experiment.CPUOversubscription-c51d measurement batch 3: 8 invocations, 0 failed
+[14:58:20.249174] AWS-ae5d Waiting for Lambda function to be updated...
+[14:58:21.490551] AWS-ae5d Lambda function has been updated.
+[14:58:21.490693] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[14:58:21.491040] Experiment.CPUOversubscription-c51d Configuration e1-resources: resources 2560MB, policy None
+[14:58:21.904604] AWS-ae5d Waiting for Lambda function to be updated...
+[14:58:23.148483] AWS-ae5d Lambda function has been updated.
+[14:58:23.148592] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[14:58:23.148644] AWS-ae5d Sent function updates enforcing cold starts.
+[14:58:23.148686] AWS-ae5d Waiting for Lambda function to be updated...
+[14:58:23.267560] AWS-ae5d Lambda function has been updated.
+[14:58:23.267634] AWS-ae5d Finished function updates enforcing cold starts.
+[14:58:23.942915] Experiment.CPUOversubscription-c51d warmup batch 0: 8 invocations, 0 failed
+[14:58:24.426965] Experiment.CPUOversubscription-c51d measurement batch 0: 8 invocations, 0 failed
+[14:58:24.912758] Experiment.CPUOversubscription-c51d measurement batch 1: 8 invocations, 0 failed
+[14:58:25.398629] Experiment.CPUOversubscription-c51d measurement batch 2: 8 invocations, 0 failed
+[14:58:25.888565] Experiment.CPUOversubscription-c51d measurement batch 3: 8 invocations, 0 failed
+[14:58:26.138493] AWS-ae5d Waiting for Lambda function to be updated...
+[14:58:27.369738] AWS-ae5d Lambda function has been updated.
+[14:58:27.369872] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[14:58:27.370219] Experiment.CPUOversubscription-c51d Configuration e1-resources: resources 3008MB, policy None
+[14:58:27.793793] AWS-ae5d Waiting for Lambda function to be updated...
+[14:58:29.027570] AWS-ae5d Lambda function has been updated.
+[14:58:29.027697] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[14:58:29.027756] AWS-ae5d Sent function updates enforcing cold starts.
+[14:58:29.027799] AWS-ae5d Waiting for Lambda function to be updated...
+[14:58:29.152451] AWS-ae5d Lambda function has been updated.
+[14:58:29.152581] AWS-ae5d Finished function updates enforcing cold starts.
+[14:58:29.843924] Experiment.CPUOversubscription-c51d warmup batch 0: 8 invocations, 0 failed
+[14:58:30.318579] Experiment.CPUOversubscription-c51d measurement batch 0: 8 invocations, 0 failed
+[14:58:30.793477] Experiment.CPUOversubscription-c51d measurement batch 1: 8 invocations, 0 failed
+[14:58:31.280538] Experiment.CPUOversubscription-c51d measurement batch 2: 8 invocations, 0 failed
+[14:58:31.770763] Experiment.CPUOversubscription-c51d measurement batch 3: 8 invocations, 0 failed
+[14:58:32.034480] AWS-ae5d Waiting for Lambda function to be updated...
+[14:58:33.301654] AWS-ae5d Lambda function has been updated.
+[14:58:33.301771] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[14:58:33.302103] Experiment.CPUOversubscription-c51d Configuration e2-thread-sweep-small: resources 128MB, policy None
+[14:58:33.732673] AWS-ae5d Waiting for Lambda function to be updated...
+[14:58:34.975034] AWS-ae5d Lambda function has been updated.
+[14:58:34.975143] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[14:58:34.975199] AWS-ae5d Sent function updates enforcing cold starts.
+[14:58:34.975245] AWS-ae5d Waiting for Lambda function to be updated...
+[14:58:35.107727] AWS-ae5d Lambda function has been updated.
+[14:58:35.107800] AWS-ae5d Finished function updates enforcing cold starts.
+[14:59:30.812849] Experiment.CPUOversubscription-c51d warmup batch 0: 8 invocations, 0 failed
+[15:00:28.901062] Experiment.CPUOversubscription-c51d measurement batch 0: 8 invocations, 0 failed
+[15:01:26.480615] Experiment.CPUOversubscription-c51d measurement batch 1: 8 invocations, 0 failed
+[15:02:24.303995] Experiment.CPUOversubscription-c51d measurement batch 2: 8 invocations, 0 failed
+[15:03:22.714810] Experiment.CPUOversubscription-c51d measurement batch 3: 8 invocations, 0 failed
+[15:03:23.019583] AWS-ae5d Waiting for Lambda function to be updated...
+[15:03:24.297196] AWS-ae5d Lambda function has been updated.
+[15:03:24.297376] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:03:24.297820] Experiment.CPUOversubscription-c51d Configuration e2-thread-sweep-small: resources 512MB, policy None
+[15:03:24.734972] AWS-ae5d Waiting for Lambda function to be updated...
+[15:03:26.008735] AWS-ae5d Lambda function has been updated.
+[15:03:26.008927] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:03:26.009001] AWS-ae5d Sent function updates enforcing cold starts.
+[15:03:26.009054] AWS-ae5d Waiting for Lambda function to be updated...
+[15:03:26.137437] AWS-ae5d Lambda function has been updated.
+[15:03:26.137704] AWS-ae5d Finished function updates enforcing cold starts.
+[15:03:39.767612] Experiment.CPUOversubscription-c51d warmup batch 0: 8 invocations, 0 failed
+[15:03:53.089959] Experiment.CPUOversubscription-c51d measurement batch 0: 8 invocations, 0 failed
+[15:04:06.438967] Experiment.CPUOversubscription-c51d measurement batch 1: 8 invocations, 0 failed
+[15:04:19.909386] Experiment.CPUOversubscription-c51d measurement batch 2: 8 invocations, 0 failed
+[15:04:33.513898] Experiment.CPUOversubscription-c51d measurement batch 3: 8 invocations, 0 failed
+[15:04:33.781194] AWS-ae5d Waiting for Lambda function to be updated...
+[15:04:35.045449] AWS-ae5d Lambda function has been updated.
+[15:04:35.045645] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:04:35.046093] Experiment.CPUOversubscription-c51d Configuration e2-thread-sweep-small: resources 1769MB, policy None
+[15:04:35.505524] AWS-ae5d Waiting for Lambda function to be updated...
+[15:04:36.754552] AWS-ae5d Lambda function has been updated.
+[15:04:36.754701] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:04:36.754769] AWS-ae5d Sent function updates enforcing cold starts.
+[15:04:36.754824] AWS-ae5d Waiting for Lambda function to be updated...
+[15:04:36.891203] AWS-ae5d Lambda function has been updated.
+[15:04:36.891507] AWS-ae5d Finished function updates enforcing cold starts.
+[15:04:42.595552] Experiment.CPUOversubscription-c51d warmup batch 0: 8 invocations, 0 failed
+[15:04:48.216154] Experiment.CPUOversubscription-c51d measurement batch 0: 8 invocations, 0 failed
+[15:04:53.777763] Experiment.CPUOversubscription-c51d measurement batch 1: 8 invocations, 0 failed
+[15:04:59.354924] Experiment.CPUOversubscription-c51d measurement batch 2: 8 invocations, 0 failed
+[15:05:04.960933] Experiment.CPUOversubscription-c51d measurement batch 3: 8 invocations, 0 failed
+[15:05:05.233654] AWS-ae5d Waiting for Lambda function to be updated...
+[15:05:06.558183] AWS-ae5d Lambda function has been updated.
+[15:05:06.558341] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:05:06.558794] Experiment.CPUOversubscription-c51d Configuration e2-thread-sweep-small: resources 3008MB, policy None
+[15:05:07.028549] AWS-ae5d Waiting for Lambda function to be updated...
+[15:05:08.354012] AWS-ae5d Lambda function has been updated.
+[15:05:08.354142] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:05:08.354210] AWS-ae5d Sent function updates enforcing cold starts.
+[15:05:08.354271] AWS-ae5d Waiting for Lambda function to be updated...
+[15:05:08.492934] AWS-ae5d Lambda function has been updated.
+[15:05:08.493031] AWS-ae5d Finished function updates enforcing cold starts.
+[15:05:12.949894] Experiment.CPUOversubscription-c51d warmup batch 0: 8 invocations, 0 failed
+[15:05:17.325496] Experiment.CPUOversubscription-c51d measurement batch 0: 8 invocations, 0 failed
+[15:05:21.586763] Experiment.CPUOversubscription-c51d measurement batch 1: 8 invocations, 0 failed
+[15:05:25.808204] Experiment.CPUOversubscription-c51d measurement batch 2: 8 invocations, 0 failed
+[15:05:30.008993] Experiment.CPUOversubscription-c51d measurement batch 3: 8 invocations, 0 failed
+[15:05:30.290159] AWS-ae5d Waiting for Lambda function to be updated...
+[15:05:31.546288] AWS-ae5d Lambda function has been updated.
+[15:05:31.546513] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:05:31.546967] Experiment.CPUOversubscription-c51d Configuration e2-thread-sweep-large: resources 1769MB, policy None
+[15:05:31.992925] AWS-ae5d Waiting for Lambda function to be updated...
+[15:05:33.244037] AWS-ae5d Lambda function has been updated.
+[15:05:33.244159] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:05:33.244209] AWS-ae5d Sent function updates enforcing cold starts.
+[15:05:33.244249] AWS-ae5d Waiting for Lambda function to be updated...
+[15:05:33.381631] AWS-ae5d Lambda function has been updated.
+[15:05:33.381892] AWS-ae5d Finished function updates enforcing cold starts.
+[15:06:10.333180] Experiment.CPUOversubscription-c51d warmup batch 0: 8 invocations, 0 failed
+[15:06:46.911581] Experiment.CPUOversubscription-c51d measurement batch 0: 8 invocations, 0 failed
+[15:07:23.217831] Experiment.CPUOversubscription-c51d measurement batch 1: 8 invocations, 0 failed
+[15:07:59.946149] Experiment.CPUOversubscription-c51d measurement batch 2: 8 invocations, 0 failed
+[15:08:36.377701] Experiment.CPUOversubscription-c51d measurement batch 3: 8 invocations, 0 failed
+[15:08:36.672271] AWS-ae5d Waiting for Lambda function to be updated...
+[15:08:37.957951] AWS-ae5d Lambda function has been updated.
+[15:08:37.958089] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:08:37.958547] Experiment.CPUOversubscription-c51d Configuration e2-thread-sweep-large: resources 3008MB, policy None
+[15:08:38.477871] AWS-ae5d Waiting for Lambda function to be updated...
+[15:08:39.737179] AWS-ae5d Lambda function has been updated.
+[15:08:39.737367] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:08:39.737449] AWS-ae5d Sent function updates enforcing cold starts.
+[15:08:39.737516] AWS-ae5d Waiting for Lambda function to be updated...
+[15:08:39.877672] AWS-ae5d Lambda function has been updated.
+[15:08:39.877817] AWS-ae5d Finished function updates enforcing cold starts.
+[15:09:06.503045] Experiment.CPUOversubscription-c51d warmup batch 0: 8 invocations, 0 failed
+[15:09:32.451895] Experiment.CPUOversubscription-c51d measurement batch 0: 8 invocations, 0 failed
+[15:09:59.251230] Experiment.CPUOversubscription-c51d measurement batch 1: 8 invocations, 0 failed
+[15:10:26.283891] Experiment.CPUOversubscription-c51d measurement batch 2: 8 invocations, 0 failed
+[15:10:53.759892] Experiment.CPUOversubscription-c51d measurement batch 3: 8 invocations, 0 failed
+[15:10:54.059705] AWS-ae5d Waiting for Lambda function to be updated...
+[15:10:55.318180] AWS-ae5d Lambda function has been updated.
+[15:10:55.318890] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:10:55.321056] Experiment.CPUOversubscription-c51d Configuration e3-wait-policy: resources 128MB, policy None
+[15:10:55.772617] AWS-ae5d Waiting for Lambda function to be updated...
+[15:10:57.093072] AWS-ae5d Lambda function has been updated.
+[15:10:57.093209] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:10:57.093257] AWS-ae5d Sent function updates enforcing cold starts.
+[15:10:57.093307] AWS-ae5d Waiting for Lambda function to be updated...
+[15:10:57.220618] AWS-ae5d Lambda function has been updated.
+[15:10:57.220776] AWS-ae5d Finished function updates enforcing cold starts.
+[15:11:18.057482] Experiment.CPUOversubscription-c51d measurement batch 0: 8 invocations, 0 failed
+[15:11:18.505808] AWS-ae5d Waiting for Lambda function to be updated...
+[15:11:19.771281] AWS-ae5d Lambda function has been updated.
+[15:11:19.771415] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:11:19.771464] AWS-ae5d Sent function updates enforcing cold starts.
+[15:11:19.771500] AWS-ae5d Waiting for Lambda function to be updated...
+[15:11:19.892418] AWS-ae5d Lambda function has been updated.
+[15:11:19.892548] AWS-ae5d Finished function updates enforcing cold starts.
+[15:11:36.976697] Experiment.CPUOversubscription-c51d measurement batch 1: 8 invocations, 0 failed
+[15:11:36.976980] Experiment.CPUOversubscription-c51d Configuration e3-wait-policy: resources 128MB, policy active
+[15:11:37.477443] AWS-ae5d Waiting for Lambda function to be updated...
+[15:11:38.747850] AWS-ae5d Lambda function has been updated.
+[15:11:38.748000] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:11:38.748086] AWS-ae5d Sent function updates enforcing cold starts.
+[15:11:38.748159] AWS-ae5d Waiting for Lambda function to be updated...
+[15:11:38.935691] AWS-ae5d Lambda function has been updated.
+[15:11:38.935840] AWS-ae5d Finished function updates enforcing cold starts.
+[15:12:01.110739] Experiment.CPUOversubscription-c51d measurement batch 0: 8 invocations, 0 failed
+[15:12:01.572698] AWS-ae5d Waiting for Lambda function to be updated...
+[15:12:02.819736] AWS-ae5d Lambda function has been updated.
+[15:12:02.820077] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:12:02.820151] AWS-ae5d Sent function updates enforcing cold starts.
+[15:12:02.820202] AWS-ae5d Waiting for Lambda function to be updated...
+[15:12:02.946518] AWS-ae5d Lambda function has been updated.
+[15:12:02.946816] AWS-ae5d Finished function updates enforcing cold starts.
+[15:12:25.662511] Experiment.CPUOversubscription-c51d measurement batch 1: 8 invocations, 0 failed
+[15:12:25.662805] Experiment.CPUOversubscription-c51d Configuration e3-wait-policy: resources 128MB, policy passive
+[15:12:26.105220] AWS-ae5d Waiting for Lambda function to be updated...
+[15:12:27.361506] AWS-ae5d Lambda function has been updated.
+[15:12:27.361640] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:12:27.361703] AWS-ae5d Sent function updates enforcing cold starts.
+[15:12:27.361749] AWS-ae5d Waiting for Lambda function to be updated...
+[15:12:27.491512] AWS-ae5d Lambda function has been updated.
+[15:12:27.491645] AWS-ae5d Finished function updates enforcing cold starts.
+[15:12:39.849444] Experiment.CPUOversubscription-c51d measurement batch 0: 8 invocations, 0 failed
+[15:12:40.319143] AWS-ae5d Waiting for Lambda function to be updated...
+[15:12:41.583745] AWS-ae5d Lambda function has been updated.
+[15:12:41.583881] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:12:41.583938] AWS-ae5d Sent function updates enforcing cold starts.
+[15:12:41.583978] AWS-ae5d Waiting for Lambda function to be updated...
+[15:12:41.705327] AWS-ae5d Lambda function has been updated.
+[15:12:41.705478] AWS-ae5d Finished function updates enforcing cold starts.
+[15:12:54.306677] Experiment.CPUOversubscription-c51d measurement batch 1: 8 invocations, 0 failed
+[15:12:54.594359] AWS-ae5d Waiting for Lambda function to be updated...
+[15:12:55.865850] AWS-ae5d Lambda function has been updated.
+[15:12:55.865968] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:12:55.866383] Experiment.CPUOversubscription-c51d Configuration e3-wait-policy: resources 1769MB, policy None
+[15:12:56.307126] AWS-ae5d Waiting for Lambda function to be updated...
+[15:12:57.595638] AWS-ae5d Lambda function has been updated.
+[15:12:57.595774] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:12:57.595845] AWS-ae5d Sent function updates enforcing cold starts.
+[15:12:57.595891] AWS-ae5d Waiting for Lambda function to be updated...
+[15:12:57.729276] AWS-ae5d Lambda function has been updated.
+[15:12:57.729422] AWS-ae5d Finished function updates enforcing cold starts.
+[15:12:59.793180] Experiment.CPUOversubscription-c51d measurement batch 0: 8 invocations, 0 failed
+[15:13:00.235891] AWS-ae5d Waiting for Lambda function to be updated...
+[15:13:01.511800] AWS-ae5d Lambda function has been updated.
+[15:13:01.511947] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:13:01.512024] AWS-ae5d Sent function updates enforcing cold starts.
+[15:13:01.512079] AWS-ae5d Waiting for Lambda function to be updated...
+[15:13:01.702977] AWS-ae5d Lambda function has been updated.
+[15:13:01.703122] AWS-ae5d Finished function updates enforcing cold starts.
+[15:13:03.700825] Experiment.CPUOversubscription-c51d measurement batch 1: 8 invocations, 0 failed
+[15:13:03.701096] Experiment.CPUOversubscription-c51d Configuration e3-wait-policy: resources 1769MB, policy active
+[15:13:04.161966] AWS-ae5d Waiting for Lambda function to be updated...
+[15:13:05.464836] AWS-ae5d Lambda function has been updated.
+[15:13:05.464971] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:13:05.465027] AWS-ae5d Sent function updates enforcing cold starts.
+[15:13:05.465073] AWS-ae5d Waiting for Lambda function to be updated...
+[15:13:05.609127] AWS-ae5d Lambda function has been updated.
+[15:13:05.609255] AWS-ae5d Finished function updates enforcing cold starts.
+[15:13:07.751200] Experiment.CPUOversubscription-c51d measurement batch 0: 8 invocations, 0 failed
+[15:13:08.213872] AWS-ae5d Waiting for Lambda function to be updated...
+[15:13:09.556495] AWS-ae5d Lambda function has been updated.
+[15:13:09.556624] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:13:09.556678] AWS-ae5d Sent function updates enforcing cold starts.
+[15:13:09.556723] AWS-ae5d Waiting for Lambda function to be updated...
+[15:13:09.690243] AWS-ae5d Lambda function has been updated.
+[15:13:09.690388] AWS-ae5d Finished function updates enforcing cold starts.
+[15:13:11.786552] Experiment.CPUOversubscription-c51d measurement batch 1: 8 invocations, 0 failed
+[15:13:11.786858] Experiment.CPUOversubscription-c51d Configuration e3-wait-policy: resources 1769MB, policy passive
+[15:13:12.213938] AWS-ae5d Waiting for Lambda function to be updated...
+[15:13:13.466243] AWS-ae5d Lambda function has been updated.
+[15:13:13.466393] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:13:13.466452] AWS-ae5d Sent function updates enforcing cold starts.
+[15:13:13.466499] AWS-ae5d Waiting for Lambda function to be updated...
+[15:13:13.592474] AWS-ae5d Lambda function has been updated.
+[15:13:13.592601] AWS-ae5d Finished function updates enforcing cold starts.
+[15:13:15.571842] Experiment.CPUOversubscription-c51d measurement batch 0: 8 invocations, 0 failed
+[15:13:16.006437] AWS-ae5d Waiting for Lambda function to be updated...
+[15:13:17.250423] AWS-ae5d Lambda function has been updated.
+[15:13:17.250565] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:13:17.250622] AWS-ae5d Sent function updates enforcing cold starts.
+[15:13:17.250668] AWS-ae5d Waiting for Lambda function to be updated...
+[15:13:17.372417] AWS-ae5d Lambda function has been updated.
+[15:13:17.372536] AWS-ae5d Finished function updates enforcing cold starts.
+[15:13:19.303257] Experiment.CPUOversubscription-c51d measurement batch 1: 8 invocations, 0 failed
+[15:13:19.578684] AWS-ae5d Waiting for Lambda function to be updated...
+[15:13:20.845622] AWS-ae5d Lambda function has been updated.
+[15:13:20.845753] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:13:20.846133] Experiment.CPUOversubscription-c51d Configuration e3-wait-policy: resources 3008MB, policy None
+[15:13:21.269733] AWS-ae5d Waiting for Lambda function to be updated...
+[15:13:22.516560] AWS-ae5d Lambda function has been updated.
+[15:13:22.516810] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:13:22.516869] AWS-ae5d Sent function updates enforcing cold starts.
+[15:13:22.516911] AWS-ae5d Waiting for Lambda function to be updated...
+[15:13:22.643472] AWS-ae5d Lambda function has been updated.
+[15:13:22.643706] AWS-ae5d Finished function updates enforcing cold starts.
+[15:13:24.336541] Experiment.CPUOversubscription-c51d measurement batch 0: 8 invocations, 0 failed
+[15:13:24.747239] AWS-ae5d Waiting for Lambda function to be updated...
+[15:13:25.986096] AWS-ae5d Lambda function has been updated.
+[15:13:25.986231] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:13:25.986289] AWS-ae5d Sent function updates enforcing cold starts.
+[15:13:25.986334] AWS-ae5d Waiting for Lambda function to be updated...
+[15:13:26.118419] AWS-ae5d Lambda function has been updated.
+[15:13:26.119048] AWS-ae5d Finished function updates enforcing cold starts.
+[15:13:27.815623] Experiment.CPUOversubscription-c51d measurement batch 1: 8 invocations, 0 failed
+[15:13:27.816008] Experiment.CPUOversubscription-c51d Configuration e3-wait-policy: resources 3008MB, policy active
+[15:13:28.253689] AWS-ae5d Waiting for Lambda function to be updated...
+[15:13:29.539164] AWS-ae5d Lambda function has been updated.
+[15:13:29.539599] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:13:29.539670] AWS-ae5d Sent function updates enforcing cold starts.
+[15:13:29.539721] AWS-ae5d Waiting for Lambda function to be updated...
+[15:13:29.653781] AWS-ae5d Lambda function has been updated.
+[15:13:29.653919] AWS-ae5d Finished function updates enforcing cold starts.
+[15:13:31.484274] Experiment.CPUOversubscription-c51d measurement batch 0: 8 invocations, 0 failed
+[15:13:31.916411] AWS-ae5d Waiting for Lambda function to be updated...
+[15:13:33.173016] AWS-ae5d Lambda function has been updated.
+[15:13:33.173168] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:13:33.173244] AWS-ae5d Sent function updates enforcing cold starts.
+[15:13:33.173341] AWS-ae5d Waiting for Lambda function to be updated...
+[15:13:33.306464] AWS-ae5d Lambda function has been updated.
+[15:13:33.306597] AWS-ae5d Finished function updates enforcing cold starts.
+[15:13:35.105712] Experiment.CPUOversubscription-c51d measurement batch 1: 8 invocations, 0 failed
+[15:13:35.105975] Experiment.CPUOversubscription-c51d Configuration e3-wait-policy: resources 3008MB, policy passive
+[15:13:35.566968] AWS-ae5d Waiting for Lambda function to be updated...
+[15:13:36.825335] AWS-ae5d Lambda function has been updated.
+[15:13:36.826002] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:13:36.826418] AWS-ae5d Sent function updates enforcing cold starts.
+[15:13:36.826724] AWS-ae5d Waiting for Lambda function to be updated...
+[15:13:36.948506] AWS-ae5d Lambda function has been updated.
+[15:13:36.948702] AWS-ae5d Finished function updates enforcing cold starts.
+[15:13:38.631350] Experiment.CPUOversubscription-c51d measurement batch 0: 8 invocations, 0 failed
+[15:13:39.057968] AWS-ae5d Waiting for Lambda function to be updated...
+[15:13:40.304878] AWS-ae5d Lambda function has been updated.
+[15:13:40.304994] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:13:40.305056] AWS-ae5d Sent function updates enforcing cold starts.
+[15:13:40.305114] AWS-ae5d Waiting for Lambda function to be updated...
+[15:13:40.446854] AWS-ae5d Lambda function has been updated.
+[15:13:40.446998] AWS-ae5d Finished function updates enforcing cold starts.
+[15:13:42.126591] Experiment.CPUOversubscription-c51d measurement batch 1: 8 invocations, 0 failed
+[15:13:42.400876] AWS-ae5d Waiting for Lambda function to be updated...
+[15:13:43.634571] AWS-ae5d Lambda function has been updated.
+[15:13:43.634769] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:13:43.635254] Experiment.CPUOversubscription-c51d Configuration e4-timeout-baseline: resources 128MB, policy None
+[15:13:44.050113] AWS-ae5d Waiting for Lambda function to be updated...
+[15:13:45.280736] AWS-ae5d Lambda function has been updated.
+[15:13:45.280886] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:13:45.280946] AWS-ae5d Sent function updates enforcing cold starts.
+[15:13:45.280996] AWS-ae5d Waiting for Lambda function to be updated...
+[15:13:45.426899] AWS-ae5d Lambda function has been updated.
+[15:13:45.427513] AWS-ae5d Finished function updates enforcing cold starts.
+[15:17:20.579878] Experiment.CPUOversubscription-c51d measurement batch 0: 4 invocations, 0 failed
+[15:17:20.886004] AWS-ae5d Waiting for Lambda function to be updated...
+[15:17:22.136173] AWS-ae5d Lambda function has been updated.
+[15:17:22.136323] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:17:22.136718] Experiment.CPUOversubscription-c51d Configuration e4-timeout-oversubscribed: resources 128MB, policy None
+[15:17:22.562912] AWS-ae5d Waiting for Lambda function to be updated...
+[15:17:23.827774] AWS-ae5d Lambda function has been updated.
+[15:17:23.827908] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:17:23.827959] AWS-ae5d Sent function updates enforcing cold starts.
+[15:17:23.827998] AWS-ae5d Waiting for Lambda function to be updated...
+[15:17:23.954752] AWS-ae5d Lambda function has been updated.
+[15:17:23.954890] AWS-ae5d Finished function updates enforcing cold starts.
+[15:21:25.070439] Experiment.CPUOversubscription-c51d measurement batch 0: 4 invocations, 0 failed
+[15:21:25.070692] Experiment.CPUOversubscription-c51d Configuration e4-timeout-oversubscribed: resources 128MB, policy active
+[15:21:25.541655] AWS-ae5d Waiting for Lambda function to be updated...
+[15:21:26.784876] AWS-ae5d Lambda function has been updated.
+[15:21:26.784986] AWS-ae5d Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:21:26.785042] AWS-ae5d Sent function updates enforcing cold starts.
+[15:21:26.785086] AWS-ae5d Waiting for Lambda function to be updated...
+[15:21:26.916765] AWS-ae5d Lambda function has been updated.
+[15:21:26.916842] AWS-ae5d Finished function updates enforcing cold starts.
+[15:25:24.754100] Experiment.CPUOversubscription-c51d measurement batch 0: 4 invocations, 0 failed
+[15:25:24.861543] Experiment.CPUOversubscription-c51d Finished, results stored in results/cpu-oversubscription/20261030-145728_aws
+[15:25:24.861819] Benchmark-e7db Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/aws.json
+[15:25:24.861956] Benchmark-e7db Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/openwhisk.json
+[15:25:24.862064] Benchmark-e7db Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/local.json

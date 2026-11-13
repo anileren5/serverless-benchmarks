@@ -1,0 +1,27 @@
+{
+  "experiment": {
+    "benchmark": "506.data-parallel-sgd",
+    "input-size": "small",
+    "memory": 1024,
+    "timeout": 120,
+    "input": {
+      "barrier_timeout": 30.0
+    },
+    "world-sizes": [
+      2,
+      11
+    ],
+    "repetitions": 1,
+    "pause-seconds": 5,
+    "label": "pilot"
+  },
+  "deployment": {
+    "name": "aws",
+    "region": "eu-north-1"
+  },
+  "runtime": {
+    "language": "python",
+    "version": "3.11"
+  },
+  "architecture": "x64"
+}

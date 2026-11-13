@@ -1,0 +1,38 @@
+{
+  "sebs_version": "1.1.0",
+  "git_commit": "90821128f74c2fa7927640bdc5a5e4ca308b216b",
+  "git_branch": "feature/cpu-quota-oversubscription",
+  "git_dirty_files": [
+    "M .gitignore",
+    " M dockerfiles/openwhisk/python/Dockerfile.function",
+    " M sebs/benchmark.py",
+    " M sebs/experiments/cpu_oversubscription.py",
+    " M sebs/openwhisk/function.py",
+    " M sebs/openwhisk/openwhisk.py",
+    "?? config/cpu-oversubscription/openwhisk.json",
+    "?? tools/openwhisk_standalone.sh"
+  ],
+  "benchmark_hash": "ec7160b47c1b938aceaa6a922f40ca88",
+  "function_name": "sebs-e94eca58-505.cpu-oversubscription-python-3.11",
+  "command": [
+    "./sebs.py",
+    "experiment",
+    "invoke",
+    "cpu-oversubscription",
+    "--config",
+    "config/openwhisk_deployment.json",
+    "--deployment",
+    "openwhisk",
+    "--container-deployment",
+    "--output-dir",
+    "results"
+  ],
+  "client": {
+    "hostname": "emilio-desktop2",
+    "kernel": "7.0.0-38-generic",
+    "cpus": 32,
+    "python": "3.13.13"
+  },
+  "begin": "2026-10-30T13:52:28.024842",
+  "end": "2026-10-30T13:55:42.153572"
+}

@@ -1,0 +1,41 @@
+[12:07:01.531762] SeBS-ffe0 Created experiment output at /home/emilio/projects/DPHPC/serverless-benchmarks/results
+[12:07:02.188494] AWS.Resources-fa13 Using cached resources for AWS
+[12:07:02.188705] AWS.Config-8d97 Using cached config for AWS
+[12:07:02.229030] AWS-77c6 Using existing resource name: 65d44790.
+[12:07:02.236806] AWS-77c6 Using existing resource name: 65d44790.
+[12:07:02.238347] AWS.SystemResources-6ba2 Initialize S3 storage instance.
+[12:07:02.263926] Benchmark-ef78 Using cached benchmark 506.data-parallel-sgd at /home/emilio/projects/DPHPC/serverless-benchmarks/cache/506.data-parallel-sgd/aws/python/3.11/x64/package/506.data-parallel-sgd.zip
+[12:07:02.264564] AWS-77c6 Using cached function sebs_65d44790_506_data_parallel_sgd_python_3_11_x64 in /home/emilio/projects/DPHPC/serverless-benchmarks/cache/506.data-parallel-sgd/aws/python/3.11/x64/package/506.data-parallel-sgd.zip
+[12:07:02.264935] AWS-77c6 Cached function sebs_65d44790_506_data_parallel_sgd_python_3_11_x64 is up to date.
+[12:07:02.660702] AWS-77c6 Waiting for Lambda function to be updated...
+[12:07:03.907319] AWS-77c6 Lambda function has been updated.
+[12:07:03.907446] AWS-77c6 Updated configuration of sebs_65d44790_506_data_parallel_sgd_python_3_11_x64 function. 
+[12:07:03.907846] Experiment.GangScheduling-d5f6 Results of this run will be stored in results/gang-scheduling/20261113-120703_aws
+[12:07:07.885949] Experiment.GangScheduling-d5f6 N=2 repetition 0: 2 of 2 ranks completed, 4.0 s
+[12:07:15.237848] Experiment.GangScheduling-d5f6 N=2 repetition 1: 2 of 2 ranks completed, 2.4 s
+[12:07:22.464122] Experiment.GangScheduling-d5f6 N=2 repetition 2: 2 of 2 ranks completed, 2.2 s
+[12:07:32.484598] Experiment.GangScheduling-d5f6 N=4 repetition 0: 4 of 4 ranks completed, 5.0 s
+[12:07:41.001573] Experiment.GangScheduling-d5f6 N=4 repetition 1: 4 of 4 ranks completed, 3.5 s
+[12:07:49.303632] Experiment.GangScheduling-d5f6 N=4 repetition 2: 4 of 4 ranks completed, 3.3 s
+[12:08:01.607775] Experiment.GangScheduling-d5f6 N=8 repetition 0: 8 of 8 ranks completed, 7.3 s
+[12:08:12.136184] Experiment.GangScheduling-d5f6 N=8 repetition 1: 8 of 8 ranks completed, 5.5 s
+[12:08:22.767037] Experiment.GangScheduling-d5f6 N=8 repetition 2: 8 of 8 ranks completed, 5.6 s
+[12:08:35.028859] Experiment.GangScheduling-d5f6 N=9 repetition 0: 9 of 9 ranks completed, 7.3 s
+[12:08:46.046830] Experiment.GangScheduling-d5f6 N=9 repetition 1: 9 of 9 ranks completed, 6.0 s
+[12:08:57.052936] Experiment.GangScheduling-d5f6 N=9 repetition 2: 9 of 9 ranks completed, 6.0 s
+[12:09:10.477429] Experiment.GangScheduling-d5f6 N=10 repetition 0: 10 of 10 ranks completed, 8.4 s
+[12:09:22.241831] Experiment.GangScheduling-d5f6 N=10 repetition 1: 10 of 10 ranks completed, 6.8 s
+[12:09:33.939423] Experiment.GangScheduling-d5f6 N=10 repetition 2: 10 of 10 ranks completed, 6.7 s
+[12:10:09.264313] Experiment.GangScheduling-d5f6 N=11 repetition 0: 0 of 11 ranks completed, 30.3 s
+[12:10:44.606163] Experiment.GangScheduling-d5f6 N=11 repetition 1: 0 of 11 ranks completed, 30.3 s
+[12:11:19.966836] Experiment.GangScheduling-d5f6 N=11 repetition 2: 0 of 11 ranks completed, 30.4 s
+[12:11:55.341125] Experiment.GangScheduling-d5f6 N=12 repetition 0: 0 of 12 ranks completed, 30.4 s
+[12:12:30.693056] Experiment.GangScheduling-d5f6 N=12 repetition 1: 0 of 12 ranks completed, 30.4 s
+[12:13:06.051718] Experiment.GangScheduling-d5f6 N=12 repetition 2: 0 of 12 ranks completed, 30.4 s
+[12:13:41.433851] Experiment.GangScheduling-d5f6 N=16 repetition 0: 0 of 16 ranks completed, 30.4 s
+[12:14:16.795188] Experiment.GangScheduling-d5f6 N=16 repetition 1: 0 of 16 ranks completed, 30.4 s
+[12:14:52.188393] Experiment.GangScheduling-d5f6 N=16 repetition 2: 0 of 16 ranks completed, 30.4 s
+[12:14:57.210027] Experiment.GangScheduling-d5f6 Finished, results stored in results/gang-scheduling/20261113-120703_aws
+[12:14:57.210306] Benchmark-92ba Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/aws.json
+[12:14:57.210441] Benchmark-92ba Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/openwhisk.json
+[12:14:57.210568] Benchmark-92ba Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/local.json

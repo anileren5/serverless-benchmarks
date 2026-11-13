@@ -1,0 +1,167 @@
+{
+  "experiment": {
+    "benchmark": "505.cpu-oversubscription",
+    "configurations": [
+      {
+        "name": "storm-g128",
+        "description": "Constant total work (1e8 point updates): 128x128 grid, 6103 sweeps, one barrier per sweep.",
+        "input-size": "small",
+        "input": {
+          "grid_size": 128,
+          "iterations": 6103,
+          "threads": [
+            1,
+            2,
+            32
+          ],
+          "order": "shuffled"
+        },
+        "omp-wait-policies": [
+          null
+        ],
+        "repetitions": 6,
+        "cpu-limits": [
+          {
+            "name": "quota-2",
+            "cpus": 2
+          },
+          {
+            "name": "model-512MB",
+            "cpuset": "0-1",
+            "cpus": 0.31
+          }
+        ]
+      },
+      {
+        "name": "storm-g256",
+        "description": "Constant total work (1e8 point updates): 256x256 grid, 1525 sweeps, one barrier per sweep.",
+        "input-size": "small",
+        "input": {
+          "grid_size": 256,
+          "iterations": 1525,
+          "threads": [
+            1,
+            2,
+            32
+          ],
+          "order": "shuffled"
+        },
+        "omp-wait-policies": [
+          null
+        ],
+        "repetitions": 6,
+        "cpu-limits": [
+          {
+            "name": "quota-2",
+            "cpus": 2
+          },
+          {
+            "name": "model-512MB",
+            "cpuset": "0-1",
+            "cpus": 0.31
+          }
+        ]
+      },
+      {
+        "name": "storm-g512",
+        "description": "Constant total work (1e8 point updates): 512x512 grid, 381 sweeps, one barrier per sweep.",
+        "input-size": "small",
+        "input": {
+          "grid_size": 512,
+          "iterations": 381,
+          "threads": [
+            1,
+            2,
+            32
+          ],
+          "order": "shuffled"
+        },
+        "omp-wait-policies": [
+          null
+        ],
+        "repetitions": 6,
+        "cpu-limits": [
+          {
+            "name": "quota-2",
+            "cpus": 2
+          },
+          {
+            "name": "model-512MB",
+            "cpuset": "0-1",
+            "cpus": 0.31
+          }
+        ]
+      },
+      {
+        "name": "storm-g1024",
+        "description": "Constant total work (1e8 point updates): 1024x1024 grid, 95 sweeps, one barrier per sweep.",
+        "input-size": "small",
+        "input": {
+          "grid_size": 1024,
+          "iterations": 95,
+          "threads": [
+            1,
+            2,
+            32
+          ],
+          "order": "shuffled"
+        },
+        "omp-wait-policies": [
+          null
+        ],
+        "repetitions": 6,
+        "cpu-limits": [
+          {
+            "name": "quota-2",
+            "cpus": 2
+          },
+          {
+            "name": "model-512MB",
+            "cpuset": "0-1",
+            "cpus": 0.31
+          }
+        ]
+      },
+      {
+        "name": "storm-g2048",
+        "description": "Constant total work (1e8 point updates): 2048x2048 grid, 23 sweeps, one barrier per sweep.",
+        "input-size": "small",
+        "input": {
+          "grid_size": 2048,
+          "iterations": 23,
+          "threads": [
+            1,
+            2,
+            32
+          ],
+          "order": "shuffled"
+        },
+        "omp-wait-policies": [
+          null
+        ],
+        "repetitions": 6,
+        "cpu-limits": [
+          {
+            "name": "quota-2",
+            "cpus": 2
+          },
+          {
+            "name": "model-512MB",
+            "cpuset": "0-1",
+            "cpus": 0.31
+          }
+        ]
+      }
+    ],
+    "label": "storm"
+  },
+  "deployment": {
+    "name": "local",
+    "region": ""
+  },
+  "runtime": {
+    "language": "python",
+    "version": "3.11"
+  },
+  "architecture": "x64"
+}

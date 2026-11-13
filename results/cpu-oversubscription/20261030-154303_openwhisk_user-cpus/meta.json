@@ -1,0 +1,43 @@
+{
+  "sebs_version": "1.1.0",
+  "git_commit": "f5fa36098e9987a091ba807cecb232320c9ecd14",
+  "git_branch": "feature/cpu-quota-oversubscription",
+  "git_dirty_files": [],
+  "benchmark_hash": "1dbc75bed9bb1bc5aeb6740d0ceb5cac",
+  "function_name": "sebs-e94eca58-505.cpu-oversubscription-python-3.11",
+  "command": [
+    "./sebs.py",
+    "experiment",
+    "invoke",
+    "cpu-oversubscription",
+    "--config",
+    "/tmp/tmp.zYwiqwadsp.json",
+    "--deployment",
+    "openwhisk",
+    "--architecture",
+    "x64",
+    "--language-version",
+    "3.11",
+    "--container-deployment",
+    "--output-dir",
+    "results"
+  ],
+  "client": {
+    "hostname": "emilio-desktop2",
+    "kernel": "7.0.0-38-generic",
+    "cpus": 32,
+    "python": "3.13.13",
+    "load_average_begin": [
+      0.51123046875,
+      27.3056640625,
+      26.55517578125
+    ],
+    "load_average_end": [
+      197.51318359375,
+      64.845703125,
+      36.9296875
+    ]
+  },
+  "begin": "2026-10-30T15:43:03.454296",
+  "end": "2026-10-30T15:50:32.976606"
+}

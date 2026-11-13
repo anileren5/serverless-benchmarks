@@ -1,0 +1,29 @@
+run,configuration,omp_wait_policy_requested,batch,failure,error,client_time_us,billed_time_ms,wall_seconds,threads
+20261030-145728_aws,e4-timeout-baseline,,0,False,,198787759,198650.0,196.60277287899999,1.0
+20261030-145728_aws,e4-timeout-baseline,,0,False,,215144651,214945.0,213.03970070100002,1.0
+20261030-145728_aws,e4-timeout-baseline,,0,False,,208060134,207898.0,206.041947343,1.0
+20261030-145728_aws,e4-timeout-baseline,,0,False,,214878754,214651.0,212.720269158,1.0
+20261030-145728_aws,e4-timeout-oversubscribed,,0,False,,239457353,239041.0,237.079697566,2.0
+20261030-145728_aws,e4-timeout-oversubscribed,,0,False,,235157067,234953.0,232.97960157999998,2.0
+20261030-145728_aws,e4-timeout-oversubscribed,,0,False,,241111439,240681.0,238.75988989299998,2.0
+20261030-145728_aws,e4-timeout-oversubscribed,,0,False,,224940690,224743.0,222.779676578,2.0
+20261030-145728_aws,e4-timeout-oversubscribed,active,0,False,,235684183,235487.0,233.319747397,2.0
+20261030-145728_aws,e4-timeout-oversubscribed,active,0,False,,237500777,237333.0,235.039487973,2.0
+20261030-145728_aws,e4-timeout-oversubscribed,active,0,False,,237833279,237640.0,235.459656192,2.0
+20261030-145728_aws,e4-timeout-oversubscribed,active,0,False,,233438156,233273.0,231.07950628700002,2.0
+20261030-152604_aws_timeout,e4-timeout-fine-baseline,,0,False,,184311110,183990.0,182.641698,1.0
+20261030-152604_aws_timeout,e4-timeout-fine-baseline,,0,False,,124884289,124697.0,123.263282984,1.0
+20261030-152604_aws_timeout,e4-timeout-fine-baseline,,0,False,,186272753,185942.0,184.581548993,1.0
+20261030-152604_aws_timeout,e4-timeout-fine-baseline,,0,False,,131732473,131410.0,129.98293851900002,1.0
+20261030-152604_aws_timeout,e4-timeout-fine-oversubscribed,,0,True,"{'errorType': 'Sandbox.Timedout', 'errorMessage': 'RequestId: b416cd12-4959-4891-b0b9-e88e5f4020c3 Error: Task timed out after 300.00 seconds'}",300348620,300068.0,,
+20261030-152604_aws_timeout,e4-timeout-fine-oversubscribed,,0,True,"{'errorType': 'Sandbox.Timedout', 'errorMessage': 'RequestId: 326f596b-ac0f-4055-a000-d72ebc10feee Error: Task timed out after 300.00 seconds'}",300349616,300068.0,,
+20261030-152604_aws_timeout,e4-timeout-fine-oversubscribed,,0,True,"{'errorType': 'Sandbox.Timedout', 'errorMessage': 'RequestId: 2c4abb74-f088-4695-bcae-d94f60c33499 Error: Task timed out after 300.00 seconds'}",300394416,300082.0,,
+20261030-152604_aws_timeout,e4-timeout-fine-oversubscribed,,0,True,"{'errorType': 'Sandbox.Timedout', 'errorMessage': 'RequestId: 53a37e4f-4a68-4b91-9d31-edb6b1bed01c Error: Task timed out after 300.00 seconds'}",300359112,300081.0,,
+20261030-152604_aws_timeout,e4-timeout-fine-oversubscribed,active,0,True,"{'errorType': 'Sandbox.Timedout', 'errorMessage': 'RequestId: eedd9faa-c135-4982-bf1f-2f8ea1c8c7ab Error: Task timed out after 300.00 seconds'}",300336155,300081.0,,
+20261030-152604_aws_timeout,e4-timeout-fine-oversubscribed,active,0,True,"{'errorType': 'Sandbox.Timedout', 'errorMessage': 'RequestId: e6a2babe-0743-4e16-a42b-0dd1eb9fa6aa Error: Task timed out after 300.00 seconds'}",300330371,300067.0,,
+20261030-152604_aws_timeout,e4-timeout-fine-oversubscribed,active,0,True,"{'errorType': 'Sandbox.Timedout', 'errorMessage': 'RequestId: 1010ad29-71e3-4ff6-a1d5-f23f5e68d3ec Error: Task timed out after 300.00 seconds'}",300423662,300080.0,,
+20261030-152604_aws_timeout,e4-timeout-fine-oversubscribed,active,0,True,"{'errorType': 'Sandbox.Timedout', 'errorMessage': 'RequestId: 190e60ad-aeaa-407b-8c69-067b09ba2bf6 Error: Task timed out after 300.00 seconds'}",300315342,300079.0,,
+20261030-152604_aws_timeout,e4-timeout-fine-oversubscribed,passive,0,False,,185778420,185601.0,184.319711536,2.0
+20261030-152604_aws_timeout,e4-timeout-fine-oversubscribed,passive,0,False,,183216527,183046.0,181.799550821,2.0
+20261030-152604_aws_timeout,e4-timeout-fine-oversubscribed,passive,0,False,,184351203,184126.0,182.879675031,2.0
+20261030-152604_aws_timeout,e4-timeout-fine-oversubscribed,passive,0,False,,192038405,191836.0,190.57970265400002,2.0

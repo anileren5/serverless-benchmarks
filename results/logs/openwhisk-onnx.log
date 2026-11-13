@@ -1,0 +1,58 @@
+[11:27:34.848734] SeBS-510b Created experiment output at /home/emilio/projects/DPHPC/serverless-benchmarks/results
+[11:27:34.850509] OpenWhisk.Resources-2c79 Using user-provided configuration of storage type: object for openwhisk containers.
+[11:27:34.850554] OpenWhisk.Resources-2c79 Deserializing access data to Minio storage
+[11:27:34.850575] OpenWhisk.Resources-2c79 No NoSQL storage available
+[11:27:34.850594] OpenWhisk.Resources-2c79 Using user-provided Docker registry for OpenWhisk.
+[11:27:34.850747] OpenWhisk-adc7 Using existing resource name: e94eca58.
+[11:27:34.858296] Benchmark-0a95 Building benchmark 412.image-recognition-onnx. Reason: no cached code package.
+[11:27:34.950170] Benchmark-0a95 There is no Docker build image for openwhisk run in python, thus skipping the Docker-based installation of dependencies.
+[11:27:34.950828] OpenWhisk.Container-16f7 Build the benchmark base image localhost:5000/spcleth/serverless-benchmarks:function.openwhisk.412.image-recognition-onnx.python-3.11-x64-1.2.0.
+[11:28:05.136740] OpenWhisk.Container-16f7 Push the benchmark base image localhost:5000/spcleth/serverless-benchmarks:function.openwhisk.412.image-recognition-onnx.python-3.11-x64-1.2.0 to registry: localhost:5000.
+[11:28:05.137203] OpenWhisk.Container-16f7 Pushing image function.openwhisk.412.image-recognition-onnx.python-3.11-x64-1.2.0 to localhost:5000/spcleth/serverless-benchmarks:function.openwhisk.412.image-recognition-onnx.python-3.11-x64-1.2.0
+Layer afabd00eec6a ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
+Layer 8e7e3241e234 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
+[11:28:05.873796] OpenWhisk-adc7 Created /home/emilio/projects/DPHPC/serverless-benchmarks/results/412.image-recognition-onnx_code/python/3.11/x64/container/412.image-recognition-onnx.zip archive
+[11:28:05.873909] OpenWhisk-adc7 Zip archive size 0.000839 MB
+[11:28:05.874371] Benchmark-0a95 Created code package (source hash: 1d3b2e7f015d82363baced2e4481566b), for run on openwhisk with python:3.11
+[11:28:05.891633] OpenWhisk-adc7 Creating new function! Reason: function sebs-e94eca58-412.image-recognition-onnx-python-3.11 not found in cache.
+[11:28:05.891695] OpenWhisk-adc7 Creating function as an action in OpenWhisk.
+[11:28:05.919796] OpenWhisk-adc7 Creating new OpenWhisk action sebs-e94eca58-412.image-recognition-onnx-python-3.11
+[11:28:05.995080] Experiment.CPUOversubscription-fa24 Results of this run will be stored in results/cpu-oversubscription/20261113-112805_openwhisk_onnx_user-cpus
+[11:28:06.003156] OpenWhisk-adc7 Update configuration of an existing OpenWhisk action sebs-e94eca58-412.image-recognition-onnx-python-3.11.
+[11:28:06.107195] Experiment.CPUOversubscription-fa24 Configuration ow-onnx-idle: resources 1024MB, policy None
+[11:28:06.187108] OpenWhisk-adc7 Updated actions to enforce cold starts.
+[11:28:11.020903] Experiment.CPUOversubscription-fa24 warmup batch 0: 1 invocations, 0 failed
+[11:28:14.711984] Experiment.CPUOversubscription-fa24 measurement batch 0: 1 invocations, 0 failed
+[11:28:18.367551] Experiment.CPUOversubscription-fa24 measurement batch 1: 1 invocations, 0 failed
+[11:28:22.036722] Experiment.CPUOversubscription-fa24 measurement batch 2: 1 invocations, 0 failed
+[11:28:25.919893] Experiment.CPUOversubscription-fa24 measurement batch 3: 1 invocations, 0 failed
+[11:28:29.413468] Experiment.CPUOversubscription-fa24 measurement batch 4: 1 invocations, 0 failed
+[11:28:33.110250] Experiment.CPUOversubscription-fa24 measurement batch 5: 1 invocations, 0 failed
+[11:28:36.554973] Experiment.CPUOversubscription-fa24 measurement batch 6: 1 invocations, 0 failed
+[11:28:40.198343] Experiment.CPUOversubscription-fa24 measurement batch 7: 1 invocations, 0 failed
+[11:28:40.198541] Experiment.CPUOversubscription-fa24 Configuration ow-onnx-idle: resources 1024MB, policy passive
+[11:28:40.260044] OpenWhisk-adc7 Updated actions to enforce cold starts.
+[11:28:43.998876] Experiment.CPUOversubscription-fa24 warmup batch 0: 1 invocations, 0 failed
+[11:28:47.090545] Experiment.CPUOversubscription-fa24 measurement batch 0: 1 invocations, 0 failed
+[11:28:50.196660] Experiment.CPUOversubscription-fa24 measurement batch 1: 1 invocations, 0 failed
+[11:28:53.370480] Experiment.CPUOversubscription-fa24 measurement batch 2: 1 invocations, 0 failed
+[11:28:56.455975] Experiment.CPUOversubscription-fa24 measurement batch 3: 1 invocations, 0 failed
+[11:28:59.556416] Experiment.CPUOversubscription-fa24 measurement batch 4: 1 invocations, 0 failed
+[11:29:02.712460] Experiment.CPUOversubscription-fa24 measurement batch 5: 1 invocations, 0 failed
+[11:29:05.842682] Experiment.CPUOversubscription-fa24 measurement batch 6: 1 invocations, 0 failed
+[11:29:08.958119] Experiment.CPUOversubscription-fa24 measurement batch 7: 1 invocations, 0 failed
+[11:29:08.958375] OpenWhisk-adc7 Update configuration of an existing OpenWhisk action sebs-e94eca58-412.image-recognition-onnx-python-3.11.
+[11:29:09.032188] Experiment.CPUOversubscription-fa24 Configuration ow-onnx-colocated-8x1024: resources 1024MB, policy None
+[11:29:09.101426] OpenWhisk-adc7 Updated actions to enforce cold starts.
+[11:29:18.738162] Experiment.CPUOversubscription-fa24 warmup batch 0: 8 invocations, 0 failed
+[11:29:27.265764] Experiment.CPUOversubscription-fa24 measurement batch 0: 8 invocations, 0 failed
+[11:29:35.971217] Experiment.CPUOversubscription-fa24 measurement batch 1: 8 invocations, 0 failed
+[11:29:35.971532] Experiment.CPUOversubscription-fa24 Configuration ow-onnx-colocated-8x1024: resources 1024MB, policy passive
+[11:29:36.027771] OpenWhisk-adc7 Updated actions to enforce cold starts.
+[11:29:44.388395] Experiment.CPUOversubscription-fa24 warmup batch 0: 8 invocations, 0 failed
+[11:29:52.171444] Experiment.CPUOversubscription-fa24 measurement batch 0: 8 invocations, 0 failed
+[11:29:59.902742] Experiment.CPUOversubscription-fa24 measurement batch 1: 8 invocations, 0 failed
+[11:29:59.933491] Experiment.CPUOversubscription-fa24 Finished, results stored in results/cpu-oversubscription/20261113-112805_openwhisk_onnx_user-cpus
+[11:29:59.933733] Benchmark-3c57 Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/aws.json
+[11:29:59.933858] Benchmark-3c57 Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/openwhisk.json
+[11:29:59.933969] Benchmark-3c57 Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/local.json

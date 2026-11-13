@@ -1,0 +1,32 @@
+{
+  "experiment": {
+    "benchmark": "506.data-parallel-sgd",
+    "input-size": "small",
+    "memory": 1024,
+    "timeout": 60,
+    "input": {
+      "barrier_timeout": 20.0
+    },
+    "world-sizes": [
+      2,
+      4,
+      7,
+      8,
+      9,
+      10,
+      12
+    ],
+    "repetitions": 3,
+    "pause-seconds": 5,
+    "label": "1024MB"
+  },
+  "deployment": {
+    "name": "openwhisk",
+    "region": ""
+  },
+  "runtime": {
+    "language": "python",
+    "version": "3.11"
+  },
+  "architecture": "x64"
+}

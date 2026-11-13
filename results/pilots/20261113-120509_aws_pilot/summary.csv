@@ -1,0 +1,3 @@
+world_size,repetition,completed_ranks,run_completed,barrier_timeouts,invocation_errors,function_errors,ranks_started,start_skew_seconds,first_rank_start_seconds,makespan_seconds,wait_fraction_median,first_barrier_wait_max,weights_consistent,errors
+2,0,2,True,0,0,0,2,0.04833817481994629,1.4962966442108154,3.800307512283325,0.41048186706846884,0.0506596565246582,True,
+11,0,0,False,10,1,0,10,1.656853199005127,0.04234814643859863,32.093730449676514,0.9896207980421203,30.052590131759644,,An error occurred (TooManyRequestsException) when calling the Invoke operation (reached max retries: 4): Rate Exceeded.

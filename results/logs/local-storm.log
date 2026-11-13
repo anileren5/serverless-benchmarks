@@ -1,0 +1,95 @@
+[11:30:30.221834] SeBS-6987 Created experiment output at /home/emilio/projects/DPHPC/serverless-benchmarks/results
+[11:30:30.223413] LocalResources-9c1d Using user-provided configuration of storage type: object for local containers.
+[11:30:30.223453] LocalResources-9c1d Deserializing access data to Minio storage
+[11:30:30.223473] LocalResources-9c1d No NoSQL storage available
+[11:30:30.223492] LocalResources-9c1d Using cached resources for Local
+[11:30:30.230047] Local-f649 Using existing deployment local-c7a37e18 that matches prefix local!
+[11:30:30.232745] minio.Minio-e4ee Using existing bucket sebs-benchmarks-local-c7a37e18 for benchmarks
+[11:30:30.233057] Benchmark-2a82 Using cached benchmark 505.cpu-oversubscription at /home/emilio/projects/DPHPC/serverless-benchmarks/cache/505.cpu-oversubscription/local/python/3.11/x64/package/code
+[11:30:30.243924] Local-f649 Using cached function sebd-505.cpu-oversubscription-python-3.11 in /home/emilio/projects/DPHPC/serverless-benchmarks/cache/505.cpu-oversubscription/local/python/3.11/x64/package/code
+[11:30:30.244216] Local-f649 Cached function sebd-505.cpu-oversubscription-python-3.11 is up to date.
+[11:30:30.244584] Experiment.CPUOversubscription-c3be Results of this run will be stored in results/cpu-oversubscription/20261113-113030_local_storm
+[11:30:30.280920] Experiment.CPUOversubscription-c3be Configuration storm-g128: resources quota-2, policy None
+[11:30:42.591925] Experiment.CPUOversubscription-c3be warmup batch 0: 1 invocations, 0 failed
+[11:30:55.175777] Experiment.CPUOversubscription-c3be measurement batch 0: 1 invocations, 0 failed
+[11:31:08.373391] Experiment.CPUOversubscription-c3be measurement batch 1: 1 invocations, 0 failed
+[11:31:24.500443] Experiment.CPUOversubscription-c3be measurement batch 2: 1 invocations, 0 failed
+[11:31:33.070808] Experiment.CPUOversubscription-c3be measurement batch 3: 1 invocations, 0 failed
+[11:31:46.796629] Experiment.CPUOversubscription-c3be measurement batch 4: 1 invocations, 0 failed
+[11:31:59.677576] Experiment.CPUOversubscription-c3be measurement batch 5: 1 invocations, 0 failed
+[11:31:59.698512] Experiment.CPUOversubscription-c3be Configuration storm-g128: resources model-512MB, policy None
+[11:32:33.998890] Experiment.CPUOversubscription-c3be warmup batch 0: 1 invocations, 0 failed
+[11:33:08.198658] Experiment.CPUOversubscription-c3be measurement batch 0: 1 invocations, 0 failed
+[11:33:41.920743] Experiment.CPUOversubscription-c3be measurement batch 1: 1 invocations, 0 failed
+[11:34:15.893009] Experiment.CPUOversubscription-c3be measurement batch 2: 1 invocations, 0 failed
+[11:34:49.897080] Experiment.CPUOversubscription-c3be measurement batch 3: 1 invocations, 0 failed
+[11:35:23.596369] Experiment.CPUOversubscription-c3be measurement batch 4: 1 invocations, 0 failed
+[11:35:57.319412] Experiment.CPUOversubscription-c3be measurement batch 5: 1 invocations, 0 failed
+[11:35:57.341472] Experiment.CPUOversubscription-c3be Configuration storm-g256: resources quota-2, policy None
+[11:36:10.987644] Experiment.CPUOversubscription-c3be warmup batch 0: 1 invocations, 0 failed
+[11:36:17.414356] Experiment.CPUOversubscription-c3be measurement batch 0: 1 invocations, 0 failed
+[11:36:24.400334] Experiment.CPUOversubscription-c3be measurement batch 1: 1 invocations, 0 failed
+[11:36:35.387563] Experiment.CPUOversubscription-c3be measurement batch 2: 1 invocations, 0 failed
+[11:36:47.515317] Experiment.CPUOversubscription-c3be measurement batch 3: 1 invocations, 0 failed
+[11:36:55.900434] Experiment.CPUOversubscription-c3be measurement batch 4: 1 invocations, 0 failed
+[11:37:08.480585] Experiment.CPUOversubscription-c3be measurement batch 5: 1 invocations, 0 failed
+[11:37:08.502636] Experiment.CPUOversubscription-c3be Configuration storm-g256: resources model-512MB, policy None
+[11:37:20.994640] Experiment.CPUOversubscription-c3be warmup batch 0: 1 invocations, 0 failed
+[11:37:33.003005] Experiment.CPUOversubscription-c3be measurement batch 0: 1 invocations, 0 failed
+[11:37:45.104519] Experiment.CPUOversubscription-c3be measurement batch 1: 1 invocations, 0 failed
+[11:37:57.195040] Experiment.CPUOversubscription-c3be measurement batch 2: 1 invocations, 0 failed
+[11:38:09.303885] Experiment.CPUOversubscription-c3be measurement batch 3: 1 invocations, 0 failed
+[11:38:21.498251] Experiment.CPUOversubscription-c3be measurement batch 4: 1 invocations, 0 failed
+[11:38:33.596002] Experiment.CPUOversubscription-c3be measurement batch 5: 1 invocations, 0 failed
+[11:38:33.617539] Experiment.CPUOversubscription-c3be Configuration storm-g512: resources quota-2, policy None
+[11:38:38.493917] Experiment.CPUOversubscription-c3be warmup batch 0: 1 invocations, 0 failed
+[11:38:42.792420] Experiment.CPUOversubscription-c3be measurement batch 0: 1 invocations, 0 failed
+[11:38:46.843691] Experiment.CPUOversubscription-c3be measurement batch 1: 1 invocations, 0 failed
+[11:38:50.983754] Experiment.CPUOversubscription-c3be measurement batch 2: 1 invocations, 0 failed
+[11:38:54.275793] Experiment.CPUOversubscription-c3be measurement batch 3: 1 invocations, 0 failed
+[11:38:58.371022] Experiment.CPUOversubscription-c3be measurement batch 4: 1 invocations, 0 failed
+[11:39:02.576664] Experiment.CPUOversubscription-c3be measurement batch 5: 1 invocations, 0 failed
+[11:39:02.598375] Experiment.CPUOversubscription-c3be Configuration storm-g512: resources model-512MB, policy None
+[11:39:09.702694] Experiment.CPUOversubscription-c3be warmup batch 0: 1 invocations, 0 failed
+[11:39:16.300066] Experiment.CPUOversubscription-c3be measurement batch 0: 1 invocations, 0 failed
+[11:39:22.904414] Experiment.CPUOversubscription-c3be measurement batch 1: 1 invocations, 0 failed
+[11:39:29.606439] Experiment.CPUOversubscription-c3be measurement batch 2: 1 invocations, 0 failed
+[11:39:36.210750] Experiment.CPUOversubscription-c3be measurement batch 3: 1 invocations, 0 failed
+[11:39:42.903261] Experiment.CPUOversubscription-c3be measurement batch 4: 1 invocations, 0 failed
+[11:39:49.600316] Experiment.CPUOversubscription-c3be measurement batch 5: 1 invocations, 0 failed
+[11:39:49.622406] Experiment.CPUOversubscription-c3be Configuration storm-g1024: resources quota-2, policy None
+[11:39:55.138429] Experiment.CPUOversubscription-c3be warmup batch 0: 1 invocations, 0 failed
+[11:39:59.064177] Experiment.CPUOversubscription-c3be measurement batch 0: 1 invocations, 0 failed
+[11:40:03.568643] Experiment.CPUOversubscription-c3be measurement batch 1: 1 invocations, 0 failed
+[11:40:09.167558] Experiment.CPUOversubscription-c3be measurement batch 2: 1 invocations, 0 failed
+[11:40:15.227936] Experiment.CPUOversubscription-c3be measurement batch 3: 1 invocations, 0 failed
+[11:40:19.663108] Experiment.CPUOversubscription-c3be measurement batch 4: 1 invocations, 0 failed
+[11:40:24.427352] Experiment.CPUOversubscription-c3be measurement batch 5: 1 invocations, 0 failed
+[11:40:24.448894] Experiment.CPUOversubscription-c3be Configuration storm-g1024: resources model-512MB, policy None
+[11:40:30.782839] Experiment.CPUOversubscription-c3be warmup batch 0: 1 invocations, 0 failed
+[11:40:36.585122] Experiment.CPUOversubscription-c3be measurement batch 0: 1 invocations, 0 failed
+[11:40:42.365039] Experiment.CPUOversubscription-c3be measurement batch 1: 1 invocations, 0 failed
+[11:40:48.183051] Experiment.CPUOversubscription-c3be measurement batch 2: 1 invocations, 0 failed
+[11:40:53.986479] Experiment.CPUOversubscription-c3be measurement batch 3: 1 invocations, 0 failed
+[11:40:59.967550] Experiment.CPUOversubscription-c3be measurement batch 4: 1 invocations, 0 failed
+[11:41:05.793795] Experiment.CPUOversubscription-c3be measurement batch 5: 1 invocations, 0 failed
+[11:41:05.815031] Experiment.CPUOversubscription-c3be Configuration storm-g2048: resources quota-2, policy None
+[11:41:21.140376] Experiment.CPUOversubscription-c3be warmup batch 0: 1 invocations, 0 failed
+[11:41:33.048578] Experiment.CPUOversubscription-c3be measurement batch 0: 1 invocations, 0 failed
+[11:41:47.359849] Experiment.CPUOversubscription-c3be measurement batch 1: 1 invocations, 0 failed
+[11:42:04.814689] Experiment.CPUOversubscription-c3be measurement batch 2: 1 invocations, 0 failed
+[11:42:20.223939] Experiment.CPUOversubscription-c3be measurement batch 3: 1 invocations, 0 failed
+[11:42:35.317900] Experiment.CPUOversubscription-c3be measurement batch 4: 1 invocations, 0 failed
+[11:42:48.366295] Experiment.CPUOversubscription-c3be measurement batch 5: 1 invocations, 0 failed
+[11:42:48.388048] Experiment.CPUOversubscription-c3be Configuration storm-g2048: resources model-512MB, policy None
+[11:42:58.670024] Experiment.CPUOversubscription-c3be warmup batch 0: 1 invocations, 0 failed
+[11:43:08.968456] Experiment.CPUOversubscription-c3be measurement batch 0: 1 invocations, 0 failed
+[11:43:19.856946] Experiment.CPUOversubscription-c3be measurement batch 1: 1 invocations, 0 failed
+[11:43:30.349737] Experiment.CPUOversubscription-c3be measurement batch 2: 1 invocations, 0 failed
+[11:43:41.055570] Experiment.CPUOversubscription-c3be measurement batch 3: 1 invocations, 0 failed
+[11:43:51.747472] Experiment.CPUOversubscription-c3be measurement batch 4: 1 invocations, 0 failed
+[11:44:02.447655] Experiment.CPUOversubscription-c3be measurement batch 5: 1 invocations, 0 failed
+[11:44:02.499761] Experiment.CPUOversubscription-c3be Finished, results stored in results/cpu-oversubscription/20261113-113030_local_storm
+[11:44:02.500096] Benchmark-b629 Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/aws.json
+[11:44:02.500235] Benchmark-b629 Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/openwhisk.json
+[11:44:02.500365] Benchmark-b629 Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/local.json

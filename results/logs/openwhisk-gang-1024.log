@@ -1,0 +1,45 @@
+[12:07:01.533231] SeBS-41bb Created experiment output at /home/emilio/projects/DPHPC/serverless-benchmarks/results
+[12:07:01.535032] OpenWhisk.Resources-1c44 Using user-provided configuration of storage type: object for openwhisk containers.
+[12:07:01.535075] OpenWhisk.Resources-1c44 Deserializing access data to Minio storage
+[12:07:01.535097] OpenWhisk.Resources-1c44 No NoSQL storage available
+[12:07:01.535115] OpenWhisk.Resources-1c44 Using user-provided Docker registry for OpenWhisk.
+[12:07:01.535273] OpenWhisk-3da1 Using existing resource name: e94eca58.
+[12:07:01.541748] Benchmark-5561 Building benchmark 506.data-parallel-sgd. Reason: no cached code package.
+[12:07:01.542930] Benchmark-5561 There is no Docker build image for openwhisk run in python, thus skipping the Docker-based installation of dependencies.
+[12:07:01.543398] OpenWhisk.Container-08a0 Build the benchmark base image localhost:5000/spcleth/serverless-benchmarks:function.openwhisk.506.data-parallel-sgd.python-3.11-x64-1.2.0.
+[12:07:10.817378] OpenWhisk.Container-08a0 Push the benchmark base image localhost:5000/spcleth/serverless-benchmarks:function.openwhisk.506.data-parallel-sgd.python-3.11-x64-1.2.0 to registry: localhost:5000.
+[12:07:10.817836] OpenWhisk.Container-08a0 Pushing image function.openwhisk.506.data-parallel-sgd.python-3.11-x64-1.2.0 to localhost:5000/spcleth/serverless-benchmarks:function.openwhisk.506.data-parallel-sgd.python-3.11-x64-1.2.0
+Layer d1994d89b720 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
+[12:07:10.953425] OpenWhisk-3da1 Created /home/emilio/projects/DPHPC/serverless-benchmarks/results/506.data-parallel-sgd_code/python/3.11/x64/container/506.data-parallel-sgd.zip archive
+[12:07:10.953545] OpenWhisk-3da1 Zip archive size 0.000839 MB
+[12:07:10.954043] Benchmark-5561 Created code package (source hash: b22f0bb8bcc70c2d54bfc702f6c6d5a8), for run on openwhisk with python:3.11
+[12:07:10.969712] OpenWhisk-3da1 Creating new function! Reason: function sebs-e94eca58-506.data-parallel-sgd-python-3.11 not found in cache.
+[12:07:10.969786] OpenWhisk-3da1 Creating function as an action in OpenWhisk.
+[12:07:11.010992] OpenWhisk-3da1 Creating new OpenWhisk action sebs-e94eca58-506.data-parallel-sgd-python-3.11
+[12:07:11.094410] OpenWhisk-3da1 Update configuration of an existing OpenWhisk action sebs-e94eca58-506.data-parallel-sgd-python-3.11.
+[12:07:11.183492] Experiment.GangScheduling-fa47 Results of this run will be stored in results/gang-scheduling/20261113-120711_openwhisk_1024MB
+[12:07:12.936646] Experiment.GangScheduling-fa47 N=2 repetition 0: 2 of 2 ranks completed, 1.7 s
+[12:07:18.701080] Experiment.GangScheduling-fa47 N=2 repetition 1: 2 of 2 ranks completed, 0.8 s
+[12:07:24.561971] Experiment.GangScheduling-fa47 N=2 repetition 2: 2 of 2 ranks completed, 0.9 s
+[12:07:31.388675] Experiment.GangScheduling-fa47 N=4 repetition 0: 4 of 4 ranks completed, 1.8 s
+[12:07:37.642439] Experiment.GangScheduling-fa47 N=4 repetition 1: 4 of 4 ranks completed, 1.3 s
+[12:07:43.861369] Experiment.GangScheduling-fa47 N=4 repetition 2: 4 of 4 ranks completed, 1.2 s
+[12:07:51.370857] Experiment.GangScheduling-fa47 N=7 repetition 0: 7 of 7 ranks completed, 2.5 s
+[12:07:58.142783] Experiment.GangScheduling-fa47 N=7 repetition 1: 7 of 7 ranks completed, 1.8 s
+[12:08:04.886647] Experiment.GangScheduling-fa47 N=7 repetition 2: 7 of 7 ranks completed, 1.7 s
+[12:08:12.391277] Experiment.GangScheduling-fa47 N=8 repetition 0: 8 of 8 ranks completed, 2.5 s
+[12:08:19.283405] Experiment.GangScheduling-fa47 N=8 repetition 1: 8 of 8 ranks completed, 1.9 s
+[12:08:26.132971] Experiment.GangScheduling-fa47 N=8 repetition 2: 8 of 8 ranks completed, 1.8 s
+[12:09:11.386026] Experiment.GangScheduling-fa47 N=9 repetition 0: 0 of 9 ranks completed, 40.3 s
+[12:09:56.627015] Experiment.GangScheduling-fa47 N=9 repetition 1: 0 of 9 ranks completed, 40.2 s
+[12:10:41.822636] Experiment.GangScheduling-fa47 N=9 repetition 2: 0 of 9 ranks completed, 40.2 s
+[12:11:27.119677] Experiment.GangScheduling-fa47 N=10 repetition 0: 0 of 10 ranks completed, 40.3 s
+[12:12:12.368739] Experiment.GangScheduling-fa47 N=10 repetition 1: 0 of 10 ranks completed, 40.2 s
+[12:12:57.624942] Experiment.GangScheduling-fa47 N=10 repetition 2: 0 of 10 ranks completed, 40.3 s
+[12:13:42.941008] Experiment.GangScheduling-fa47 N=12 repetition 0: 0 of 12 ranks completed, 40.3 s
+[12:14:28.248079] Experiment.GangScheduling-fa47 N=12 repetition 1: 0 of 12 ranks completed, 40.3 s
+[12:15:13.567012] Experiment.GangScheduling-fa47 N=12 repetition 2: 0 of 12 ranks completed, 40.3 s
+[12:15:18.586466] Experiment.GangScheduling-fa47 Finished, results stored in results/gang-scheduling/20261113-120711_openwhisk_1024MB
+[12:15:18.586747] Benchmark-f107 Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/aws.json
+[12:15:18.586871] Benchmark-f107 Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/openwhisk.json
+[12:15:18.586974] Benchmark-f107 Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/local.json

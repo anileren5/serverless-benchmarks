@@ -1,0 +1,369 @@
+[14:58:20.270753] SeBS-c5de Created experiment output at /home/emilio/projects/DPHPC/serverless-benchmarks/results
+[14:58:20.272459] LocalResources-209e Using user-provided configuration of storage type: object for local containers.
+[14:58:20.272500] LocalResources-209e Deserializing access data to Minio storage
+[14:58:20.272519] LocalResources-209e No NoSQL storage available
+[14:58:20.272537] LocalResources-209e Using cached resources for Local
+[14:58:20.281012] Local-1318 Using existing deployment local-c7a37e18 that matches prefix local!
+[14:58:20.283818] minio.Minio-8329 Using existing bucket sebs-benchmarks-local-c7a37e18 for benchmarks
+[14:58:20.284819] Benchmark-5723 Building benchmark 505.cpu-oversubscription. Reason: cached code package is not up to date/build enforced.
+[14:58:20.307458] Benchmark-5723 Docker build of benchmark dependencies in container of image spcleth/serverless-benchmarks:build.local.python.3.11-1.2.0
+[14:58:20.307568] Benchmark-5723 Docker mount of benchmark code from path /home/emilio/projects/DPHPC/serverless-benchmarks/results/505.cpu-oversubscription_code/python/3.11/x64/package
+[14:58:21.628880] Local-1318 Function size 0.003906 MB
+[14:58:21.629212] Benchmark-5723 Created code package (source hash: 941119b65d0f4f723b7cb85136786c45), for run on local with python:3.11
+[14:58:21.642760] Local-1318 Using cached function sebd-505.cpu-oversubscription-python-3.11 in /home/emilio/projects/DPHPC/serverless-benchmarks/cache/505.cpu-oversubscription/local/python/3.11/x64/package/code
+[14:58:21.643517] Local-1318 Cached function sebd-505.cpu-oversubscription-python-3.11 with hash d6585a5f15df544f8a44b9e55eda79f5 is not up to date with current build 941119b65d0f4f723b7cb85136786c45 in /home/emilio/projects/DPHPC/serverless-benchmarks/cache/505.cpu-oversubscription/local/python/3.11/x64/package/code, updating cloud version!
+[14:58:21.643590] Local-1318 Enforcing rebuild and update of of cached function sebd-505.cpu-oversubscription-python-3.11 with hash d6585a5f15df544f8a44b9e55eda79f5.
+[14:58:21.643647] Local.LocalFunction-00f6 Stopping function container 014fa9e020be144149582bf9093d6996774402c5cdbfbfb9d7baf268b29be8ec
+[14:58:21.748382] Local.LocalFunction-00f6 Function container 014fa9e020be144149582bf9093d6996774402c5cdbfbfb9d7baf268b29be8ec stopped succesfully
+[14:58:21.748437] Local-1318 Allocating a new function container with updated code
+[14:58:22.118904] Local-1318 Started sebd-505.cpu-oversubscription-python-3.11 function at container ff11b2f6f0a567974df981cda101732f87c98788bdf0574b4f30f4fb93a2cc21 , running on 172.17.0.3:9000
+[14:58:22.120312] Experiment.CPUOversubscription-a86e Results of this run will be stored in results/cpu-oversubscription/20261030-145822_local
+[14:58:22.157026] Experiment.CPUOversubscription-a86e Configuration gt-mechanisms: resources unlimited, policy None
+[14:58:25.566893] Experiment.CPUOversubscription-a86e warmup batch 0: 1 invocations, 0 failed
+[14:58:28.412661] Experiment.CPUOversubscription-a86e measurement batch 0: 1 invocations, 0 failed
+[14:58:31.821487] Experiment.CPUOversubscription-a86e measurement batch 1: 1 invocations, 0 failed
+[14:58:34.747445] Experiment.CPUOversubscription-a86e measurement batch 2: 1 invocations, 0 failed
+[14:58:37.643066] Experiment.CPUOversubscription-a86e measurement batch 3: 1 invocations, 0 failed
+[14:58:40.478398] Experiment.CPUOversubscription-a86e measurement batch 4: 1 invocations, 0 failed
+[14:58:43.322265] Experiment.CPUOversubscription-a86e measurement batch 5: 1 invocations, 0 failed
+[14:58:46.150433] Experiment.CPUOversubscription-a86e measurement batch 6: 1 invocations, 0 failed
+[14:58:49.551697] Experiment.CPUOversubscription-a86e measurement batch 7: 1 invocations, 0 failed
+[14:58:52.418008] Experiment.CPUOversubscription-a86e measurement batch 8: 1 invocations, 0 failed
+[14:58:55.260023] Experiment.CPUOversubscription-a86e measurement batch 9: 1 invocations, 0 failed
+[14:58:58.147507] Experiment.CPUOversubscription-a86e measurement batch 10: 1 invocations, 0 failed
+[14:59:01.076673] Experiment.CPUOversubscription-a86e measurement batch 11: 1 invocations, 0 failed
+[14:59:03.940243] Experiment.CPUOversubscription-a86e measurement batch 12: 1 invocations, 0 failed
+[14:59:06.853982] Experiment.CPUOversubscription-a86e measurement batch 13: 1 invocations, 0 failed
+[14:59:09.692193] Experiment.CPUOversubscription-a86e measurement batch 14: 1 invocations, 0 failed
+[14:59:12.532923] Experiment.CPUOversubscription-a86e measurement batch 15: 1 invocations, 0 failed
+[14:59:12.554352] Experiment.CPUOversubscription-a86e Configuration gt-mechanisms: resources quota-2, policy None
+[14:59:16.596171] Experiment.CPUOversubscription-a86e warmup batch 0: 1 invocations, 0 failed
+[14:59:21.322905] Experiment.CPUOversubscription-a86e measurement batch 0: 1 invocations, 0 failed
+[14:59:24.797731] Experiment.CPUOversubscription-a86e measurement batch 1: 1 invocations, 0 failed
+[14:59:28.611300] Experiment.CPUOversubscription-a86e measurement batch 2: 1 invocations, 0 failed
+[14:59:32.085384] Experiment.CPUOversubscription-a86e measurement batch 3: 1 invocations, 0 failed
+[14:59:35.761408] Experiment.CPUOversubscription-a86e measurement batch 4: 1 invocations, 0 failed
+[14:59:39.600966] Experiment.CPUOversubscription-a86e measurement batch 5: 1 invocations, 0 failed
+[14:59:44.198506] Experiment.CPUOversubscription-a86e measurement batch 6: 1 invocations, 0 failed
+[14:59:47.537207] Experiment.CPUOversubscription-a86e measurement batch 7: 1 invocations, 0 failed
+[14:59:51.699517] Experiment.CPUOversubscription-a86e measurement batch 8: 1 invocations, 0 failed
+[14:59:55.121726] Experiment.CPUOversubscription-a86e measurement batch 9: 1 invocations, 0 failed
+[14:59:59.014777] Experiment.CPUOversubscription-a86e measurement batch 10: 1 invocations, 0 failed
+[15:00:03.200807] Experiment.CPUOversubscription-a86e measurement batch 11: 1 invocations, 0 failed
+[15:00:06.752030] Experiment.CPUOversubscription-a86e measurement batch 12: 1 invocations, 0 failed
+[15:00:10.194274] Experiment.CPUOversubscription-a86e measurement batch 13: 1 invocations, 0 failed
+[15:00:14.656203] Experiment.CPUOversubscription-a86e measurement batch 14: 1 invocations, 0 failed
+[15:00:18.802646] Experiment.CPUOversubscription-a86e measurement batch 15: 1 invocations, 0 failed
+[15:00:18.823583] Experiment.CPUOversubscription-a86e Configuration gt-mechanisms: resources cpuset-2, policy None
+[15:00:22.384455] Experiment.CPUOversubscription-a86e warmup batch 0: 1 invocations, 0 failed
+[15:00:25.470698] Experiment.CPUOversubscription-a86e measurement batch 0: 1 invocations, 0 failed
+[15:00:28.578150] Experiment.CPUOversubscription-a86e measurement batch 1: 1 invocations, 0 failed
+[15:00:31.703104] Experiment.CPUOversubscription-a86e measurement batch 2: 1 invocations, 0 failed
+[15:00:34.829199] Experiment.CPUOversubscription-a86e measurement batch 3: 1 invocations, 0 failed
+[15:00:37.960639] Experiment.CPUOversubscription-a86e measurement batch 4: 1 invocations, 0 failed
+[15:00:41.090399] Experiment.CPUOversubscription-a86e measurement batch 5: 1 invocations, 0 failed
+[15:00:44.218049] Experiment.CPUOversubscription-a86e measurement batch 6: 1 invocations, 0 failed
+[15:00:47.622351] Experiment.CPUOversubscription-a86e measurement batch 7: 1 invocations, 0 failed
+[15:00:50.726821] Experiment.CPUOversubscription-a86e measurement batch 8: 1 invocations, 0 failed
+[15:00:53.858456] Experiment.CPUOversubscription-a86e measurement batch 9: 1 invocations, 0 failed
+[15:00:56.973256] Experiment.CPUOversubscription-a86e measurement batch 10: 1 invocations, 0 failed
+[15:01:00.093850] Experiment.CPUOversubscription-a86e measurement batch 11: 1 invocations, 0 failed
+[15:01:03.215251] Experiment.CPUOversubscription-a86e measurement batch 12: 1 invocations, 0 failed
+[15:01:06.325223] Experiment.CPUOversubscription-a86e measurement batch 13: 1 invocations, 0 failed
+[15:01:09.428225] Experiment.CPUOversubscription-a86e measurement batch 14: 1 invocations, 0 failed
+[15:01:12.563708] Experiment.CPUOversubscription-a86e measurement batch 15: 1 invocations, 0 failed
+[15:01:12.585063] Experiment.CPUOversubscription-a86e Configuration gt-mechanisms: resources shares-idle, policy None
+[15:01:15.875739] Experiment.CPUOversubscription-a86e warmup batch 0: 1 invocations, 0 failed
+[15:01:18.719258] Experiment.CPUOversubscription-a86e measurement batch 0: 1 invocations, 0 failed
+[15:01:21.691475] Experiment.CPUOversubscription-a86e measurement batch 1: 1 invocations, 0 failed
+[15:01:24.682428] Experiment.CPUOversubscription-a86e measurement batch 2: 1 invocations, 0 failed
+[15:01:27.547136] Experiment.CPUOversubscription-a86e measurement batch 3: 1 invocations, 0 failed
+[15:01:30.469788] Experiment.CPUOversubscription-a86e measurement batch 4: 1 invocations, 0 failed
+[15:01:33.301141] Experiment.CPUOversubscription-a86e measurement batch 5: 1 invocations, 0 failed
+[15:01:36.170036] Experiment.CPUOversubscription-a86e measurement batch 6: 1 invocations, 0 failed
+[15:01:39.012675] Experiment.CPUOversubscription-a86e measurement batch 7: 1 invocations, 0 failed
+[15:01:41.957848] Experiment.CPUOversubscription-a86e measurement batch 8: 1 invocations, 0 failed
+[15:01:44.885253] Experiment.CPUOversubscription-a86e measurement batch 9: 1 invocations, 0 failed
+[15:01:47.744143] Experiment.CPUOversubscription-a86e measurement batch 10: 1 invocations, 0 failed
+[15:01:50.634390] Experiment.CPUOversubscription-a86e measurement batch 11: 1 invocations, 0 failed
+[15:01:53.596878] Experiment.CPUOversubscription-a86e measurement batch 12: 1 invocations, 0 failed
+[15:01:57.045092] Experiment.CPUOversubscription-a86e measurement batch 13: 1 invocations, 0 failed
+[15:02:00.473464] Experiment.CPUOversubscription-a86e measurement batch 14: 1 invocations, 0 failed
+[15:02:03.313852] Experiment.CPUOversubscription-a86e measurement batch 15: 1 invocations, 0 failed
+[15:02:03.456175] Experiment.CPUOversubscription-a86e Started competitor container with 32 busy threads
+[15:02:03.456321] Experiment.CPUOversubscription-a86e Configuration gt-mechanisms: resources shares-contended, policy None
+[15:02:19.903468] Experiment.CPUOversubscription-a86e warmup batch 0: 1 invocations, 0 failed
+[15:02:34.643512] Experiment.CPUOversubscription-a86e measurement batch 0: 1 invocations, 0 failed
+[15:02:49.638944] Experiment.CPUOversubscription-a86e measurement batch 1: 1 invocations, 0 failed
+[15:03:04.744681] Experiment.CPUOversubscription-a86e measurement batch 2: 1 invocations, 0 failed
+[15:03:20.661022] Experiment.CPUOversubscription-a86e measurement batch 3: 1 invocations, 0 failed
+[15:03:35.909149] Experiment.CPUOversubscription-a86e measurement batch 4: 1 invocations, 0 failed
+[15:03:51.067751] Experiment.CPUOversubscription-a86e measurement batch 5: 1 invocations, 0 failed
+[15:04:06.541816] Experiment.CPUOversubscription-a86e measurement batch 6: 1 invocations, 0 failed
+[15:04:21.555060] Experiment.CPUOversubscription-a86e measurement batch 7: 1 invocations, 0 failed
+[15:04:37.107493] Experiment.CPUOversubscription-a86e measurement batch 8: 1 invocations, 0 failed
+[15:04:52.434584] Experiment.CPUOversubscription-a86e measurement batch 9: 1 invocations, 0 failed
+[15:05:08.270940] Experiment.CPUOversubscription-a86e measurement batch 10: 1 invocations, 0 failed
+[15:05:23.745071] Experiment.CPUOversubscription-a86e measurement batch 11: 1 invocations, 0 failed
+[15:05:39.512519] Experiment.CPUOversubscription-a86e measurement batch 12: 1 invocations, 0 failed
+[15:05:55.548086] Experiment.CPUOversubscription-a86e measurement batch 13: 1 invocations, 0 failed
+[15:06:10.109871] Experiment.CPUOversubscription-a86e measurement batch 14: 1 invocations, 0 failed
+[15:06:24.961204] Experiment.CPUOversubscription-a86e measurement batch 15: 1 invocations, 0 failed
+[15:06:25.124122] Experiment.CPUOversubscription-a86e Configuration gt-mechanisms-large: resources unlimited, policy None
+[15:06:36.565567] Experiment.CPUOversubscription-a86e warmup batch 0: 1 invocations, 0 failed
+[15:06:47.281377] Experiment.CPUOversubscription-a86e measurement batch 0: 1 invocations, 0 failed
+[15:06:57.957701] Experiment.CPUOversubscription-a86e measurement batch 1: 1 invocations, 0 failed
+[15:07:08.480157] Experiment.CPUOversubscription-a86e measurement batch 2: 1 invocations, 0 failed
+[15:07:19.013925] Experiment.CPUOversubscription-a86e measurement batch 3: 1 invocations, 0 failed
+[15:07:29.836901] Experiment.CPUOversubscription-a86e measurement batch 4: 1 invocations, 0 failed
+[15:07:40.319975] Experiment.CPUOversubscription-a86e measurement batch 5: 1 invocations, 0 failed
+[15:07:50.858312] Experiment.CPUOversubscription-a86e measurement batch 6: 1 invocations, 0 failed
+[15:08:01.605896] Experiment.CPUOversubscription-a86e measurement batch 7: 1 invocations, 0 failed
+[15:08:01.626389] Experiment.CPUOversubscription-a86e Configuration gt-mechanisms-large: resources quota-2, policy None
+[15:08:48.192506] Experiment.CPUOversubscription-a86e warmup batch 0: 1 invocations, 0 failed
+[15:09:35.905653] Experiment.CPUOversubscription-a86e measurement batch 0: 1 invocations, 0 failed
+[15:10:21.663138] Experiment.CPUOversubscription-a86e measurement batch 1: 1 invocations, 0 failed
+[15:11:11.408863] Experiment.CPUOversubscription-a86e measurement batch 2: 1 invocations, 0 failed
+[15:12:00.818934] Experiment.CPUOversubscription-a86e measurement batch 3: 1 invocations, 0 failed
+[15:12:46.797867] Experiment.CPUOversubscription-a86e measurement batch 4: 1 invocations, 0 failed
+[15:13:39.231617] Experiment.CPUOversubscription-a86e measurement batch 5: 1 invocations, 0 failed
+[15:14:24.821658] Experiment.CPUOversubscription-a86e measurement batch 6: 1 invocations, 0 failed
+[15:15:11.910680] Experiment.CPUOversubscription-a86e measurement batch 7: 1 invocations, 0 failed
+[15:15:11.931001] Experiment.CPUOversubscription-a86e Configuration gt-aws-model: resources model-128MB, policy None
+[15:15:31.603875] Experiment.CPUOversubscription-a86e warmup batch 0: 1 invocations, 0 failed
+[15:15:50.207389] Experiment.CPUOversubscription-a86e measurement batch 0: 1 invocations, 0 failed
+[15:16:08.206473] Experiment.CPUOversubscription-a86e measurement batch 1: 1 invocations, 0 failed
+[15:16:26.808654] Experiment.CPUOversubscription-a86e measurement batch 2: 1 invocations, 0 failed
+[15:16:45.209778] Experiment.CPUOversubscription-a86e measurement batch 3: 1 invocations, 0 failed
+[15:17:03.904677] Experiment.CPUOversubscription-a86e measurement batch 4: 1 invocations, 0 failed
+[15:17:22.209986] Experiment.CPUOversubscription-a86e measurement batch 5: 1 invocations, 0 failed
+[15:17:40.608964] Experiment.CPUOversubscription-a86e measurement batch 6: 1 invocations, 0 failed
+[15:17:58.806192] Experiment.CPUOversubscription-a86e measurement batch 7: 1 invocations, 0 failed
+[15:18:17.403848] Experiment.CPUOversubscription-a86e measurement batch 8: 1 invocations, 0 failed
+[15:18:36.004120] Experiment.CPUOversubscription-a86e measurement batch 9: 1 invocations, 0 failed
+[15:18:54.403598] Experiment.CPUOversubscription-a86e measurement batch 10: 1 invocations, 0 failed
+[15:19:13.406715] Experiment.CPUOversubscription-a86e measurement batch 11: 1 invocations, 0 failed
+[15:19:31.903910] Experiment.CPUOversubscription-a86e measurement batch 12: 1 invocations, 0 failed
+[15:19:49.906169] Experiment.CPUOversubscription-a86e measurement batch 13: 1 invocations, 0 failed
+[15:20:07.807543] Experiment.CPUOversubscription-a86e measurement batch 14: 1 invocations, 0 failed
+[15:20:25.903862] Experiment.CPUOversubscription-a86e measurement batch 15: 1 invocations, 0 failed
+[15:20:25.925325] Experiment.CPUOversubscription-a86e Configuration gt-aws-model: resources model-512MB, policy None
+[15:20:31.811770] Experiment.CPUOversubscription-a86e warmup batch 0: 1 invocations, 0 failed
+[15:20:37.321821] Experiment.CPUOversubscription-a86e measurement batch 0: 1 invocations, 0 failed
+[15:20:42.806330] Experiment.CPUOversubscription-a86e measurement batch 1: 1 invocations, 0 failed
+[15:20:48.211054] Experiment.CPUOversubscription-a86e measurement batch 2: 1 invocations, 0 failed
+[15:20:53.705484] Experiment.CPUOversubscription-a86e measurement batch 3: 1 invocations, 0 failed
+[15:20:59.103406] Experiment.CPUOversubscription-a86e measurement batch 4: 1 invocations, 0 failed
+[15:21:04.521679] Experiment.CPUOversubscription-a86e measurement batch 5: 1 invocations, 0 failed
+[15:21:10.008582] Experiment.CPUOversubscription-a86e measurement batch 6: 1 invocations, 0 failed
+[15:21:15.505648] Experiment.CPUOversubscription-a86e measurement batch 7: 1 invocations, 0 failed
+[15:21:20.903980] Experiment.CPUOversubscription-a86e measurement batch 8: 1 invocations, 0 failed
+[15:21:26.314794] Experiment.CPUOversubscription-a86e measurement batch 9: 1 invocations, 0 failed
+[15:21:31.823635] Experiment.CPUOversubscription-a86e measurement batch 10: 1 invocations, 0 failed
+[15:21:37.407636] Experiment.CPUOversubscription-a86e measurement batch 11: 1 invocations, 0 failed
+[15:21:42.819825] Experiment.CPUOversubscription-a86e measurement batch 12: 1 invocations, 0 failed
+[15:21:48.310686] Experiment.CPUOversubscription-a86e measurement batch 13: 1 invocations, 0 failed
+[15:21:53.819094] Experiment.CPUOversubscription-a86e measurement batch 14: 1 invocations, 0 failed
+[15:21:59.407294] Experiment.CPUOversubscription-a86e measurement batch 15: 1 invocations, 0 failed
+[15:21:59.428234] Experiment.CPUOversubscription-a86e Configuration gt-aws-model: resources model-1769MB, policy None
+[15:22:03.077514] Experiment.CPUOversubscription-a86e warmup batch 0: 1 invocations, 0 failed
+[15:22:06.240046] Experiment.CPUOversubscription-a86e measurement batch 0: 1 invocations, 0 failed
+[15:22:09.364883] Experiment.CPUOversubscription-a86e measurement batch 1: 1 invocations, 0 failed
+[15:22:12.557374] Experiment.CPUOversubscription-a86e measurement batch 2: 1 invocations, 0 failed
+[15:22:15.825692] Experiment.CPUOversubscription-a86e measurement batch 3: 1 invocations, 0 failed
+[15:22:18.941825] Experiment.CPUOversubscription-a86e measurement batch 4: 1 invocations, 0 failed
+[15:22:22.084897] Experiment.CPUOversubscription-a86e measurement batch 5: 1 invocations, 0 failed
+[15:22:25.254927] Experiment.CPUOversubscription-a86e measurement batch 6: 1 invocations, 0 failed
+[15:22:28.461100] Experiment.CPUOversubscription-a86e measurement batch 7: 1 invocations, 0 failed
+[15:22:31.641983] Experiment.CPUOversubscription-a86e measurement batch 8: 1 invocations, 0 failed
+[15:22:34.860590] Experiment.CPUOversubscription-a86e measurement batch 9: 1 invocations, 0 failed
+[15:22:38.132273] Experiment.CPUOversubscription-a86e measurement batch 10: 1 invocations, 0 failed
+[15:22:41.259444] Experiment.CPUOversubscription-a86e measurement batch 11: 1 invocations, 0 failed
+[15:22:44.442990] Experiment.CPUOversubscription-a86e measurement batch 12: 1 invocations, 0 failed
+[15:22:47.641821] Experiment.CPUOversubscription-a86e measurement batch 13: 1 invocations, 0 failed
+[15:22:50.792522] Experiment.CPUOversubscription-a86e measurement batch 14: 1 invocations, 0 failed
+[15:22:53.917063] Experiment.CPUOversubscription-a86e measurement batch 15: 1 invocations, 0 failed
+[15:22:53.937333] Experiment.CPUOversubscription-a86e Configuration gt-aws-model: resources model-3008MB, policy None
+[15:22:57.447343] Experiment.CPUOversubscription-a86e warmup batch 0: 1 invocations, 0 failed
+[15:23:00.575465] Experiment.CPUOversubscription-a86e measurement batch 0: 1 invocations, 0 failed
+[15:23:03.747201] Experiment.CPUOversubscription-a86e measurement batch 1: 1 invocations, 0 failed
+[15:23:06.875712] Experiment.CPUOversubscription-a86e measurement batch 2: 1 invocations, 0 failed
+[15:23:10.005744] Experiment.CPUOversubscription-a86e measurement batch 3: 1 invocations, 0 failed
+[15:23:13.127850] Experiment.CPUOversubscription-a86e measurement batch 4: 1 invocations, 0 failed
+[15:23:16.253739] Experiment.CPUOversubscription-a86e measurement batch 5: 1 invocations, 0 failed
+[15:23:19.395353] Experiment.CPUOversubscription-a86e measurement batch 6: 1 invocations, 0 failed
+[15:23:22.510843] Experiment.CPUOversubscription-a86e measurement batch 7: 1 invocations, 0 failed
+[15:23:25.636116] Experiment.CPUOversubscription-a86e measurement batch 8: 1 invocations, 0 failed
+[15:23:28.782191] Experiment.CPUOversubscription-a86e measurement batch 9: 1 invocations, 0 failed
+[15:23:31.885148] Experiment.CPUOversubscription-a86e measurement batch 10: 1 invocations, 0 failed
+[15:23:35.007830] Experiment.CPUOversubscription-a86e measurement batch 11: 1 invocations, 0 failed
+[15:23:38.161214] Experiment.CPUOversubscription-a86e measurement batch 12: 1 invocations, 0 failed
+[15:23:41.261726] Experiment.CPUOversubscription-a86e measurement batch 13: 1 invocations, 0 failed
+[15:23:44.368153] Experiment.CPUOversubscription-a86e measurement batch 14: 1 invocations, 0 failed
+[15:23:47.554392] Experiment.CPUOversubscription-a86e measurement batch 15: 1 invocations, 0 failed
+[15:23:47.575582] Experiment.CPUOversubscription-a86e Configuration gt-wait-policy: resources unlimited, policy None
+[15:23:49.201416] Experiment.CPUOversubscription-a86e warmup batch 0: 1 invocations, 0 failed
+[15:23:50.438414] Experiment.CPUOversubscription-a86e measurement batch 0: 1 invocations, 0 failed
+[15:23:51.647566] Experiment.CPUOversubscription-a86e measurement batch 1: 1 invocations, 0 failed
+[15:23:52.823540] Experiment.CPUOversubscription-a86e measurement batch 2: 1 invocations, 0 failed
+[15:23:54.003598] Experiment.CPUOversubscription-a86e measurement batch 3: 1 invocations, 0 failed
+[15:23:55.185493] Experiment.CPUOversubscription-a86e measurement batch 4: 1 invocations, 0 failed
+[15:23:56.364367] Experiment.CPUOversubscription-a86e measurement batch 5: 1 invocations, 0 failed
+[15:23:57.547584] Experiment.CPUOversubscription-a86e measurement batch 6: 1 invocations, 0 failed
+[15:23:58.814348] Experiment.CPUOversubscription-a86e measurement batch 7: 1 invocations, 0 failed
+[15:23:59.997535] Experiment.CPUOversubscription-a86e measurement batch 8: 1 invocations, 0 failed
+[15:24:01.474825] Experiment.CPUOversubscription-a86e measurement batch 9: 1 invocations, 0 failed
+[15:24:02.713488] Experiment.CPUOversubscription-a86e measurement batch 10: 1 invocations, 0 failed
+[15:24:03.893069] Experiment.CPUOversubscription-a86e measurement batch 11: 1 invocations, 0 failed
+[15:24:05.070633] Experiment.CPUOversubscription-a86e measurement batch 12: 1 invocations, 0 failed
+[15:24:06.305678] Experiment.CPUOversubscription-a86e measurement batch 13: 1 invocations, 0 failed
+[15:24:07.543811] Experiment.CPUOversubscription-a86e measurement batch 14: 1 invocations, 0 failed
+[15:24:08.724664] Experiment.CPUOversubscription-a86e measurement batch 15: 1 invocations, 0 failed
+[15:24:08.724865] Experiment.CPUOversubscription-a86e Configuration gt-wait-policy: resources unlimited, policy active
+[15:24:10.356962] Experiment.CPUOversubscription-a86e warmup batch 0: 1 invocations, 0 failed
+[15:24:11.554794] Experiment.CPUOversubscription-a86e measurement batch 0: 1 invocations, 0 failed
+[15:24:12.730077] Experiment.CPUOversubscription-a86e measurement batch 1: 1 invocations, 0 failed
+[15:24:13.906508] Experiment.CPUOversubscription-a86e measurement batch 2: 1 invocations, 0 failed
+[15:24:15.087430] Experiment.CPUOversubscription-a86e measurement batch 3: 1 invocations, 0 failed
+[15:24:16.554829] Experiment.CPUOversubscription-a86e measurement batch 4: 1 invocations, 0 failed
+[15:24:17.730803] Experiment.CPUOversubscription-a86e measurement batch 5: 1 invocations, 0 failed
+[15:24:18.909167] Experiment.CPUOversubscription-a86e measurement batch 6: 1 invocations, 0 failed
+[15:24:20.094673] Experiment.CPUOversubscription-a86e measurement batch 7: 1 invocations, 0 failed
+[15:24:21.269773] Experiment.CPUOversubscription-a86e measurement batch 8: 1 invocations, 0 failed
+[15:24:22.451424] Experiment.CPUOversubscription-a86e measurement batch 9: 1 invocations, 0 failed
+[15:24:23.625964] Experiment.CPUOversubscription-a86e measurement batch 10: 1 invocations, 0 failed
+[15:24:24.802281] Experiment.CPUOversubscription-a86e measurement batch 11: 1 invocations, 0 failed
+[15:24:25.980714] Experiment.CPUOversubscription-a86e measurement batch 12: 1 invocations, 0 failed
+[15:24:27.167166] Experiment.CPUOversubscription-a86e measurement batch 13: 1 invocations, 0 failed
+[15:24:28.351075] Experiment.CPUOversubscription-a86e measurement batch 14: 1 invocations, 0 failed
+[15:24:29.528036] Experiment.CPUOversubscription-a86e measurement batch 15: 1 invocations, 0 failed
+[15:24:29.528192] Experiment.CPUOversubscription-a86e Configuration gt-wait-policy: resources unlimited, policy passive
+[15:24:31.183500] Experiment.CPUOversubscription-a86e warmup batch 0: 1 invocations, 0 failed
+[15:24:32.370179] Experiment.CPUOversubscription-a86e measurement batch 0: 1 invocations, 0 failed
+[15:24:33.565606] Experiment.CPUOversubscription-a86e measurement batch 1: 1 invocations, 0 failed
+[15:24:34.754412] Experiment.CPUOversubscription-a86e measurement batch 2: 1 invocations, 0 failed
+[15:24:35.944571] Experiment.CPUOversubscription-a86e measurement batch 3: 1 invocations, 0 failed
+[15:24:37.128583] Experiment.CPUOversubscription-a86e measurement batch 4: 1 invocations, 0 failed
+[15:24:38.317189] Experiment.CPUOversubscription-a86e measurement batch 5: 1 invocations, 0 failed
+[15:24:39.514209] Experiment.CPUOversubscription-a86e measurement batch 6: 1 invocations, 0 failed
+[15:24:40.707054] Experiment.CPUOversubscription-a86e measurement batch 7: 1 invocations, 0 failed
+[15:24:41.898995] Experiment.CPUOversubscription-a86e measurement batch 8: 1 invocations, 0 failed
+[15:24:43.082656] Experiment.CPUOversubscription-a86e measurement batch 9: 1 invocations, 0 failed
+[15:24:44.284924] Experiment.CPUOversubscription-a86e measurement batch 10: 1 invocations, 0 failed
+[15:24:45.471375] Experiment.CPUOversubscription-a86e measurement batch 11: 1 invocations, 0 failed
+[15:24:46.669009] Experiment.CPUOversubscription-a86e measurement batch 12: 1 invocations, 0 failed
+[15:24:47.872940] Experiment.CPUOversubscription-a86e measurement batch 13: 1 invocations, 0 failed
+[15:24:49.057261] Experiment.CPUOversubscription-a86e measurement batch 14: 1 invocations, 0 failed
+[15:24:50.249537] Experiment.CPUOversubscription-a86e measurement batch 15: 1 invocations, 0 failed
+[15:24:50.269794] Experiment.CPUOversubscription-a86e Configuration gt-wait-policy: resources quota-2, policy None
+[15:24:52.424005] Experiment.CPUOversubscription-a86e warmup batch 0: 1 invocations, 0 failed
+[15:24:54.423888] Experiment.CPUOversubscription-a86e measurement batch 0: 1 invocations, 0 failed
+[15:24:56.379826] Experiment.CPUOversubscription-a86e measurement batch 1: 1 invocations, 0 failed
+[15:24:58.174777] Experiment.CPUOversubscription-a86e measurement batch 2: 1 invocations, 0 failed
+[15:24:59.781356] Experiment.CPUOversubscription-a86e measurement batch 3: 1 invocations, 0 failed
+[15:25:02.369956] Experiment.CPUOversubscription-a86e measurement batch 4: 1 invocations, 0 failed
+[15:25:04.119265] Experiment.CPUOversubscription-a86e measurement batch 5: 1 invocations, 0 failed
+[15:25:05.771315] Experiment.CPUOversubscription-a86e measurement batch 6: 1 invocations, 0 failed
+[15:25:07.523596] Experiment.CPUOversubscription-a86e measurement batch 7: 1 invocations, 0 failed
+[15:25:09.126633] Experiment.CPUOversubscription-a86e measurement batch 8: 1 invocations, 0 failed
+[15:25:10.870787] Experiment.CPUOversubscription-a86e measurement batch 9: 1 invocations, 0 failed
+[15:25:13.424730] Experiment.CPUOversubscription-a86e measurement batch 10: 1 invocations, 0 failed
+[15:25:15.379985] Experiment.CPUOversubscription-a86e measurement batch 11: 1 invocations, 0 failed
+[15:25:16.922602] Experiment.CPUOversubscription-a86e measurement batch 12: 1 invocations, 0 failed
+[15:25:19.768569] Experiment.CPUOversubscription-a86e measurement batch 13: 1 invocations, 0 failed
+[15:25:21.870962] Experiment.CPUOversubscription-a86e measurement batch 14: 1 invocations, 0 failed
+[15:25:23.578655] Experiment.CPUOversubscription-a86e measurement batch 15: 1 invocations, 0 failed
+[15:25:23.578841] Experiment.CPUOversubscription-a86e Configuration gt-wait-policy: resources quota-2, policy active
+[15:25:26.891472] Experiment.CPUOversubscription-a86e warmup batch 0: 1 invocations, 0 failed
+[15:25:28.917045] Experiment.CPUOversubscription-a86e measurement batch 0: 1 invocations, 0 failed
+[15:25:30.791881] Experiment.CPUOversubscription-a86e measurement batch 1: 1 invocations, 0 failed
+[15:25:33.834430] Experiment.CPUOversubscription-a86e measurement batch 2: 1 invocations, 0 failed
+[15:25:35.790690] Experiment.CPUOversubscription-a86e measurement batch 3: 1 invocations, 0 failed
+[15:25:38.089011] Experiment.CPUOversubscription-a86e measurement batch 4: 1 invocations, 0 failed
+[15:25:40.394014] Experiment.CPUOversubscription-a86e measurement batch 5: 1 invocations, 0 failed
+[15:25:42.590590] Experiment.CPUOversubscription-a86e measurement batch 6: 1 invocations, 0 failed
+[15:25:45.534584] Experiment.CPUOversubscription-a86e measurement batch 7: 1 invocations, 0 failed
+[15:25:48.021428] Experiment.CPUOversubscription-a86e measurement batch 8: 1 invocations, 0 failed
+[15:25:49.739823] Experiment.CPUOversubscription-a86e measurement batch 9: 1 invocations, 0 failed
+[15:25:51.834520] Experiment.CPUOversubscription-a86e measurement batch 10: 1 invocations, 0 failed
+[15:25:53.592715] Experiment.CPUOversubscription-a86e measurement batch 11: 1 invocations, 0 failed
+[15:25:56.403470] Experiment.CPUOversubscription-a86e measurement batch 12: 1 invocations, 0 failed
+[15:25:58.528073] Experiment.CPUOversubscription-a86e measurement batch 13: 1 invocations, 0 failed
+[15:26:00.737998] Experiment.CPUOversubscription-a86e measurement batch 14: 1 invocations, 0 failed
+[15:26:02.293771] Experiment.CPUOversubscription-a86e measurement batch 15: 1 invocations, 0 failed
+[15:26:02.293939] Experiment.CPUOversubscription-a86e Configuration gt-wait-policy: resources quota-2, policy passive
+[15:26:04.217401] Experiment.CPUOversubscription-a86e warmup batch 0: 1 invocations, 0 failed
+[15:26:05.667676] Experiment.CPUOversubscription-a86e measurement batch 0: 1 invocations, 0 failed
+[15:26:07.066786] Experiment.CPUOversubscription-a86e measurement batch 1: 1 invocations, 0 failed
+[15:26:08.459692] Experiment.CPUOversubscription-a86e measurement batch 2: 1 invocations, 0 failed
+[15:26:09.869205] Experiment.CPUOversubscription-a86e measurement batch 3: 1 invocations, 0 failed
+[15:26:11.279020] Experiment.CPUOversubscription-a86e measurement batch 4: 1 invocations, 0 failed
+[15:26:12.620099] Experiment.CPUOversubscription-a86e measurement batch 5: 1 invocations, 0 failed
+[15:26:14.066341] Experiment.CPUOversubscription-a86e measurement batch 6: 1 invocations, 0 failed
+[15:26:15.416582] Experiment.CPUOversubscription-a86e measurement batch 7: 1 invocations, 0 failed
+[15:26:16.872461] Experiment.CPUOversubscription-a86e measurement batch 8: 1 invocations, 0 failed
+[15:26:18.270714] Experiment.CPUOversubscription-a86e measurement batch 9: 1 invocations, 0 failed
+[15:26:19.668624] Experiment.CPUOversubscription-a86e measurement batch 10: 1 invocations, 0 failed
+[15:26:21.070553] Experiment.CPUOversubscription-a86e measurement batch 11: 1 invocations, 0 failed
+[15:26:22.325755] Experiment.CPUOversubscription-a86e measurement batch 12: 1 invocations, 0 failed
+[15:26:23.717582] Experiment.CPUOversubscription-a86e measurement batch 13: 1 invocations, 0 failed
+[15:26:25.170015] Experiment.CPUOversubscription-a86e measurement batch 14: 1 invocations, 0 failed
+[15:26:26.421317] Experiment.CPUOversubscription-a86e measurement batch 15: 1 invocations, 0 failed
+[15:26:26.442757] Experiment.CPUOversubscription-a86e Configuration gt-wait-policy: resources model-128MB, policy None
+[15:26:33.395754] Experiment.CPUOversubscription-a86e warmup batch 0: 1 invocations, 0 failed
+[15:26:39.298967] Experiment.CPUOversubscription-a86e measurement batch 0: 1 invocations, 0 failed
+[15:26:45.301072] Experiment.CPUOversubscription-a86e measurement batch 1: 1 invocations, 0 failed
+[15:26:51.200659] Experiment.CPUOversubscription-a86e measurement batch 2: 1 invocations, 0 failed
+[15:26:57.301236] Experiment.CPUOversubscription-a86e measurement batch 3: 1 invocations, 0 failed
+[15:27:02.899438] Experiment.CPUOversubscription-a86e measurement batch 4: 1 invocations, 0 failed
+[15:27:08.795907] Experiment.CPUOversubscription-a86e measurement batch 5: 1 invocations, 0 failed
+[15:27:14.698825] Experiment.CPUOversubscription-a86e measurement batch 6: 1 invocations, 0 failed
+[15:27:20.698676] Experiment.CPUOversubscription-a86e measurement batch 7: 1 invocations, 0 failed
+[15:27:26.698237] Experiment.CPUOversubscription-a86e measurement batch 8: 1 invocations, 0 failed
+[15:27:32.601737] Experiment.CPUOversubscription-a86e measurement batch 9: 1 invocations, 0 failed
+[15:27:38.699299] Experiment.CPUOversubscription-a86e measurement batch 10: 1 invocations, 0 failed
+[15:27:44.697817] Experiment.CPUOversubscription-a86e measurement batch 11: 1 invocations, 0 failed
+[15:27:50.695757] Experiment.CPUOversubscription-a86e measurement batch 12: 1 invocations, 0 failed
+[15:27:56.795311] Experiment.CPUOversubscription-a86e measurement batch 13: 1 invocations, 0 failed
+[15:28:02.699913] Experiment.CPUOversubscription-a86e measurement batch 14: 1 invocations, 0 failed
+[15:28:08.399025] Experiment.CPUOversubscription-a86e measurement batch 15: 1 invocations, 0 failed
+[15:28:08.399185] Experiment.CPUOversubscription-a86e Configuration gt-wait-policy: resources model-128MB, policy active
+[15:28:16.768799] Experiment.CPUOversubscription-a86e warmup batch 0: 1 invocations, 0 failed
+[15:28:24.267775] Experiment.CPUOversubscription-a86e measurement batch 0: 1 invocations, 0 failed
+[15:28:31.667964] Experiment.CPUOversubscription-a86e measurement batch 1: 1 invocations, 0 failed
+[15:28:39.065451] Experiment.CPUOversubscription-a86e measurement batch 2: 1 invocations, 0 failed
+[15:28:46.368741] Experiment.CPUOversubscription-a86e measurement batch 3: 1 invocations, 0 failed
+[15:28:53.868676] Experiment.CPUOversubscription-a86e measurement batch 4: 1 invocations, 0 failed
+[15:29:01.370150] Experiment.CPUOversubscription-a86e measurement batch 5: 1 invocations, 0 failed
+[15:29:08.568220] Experiment.CPUOversubscription-a86e measurement batch 6: 1 invocations, 0 failed
+[15:29:16.171241] Experiment.CPUOversubscription-a86e measurement batch 7: 1 invocations, 0 failed
+[15:29:23.865424] Experiment.CPUOversubscription-a86e measurement batch 8: 1 invocations, 0 failed
+[15:29:31.765288] Experiment.CPUOversubscription-a86e measurement batch 9: 1 invocations, 0 failed
+[15:29:39.467941] Experiment.CPUOversubscription-a86e measurement batch 10: 1 invocations, 0 failed
+[15:29:46.668343] Experiment.CPUOversubscription-a86e measurement batch 11: 1 invocations, 0 failed
+[15:29:54.368620] Experiment.CPUOversubscription-a86e measurement batch 12: 1 invocations, 0 failed
+[15:30:01.867687] Experiment.CPUOversubscription-a86e measurement batch 13: 1 invocations, 0 failed
+[15:30:09.470057] Experiment.CPUOversubscription-a86e measurement batch 14: 1 invocations, 0 failed
+[15:30:17.165542] Experiment.CPUOversubscription-a86e measurement batch 15: 1 invocations, 0 failed
+[15:30:17.165723] Experiment.CPUOversubscription-a86e Configuration gt-wait-policy: resources model-128MB, policy passive
+[15:30:22.507228] Experiment.CPUOversubscription-a86e warmup batch 0: 1 invocations, 0 failed
+[15:30:26.810557] Experiment.CPUOversubscription-a86e measurement batch 0: 1 invocations, 0 failed
+[15:30:31.007244] Experiment.CPUOversubscription-a86e measurement batch 1: 1 invocations, 0 failed
+[15:30:35.209208] Experiment.CPUOversubscription-a86e measurement batch 2: 1 invocations, 0 failed
+[15:30:39.511504] Experiment.CPUOversubscription-a86e measurement batch 3: 1 invocations, 0 failed
+[15:30:43.707498] Experiment.CPUOversubscription-a86e measurement batch 4: 1 invocations, 0 failed
+[15:30:47.911264] Experiment.CPUOversubscription-a86e measurement batch 5: 1 invocations, 0 failed
+[15:30:52.211890] Experiment.CPUOversubscription-a86e measurement batch 6: 1 invocations, 0 failed
+[15:30:56.411180] Experiment.CPUOversubscription-a86e measurement batch 7: 1 invocations, 0 failed
+[15:31:00.612856] Experiment.CPUOversubscription-a86e measurement batch 8: 1 invocations, 0 failed
+[15:31:04.911048] Experiment.CPUOversubscription-a86e measurement batch 9: 1 invocations, 0 failed
+[15:31:09.110970] Experiment.CPUOversubscription-a86e measurement batch 10: 1 invocations, 0 failed
+[15:31:13.311766] Experiment.CPUOversubscription-a86e measurement batch 11: 1 invocations, 0 failed
+[15:31:17.610091] Experiment.CPUOversubscription-a86e measurement batch 12: 1 invocations, 0 failed
+[15:31:21.910359] Experiment.CPUOversubscription-a86e measurement batch 13: 1 invocations, 0 failed
+[15:31:26.110969] Experiment.CPUOversubscription-a86e measurement batch 14: 1 invocations, 0 failed
+[15:31:30.313075] Experiment.CPUOversubscription-a86e measurement batch 15: 1 invocations, 0 failed
+[15:31:30.430619] Experiment.CPUOversubscription-a86e Finished, results stored in results/cpu-oversubscription/20261030-145822_local
+[15:31:30.430916] Benchmark-d4fd Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/aws.json
+[15:31:30.431074] Benchmark-d4fd Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/openwhisk.json
+[15:31:30.431200] Benchmark-d4fd Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/local.json

@@ -1,0 +1,3 @@
+configuration,resources,omp_wait_policy_requested,cold_starts,threads,samples,wall_median,wall_p25,wall_p75,cpu_utilization_median,throttled_fraction_median,effective_cpus_median,os_cpu_count,cold_fraction,speedup,penalty_vs_best
+e4-timeout-fine-baseline,128MB,,True,1.0,4,156.3123182595,128.30302463525,183.12666074825,0.06626381589096197,,0.07113967168859492,2.0,1.0,1.0,1.0
+e4-timeout-fine-oversubscribed,128MB,passive,True,2.0,4,183.59969328350002,182.6096439785,185.8847093155,0.07231059131583126,,0.07219370515567958,2.0,1.0,,1.0

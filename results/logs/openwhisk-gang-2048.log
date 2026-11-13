@@ -1,0 +1,31 @@
+[12:15:19.793662] SeBS-b825 Created experiment output at /home/emilio/projects/DPHPC/serverless-benchmarks/results
+[12:15:19.795455] OpenWhisk.Resources-2e3f Using user-provided configuration of storage type: object for openwhisk containers.
+[12:15:19.795498] OpenWhisk.Resources-2e3f Deserializing access data to Minio storage
+[12:15:19.795519] OpenWhisk.Resources-2e3f No NoSQL storage available
+[12:15:19.795534] OpenWhisk.Resources-2e3f Using user-provided Docker registry for OpenWhisk.
+[12:15:19.795685] OpenWhisk-9ae0 Using existing resource name: e94eca58.
+[12:15:19.803151] Benchmark-62a5 Using cached benchmark 506.data-parallel-sgd at /home/emilio/projects/DPHPC/serverless-benchmarks/cache/506.data-parallel-sgd/openwhisk/python/3.11/x64/docker/506.data-parallel-sgd.zip
+[12:15:19.803402] OpenWhisk-9ae0 Using cached function sebs-e94eca58-506.data-parallel-sgd-python-3.11 in /home/emilio/projects/DPHPC/serverless-benchmarks/cache/506.data-parallel-sgd/openwhisk/python/3.11/x64/docker/506.data-parallel-sgd.zip
+[12:15:19.803779] OpenWhisk-9ae0 Updating function configuration due to changed attribute timeout: cached function has value 60 whereas 120 has been requested.
+[12:15:19.803864] OpenWhisk-9ae0 Update configuration of an existing OpenWhisk action sebs-e94eca58-506.data-parallel-sgd-python-3.11.
+[12:15:19.863011] OpenWhisk-9ae0 Update configuration of an existing OpenWhisk action sebs-e94eca58-506.data-parallel-sgd-python-3.11.
+[12:15:19.921644] Experiment.GangScheduling-5a1d Results of this run will be stored in results/gang-scheduling/20261113-121519_openwhisk_2048MB
+[12:15:21.354815] Experiment.GangScheduling-5a1d N=2 repetition 0: 2 of 2 ranks completed, 1.4 s
+[12:15:27.076786] Experiment.GangScheduling-5a1d N=2 repetition 1: 2 of 2 ranks completed, 0.7 s
+[12:15:32.889023] Experiment.GangScheduling-5a1d N=2 repetition 2: 2 of 2 ranks completed, 0.8 s
+[12:15:39.410658] Experiment.GangScheduling-5a1d N=3 repetition 0: 3 of 3 ranks completed, 1.5 s
+[12:15:45.465490] Experiment.GangScheduling-5a1d N=3 repetition 1: 3 of 3 ranks completed, 1.1 s
+[12:15:51.452770] Experiment.GangScheduling-5a1d N=3 repetition 2: 3 of 3 ranks completed, 1.0 s
+[12:15:58.257663] Experiment.GangScheduling-5a1d N=4 repetition 0: 4 of 4 ranks completed, 1.8 s
+[12:16:04.497815] Experiment.GangScheduling-5a1d N=4 repetition 1: 4 of 4 ranks completed, 1.2 s
+[12:16:10.659241] Experiment.GangScheduling-5a1d N=4 repetition 2: 4 of 4 ranks completed, 1.2 s
+[12:16:55.865997] Experiment.GangScheduling-5a1d N=5 repetition 0: 0 of 5 ranks completed, 40.2 s
+[12:17:41.084694] Experiment.GangScheduling-5a1d N=5 repetition 1: 0 of 5 ranks completed, 40.2 s
+[12:18:26.248072] Experiment.GangScheduling-5a1d N=5 repetition 2: 0 of 5 ranks completed, 40.2 s
+[12:19:11.463804] Experiment.GangScheduling-5a1d N=6 repetition 0: 0 of 6 ranks completed, 40.2 s
+[12:19:56.703832] Experiment.GangScheduling-5a1d N=6 repetition 1: 0 of 6 ranks completed, 40.2 s
+[12:20:41.925365] Experiment.GangScheduling-5a1d N=6 repetition 2: 0 of 6 ranks completed, 40.2 s
+[12:20:46.938046] Experiment.GangScheduling-5a1d Finished, results stored in results/gang-scheduling/20261113-121519_openwhisk_2048MB
+[12:20:46.938337] Benchmark-1d42 Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/aws.json
+[12:20:46.938455] Benchmark-1d42 Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/openwhisk.json
+[12:20:46.938567] Benchmark-1d42 Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/local.json

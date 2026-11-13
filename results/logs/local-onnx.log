@@ -1,0 +1,101 @@
+[11:11:55.367291] SeBS-753a Created experiment output at /home/emilio/projects/DPHPC/serverless-benchmarks/results
+[11:11:55.368932] LocalResources-1ca4 Using user-provided configuration of storage type: object for local containers.
+[11:11:55.368974] LocalResources-1ca4 Deserializing access data to Minio storage
+[11:11:55.368992] LocalResources-1ca4 No NoSQL storage available
+[11:11:55.369010] LocalResources-1ca4 Using cached resources for Local
+[11:11:55.376236] Local-c43f Using existing deployment local-c7a37e18 that matches prefix local!
+[11:11:55.379280] minio.Minio-3db0 Using existing bucket sebs-benchmarks-local-c7a37e18 for benchmarks
+[11:11:55.379568] Benchmark-6206 Building benchmark 412.image-recognition-onnx. Reason: no cached code package.
+[11:11:55.518471] Benchmark-6206 Docker build of benchmark dependencies in container of image spcleth/serverless-benchmarks:build.local.python.3.11-1.2.0
+[11:11:55.518574] Benchmark-6206 Docker mount of benchmark code from path /home/emilio/projects/DPHPC/serverless-benchmarks/results/412.image-recognition-onnx_code/python/3.11/x64/package
+[11:12:04.627559] Benchmark-6206 Docker build: Original size 190M
+[11:12:04.627692] Benchmark-6206 Docker build: Stripped size 
+[11:12:04.628106] Local-c43f Function size 0.003906 MB
+[11:12:04.628594] Benchmark-6206 Created code package (source hash: 698d42f09a52d32332bfbc10554612be), for run on local with python:3.11
+[11:12:04.720602] Local-c43f Creating new function! Reason: function sebd-412.image-recognition-onnx-python-3.11 not found in cache.
+[11:12:05.199271] Local-c43f Started sebd-412.image-recognition-onnx-python-3.11 function at container 1cb8bb82c80873b5690320e4057d288f28667c5f11a0163232c1ec824c22f8dd , running on 172.17.0.4:9000
+[11:12:05.200278] Experiment.CPUOversubscription-2bf0 Results of this run will be stored in results/cpu-oversubscription/20261113-111205_local_onnx
+[11:12:05.241133] Experiment.CPUOversubscription-2bf0 Configuration onnx-mechanisms: resources unlimited, policy None
+[11:12:08.997185] Experiment.CPUOversubscription-2bf0 warmup batch 0: 1 invocations, 0 failed
+[11:12:11.934085] Experiment.CPUOversubscription-2bf0 measurement batch 0: 1 invocations, 0 failed
+[11:12:14.847899] Experiment.CPUOversubscription-2bf0 measurement batch 1: 1 invocations, 0 failed
+[11:12:17.734916] Experiment.CPUOversubscription-2bf0 measurement batch 2: 1 invocations, 0 failed
+[11:12:20.652368] Experiment.CPUOversubscription-2bf0 measurement batch 3: 1 invocations, 0 failed
+[11:12:23.608865] Experiment.CPUOversubscription-2bf0 measurement batch 4: 1 invocations, 0 failed
+[11:12:26.478976] Experiment.CPUOversubscription-2bf0 measurement batch 5: 1 invocations, 0 failed
+[11:12:29.409389] Experiment.CPUOversubscription-2bf0 measurement batch 6: 1 invocations, 0 failed
+[11:12:32.368364] Experiment.CPUOversubscription-2bf0 measurement batch 7: 1 invocations, 0 failed
+[11:12:32.368583] Experiment.CPUOversubscription-2bf0 Configuration onnx-mechanisms: resources unlimited, policy passive
+[11:12:36.031204] Experiment.CPUOversubscription-2bf0 warmup batch 0: 1 invocations, 0 failed
+[11:12:39.010283] Experiment.CPUOversubscription-2bf0 measurement batch 0: 1 invocations, 0 failed
+[11:12:41.955685] Experiment.CPUOversubscription-2bf0 measurement batch 1: 1 invocations, 0 failed
+[11:12:44.835095] Experiment.CPUOversubscription-2bf0 measurement batch 2: 1 invocations, 0 failed
+[11:12:47.710389] Experiment.CPUOversubscription-2bf0 measurement batch 3: 1 invocations, 0 failed
+[11:12:50.558589] Experiment.CPUOversubscription-2bf0 measurement batch 4: 1 invocations, 0 failed
+[11:12:53.504331] Experiment.CPUOversubscription-2bf0 measurement batch 5: 1 invocations, 0 failed
+[11:12:56.467087] Experiment.CPUOversubscription-2bf0 measurement batch 6: 1 invocations, 0 failed
+[11:12:59.392656] Experiment.CPUOversubscription-2bf0 measurement batch 7: 1 invocations, 0 failed
+[11:12:59.414686] Experiment.CPUOversubscription-2bf0 Configuration onnx-mechanisms: resources cpuset-2, policy None
+[11:13:08.372471] Experiment.CPUOversubscription-2bf0 warmup batch 0: 1 invocations, 0 failed
+[11:13:16.450121] Experiment.CPUOversubscription-2bf0 measurement batch 0: 1 invocations, 0 failed
+[11:13:24.231668] Experiment.CPUOversubscription-2bf0 measurement batch 1: 1 invocations, 0 failed
+[11:13:32.063847] Experiment.CPUOversubscription-2bf0 measurement batch 2: 1 invocations, 0 failed
+[11:13:39.544335] Experiment.CPUOversubscription-2bf0 measurement batch 3: 1 invocations, 0 failed
+[11:13:48.205058] Experiment.CPUOversubscription-2bf0 measurement batch 4: 1 invocations, 0 failed
+[11:13:56.191470] Experiment.CPUOversubscription-2bf0 measurement batch 5: 1 invocations, 0 failed
+[11:14:04.014113] Experiment.CPUOversubscription-2bf0 measurement batch 6: 1 invocations, 0 failed
+[11:14:13.132423] Experiment.CPUOversubscription-2bf0 measurement batch 7: 1 invocations, 0 failed
+[11:14:13.132618] Experiment.CPUOversubscription-2bf0 Configuration onnx-mechanisms: resources cpuset-2, policy passive
+[11:14:17.118693] Experiment.CPUOversubscription-2bf0 warmup batch 0: 1 invocations, 0 failed
+[11:14:20.307270] Experiment.CPUOversubscription-2bf0 measurement batch 0: 1 invocations, 0 failed
+[11:14:23.472394] Experiment.CPUOversubscription-2bf0 measurement batch 1: 1 invocations, 0 failed
+[11:14:26.724805] Experiment.CPUOversubscription-2bf0 measurement batch 2: 1 invocations, 0 failed
+[11:14:29.904560] Experiment.CPUOversubscription-2bf0 measurement batch 3: 1 invocations, 0 failed
+[11:14:33.158541] Experiment.CPUOversubscription-2bf0 measurement batch 4: 1 invocations, 0 failed
+[11:14:36.427404] Experiment.CPUOversubscription-2bf0 measurement batch 5: 1 invocations, 0 failed
+[11:14:39.610085] Experiment.CPUOversubscription-2bf0 measurement batch 6: 1 invocations, 0 failed
+[11:14:42.779005] Experiment.CPUOversubscription-2bf0 measurement batch 7: 1 invocations, 0 failed
+[11:14:42.800126] Experiment.CPUOversubscription-2bf0 Configuration onnx-mechanisms: resources quota-2, policy None
+[11:14:47.984356] Experiment.CPUOversubscription-2bf0 warmup batch 0: 1 invocations, 0 failed
+[11:14:52.230864] Experiment.CPUOversubscription-2bf0 measurement batch 0: 1 invocations, 0 failed
+[11:14:56.952118] Experiment.CPUOversubscription-2bf0 measurement batch 1: 1 invocations, 0 failed
+[11:15:01.249619] Experiment.CPUOversubscription-2bf0 measurement batch 2: 1 invocations, 0 failed
+[11:15:05.695646] Experiment.CPUOversubscription-2bf0 measurement batch 3: 1 invocations, 0 failed
+[11:15:10.436523] Experiment.CPUOversubscription-2bf0 measurement batch 4: 1 invocations, 0 failed
+[11:15:14.736488] Experiment.CPUOversubscription-2bf0 measurement batch 5: 1 invocations, 0 failed
+[11:15:18.905818] Experiment.CPUOversubscription-2bf0 measurement batch 6: 1 invocations, 0 failed
+[11:15:23.166069] Experiment.CPUOversubscription-2bf0 measurement batch 7: 1 invocations, 0 failed
+[11:15:23.166239] Experiment.CPUOversubscription-2bf0 Configuration onnx-mechanisms: resources quota-2, policy passive
+[11:15:27.511106] Experiment.CPUOversubscription-2bf0 warmup batch 0: 1 invocations, 0 failed
+[11:15:31.106780] Experiment.CPUOversubscription-2bf0 measurement batch 0: 1 invocations, 0 failed
+[11:15:34.589953] Experiment.CPUOversubscription-2bf0 measurement batch 1: 1 invocations, 0 failed
+[11:15:37.945610] Experiment.CPUOversubscription-2bf0 measurement batch 2: 1 invocations, 0 failed
+[11:15:41.471754] Experiment.CPUOversubscription-2bf0 measurement batch 3: 1 invocations, 0 failed
+[11:15:44.863233] Experiment.CPUOversubscription-2bf0 measurement batch 4: 1 invocations, 0 failed
+[11:15:48.330418] Experiment.CPUOversubscription-2bf0 measurement batch 5: 1 invocations, 0 failed
+[11:15:51.918436] Experiment.CPUOversubscription-2bf0 measurement batch 6: 1 invocations, 0 failed
+[11:15:55.520519] Experiment.CPUOversubscription-2bf0 measurement batch 7: 1 invocations, 0 failed
+[11:15:55.542397] Experiment.CPUOversubscription-2bf0 Configuration onnx-mechanisms: resources model-640MB, policy None
+[11:16:38.260570] Experiment.CPUOversubscription-2bf0 warmup batch 0: 1 invocations, 0 failed
+[11:17:17.663263] Experiment.CPUOversubscription-2bf0 measurement batch 0: 1 invocations, 0 failed
+[11:17:56.673751] Experiment.CPUOversubscription-2bf0 measurement batch 1: 1 invocations, 0 failed
+[11:18:35.776253] Experiment.CPUOversubscription-2bf0 measurement batch 2: 1 invocations, 0 failed
+[11:19:16.667383] Experiment.CPUOversubscription-2bf0 measurement batch 3: 1 invocations, 0 failed
+[11:19:55.458010] Experiment.CPUOversubscription-2bf0 measurement batch 4: 1 invocations, 0 failed
+[11:20:35.557101] Experiment.CPUOversubscription-2bf0 measurement batch 5: 1 invocations, 0 failed
+[11:21:15.458879] Experiment.CPUOversubscription-2bf0 measurement batch 6: 1 invocations, 0 failed
+[11:21:55.065767] Experiment.CPUOversubscription-2bf0 measurement batch 7: 1 invocations, 0 failed
+[11:21:55.065971] Experiment.CPUOversubscription-2bf0 Configuration onnx-mechanisms: resources model-640MB, policy passive
+[11:22:05.282275] Experiment.CPUOversubscription-2bf0 warmup batch 0: 1 invocations, 0 failed
+[11:22:14.197253] Experiment.CPUOversubscription-2bf0 measurement batch 0: 1 invocations, 0 failed
+[11:22:23.073374] Experiment.CPUOversubscription-2bf0 measurement batch 1: 1 invocations, 0 failed
+[11:22:31.977295] Experiment.CPUOversubscription-2bf0 measurement batch 2: 1 invocations, 0 failed
+[11:22:40.772525] Experiment.CPUOversubscription-2bf0 measurement batch 3: 1 invocations, 0 failed
+[11:22:49.479386] Experiment.CPUOversubscription-2bf0 measurement batch 4: 1 invocations, 0 failed
+[11:22:58.488863] Experiment.CPUOversubscription-2bf0 measurement batch 5: 1 invocations, 0 failed
+[11:23:07.595650] Experiment.CPUOversubscription-2bf0 measurement batch 6: 1 invocations, 0 failed
+[11:23:16.596012] Experiment.CPUOversubscription-2bf0 measurement batch 7: 1 invocations, 0 failed
+[11:23:16.656797] Experiment.CPUOversubscription-2bf0 Finished, results stored in results/cpu-oversubscription/20261113-111205_local_onnx
+[11:23:16.657027] Benchmark-ad30 Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/aws.json
+[11:23:16.657143] Benchmark-ad30 Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/openwhisk.json
+[11:23:16.657249] Benchmark-ad30 Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/local.json

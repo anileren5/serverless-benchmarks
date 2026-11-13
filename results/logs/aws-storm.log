@@ -1,0 +1,212 @@
+[11:11:41.506966] SeBS-20b9 Created experiment output at /home/emilio/projects/DPHPC/serverless-benchmarks/results
+[11:11:42.138706] AWS.Resources-65cc Using cached resources for AWS
+[11:11:42.138906] AWS.Config-3f48 Using cached config for AWS
+[11:11:42.174361] AWS-39e9 Using existing resource name: 65d44790.
+[11:11:42.181919] AWS-39e9 Using existing resource name: 65d44790.
+[11:11:42.183711] AWS.SystemResources-9470 Initialize S3 storage instance.
+[11:11:42.207363] Benchmark-e5cf Using cached benchmark 505.cpu-oversubscription at /home/emilio/projects/DPHPC/serverless-benchmarks/cache/505.cpu-oversubscription/aws/python/3.11/x64/package/505.cpu-oversubscription.zip
+[11:11:42.207859] AWS-39e9 Using cached function sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 in /home/emilio/projects/DPHPC/serverless-benchmarks/cache/505.cpu-oversubscription/aws/python/3.11/x64/package/505.cpu-oversubscription.zip
+[11:11:42.208173] AWS-39e9 Updating function configuration due to changed attribute memory: cached function has value 128 whereas 1024 has been requested.
+[11:11:42.652902] AWS-39e9 Waiting for Lambda function to be updated...
+[11:11:43.936248] AWS-39e9 Lambda function has been updated.
+[11:11:43.936442] AWS-39e9 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[11:11:43.937461] Experiment.CPUOversubscription-27dc Results of this run will be stored in results/cpu-oversubscription/20261113-111143_aws_storm
+[11:11:44.249030] AWS-39e9 Waiting for Lambda function to be updated...
+[11:11:45.525071] AWS-39e9 Lambda function has been updated.
+[11:11:45.525210] AWS-39e9 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[11:11:45.525792] Experiment.CPUOversubscription-27dc Configuration storm-g128: resources 128MB, policy None
+[11:11:46.009291] AWS-39e9 Waiting for Lambda function to be updated...
+[11:11:47.343422] AWS-39e9 Lambda function has been updated.
+[11:11:47.343535] AWS-39e9 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[11:11:47.343694] AWS-39e9 Sent function updates enforcing cold starts.
+[11:11:47.343778] AWS-39e9 Waiting for Lambda function to be updated...
+[11:11:47.482372] AWS-39e9 Lambda function has been updated.
+[11:11:47.482512] AWS-39e9 Finished function updates enforcing cold starts.
+[11:14:00.985526] Experiment.CPUOversubscription-27dc warmup batch 0: 8 invocations, 0 failed
+[11:15:42.761589] Experiment.CPUOversubscription-27dc measurement batch 0: 8 invocations, 0 failed
+[11:15:43.052869] AWS-39e9 Waiting for Lambda function to be updated...
+[11:15:44.310946] AWS-39e9 Lambda function has been updated.
+[11:15:44.311152] AWS-39e9 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[11:15:44.311661] Experiment.CPUOversubscription-27dc Configuration storm-g128: resources 512MB, policy None
+[11:15:44.761204] AWS-39e9 Waiting for Lambda function to be updated...
+[11:15:46.018052] AWS-39e9 Lambda function has been updated.
+[11:15:46.018186] AWS-39e9 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[11:15:46.018253] AWS-39e9 Sent function updates enforcing cold starts.
+[11:15:46.018312] AWS-39e9 Waiting for Lambda function to be updated...
+[11:15:46.145851] AWS-39e9 Lambda function has been updated.
+[11:15:46.145969] AWS-39e9 Finished function updates enforcing cold starts.
+[11:15:49.291027] Experiment.CPUOversubscription-27dc warmup batch 0: 8 invocations, 0 failed
+[11:15:52.320697] Experiment.CPUOversubscription-27dc measurement batch 0: 8 invocations, 0 failed
+[11:15:52.606077] AWS-39e9 Waiting for Lambda function to be updated...
+[11:15:53.883178] AWS-39e9 Lambda function has been updated.
+[11:15:53.883358] AWS-39e9 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[11:15:53.883839] Experiment.CPUOversubscription-27dc Configuration storm-g128: resources 1769MB, policy None
+[11:15:54.376931] AWS-39e9 Waiting for Lambda function to be updated...
+[11:15:55.662528] AWS-39e9 Lambda function has been updated.
+[11:15:55.662669] AWS-39e9 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[11:15:55.662729] AWS-39e9 Sent function updates enforcing cold starts.
+[11:15:55.662779] AWS-39e9 Waiting for Lambda function to be updated...
+[11:15:55.801987] AWS-39e9 Lambda function has been updated.
+[11:15:55.802118] AWS-39e9 Finished function updates enforcing cold starts.
+[11:15:57.859176] Experiment.CPUOversubscription-27dc warmup batch 0: 8 invocations, 0 failed
+[11:15:59.598668] Experiment.CPUOversubscription-27dc measurement batch 0: 8 invocations, 0 failed
+[11:15:59.872269] AWS-39e9 Waiting for Lambda function to be updated...
+[11:16:01.133140] AWS-39e9 Lambda function has been updated.
+[11:16:01.133252] AWS-39e9 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[11:16:01.133627] Experiment.CPUOversubscription-27dc Configuration storm-g256: resources 128MB, policy None
+[11:16:01.599585] AWS-39e9 Waiting for Lambda function to be updated...
+[11:16:02.854307] AWS-39e9 Lambda function has been updated.
+[11:16:02.854420] AWS-39e9 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[11:16:02.854494] AWS-39e9 Sent function updates enforcing cold starts.
+[11:16:02.854557] AWS-39e9 Waiting for Lambda function to be updated...
+[11:16:02.988052] AWS-39e9 Lambda function has been updated.
+[11:16:02.988122] AWS-39e9 Finished function updates enforcing cold starts.
+[11:17:06.774973] Experiment.CPUOversubscription-27dc warmup batch 0: 8 invocations, 0 failed
+[11:18:12.276599] Experiment.CPUOversubscription-27dc measurement batch 0: 8 invocations, 0 failed
+[11:18:12.570439] AWS-39e9 Waiting for Lambda function to be updated...
+[11:18:13.829053] AWS-39e9 Lambda function has been updated.
+[11:18:13.829160] AWS-39e9 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[11:18:13.829624] Experiment.CPUOversubscription-27dc Configuration storm-g256: resources 512MB, policy None
+[11:18:14.275336] AWS-39e9 Waiting for Lambda function to be updated...
+[11:18:15.523808] AWS-39e9 Lambda function has been updated.
+[11:18:15.523915] AWS-39e9 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[11:18:15.523968] AWS-39e9 Sent function updates enforcing cold starts.
+[11:18:15.524012] AWS-39e9 Waiting for Lambda function to be updated...
+[11:18:15.664896] AWS-39e9 Lambda function has been updated.
+[11:18:15.664968] AWS-39e9 Finished function updates enforcing cold starts.
+[11:18:18.336047] Experiment.CPUOversubscription-27dc warmup batch 0: 8 invocations, 0 failed
+[11:18:20.896918] Experiment.CPUOversubscription-27dc measurement batch 0: 8 invocations, 0 failed
+[11:18:21.171283] AWS-39e9 Waiting for Lambda function to be updated...
+[11:18:22.493768] AWS-39e9 Lambda function has been updated.
+[11:18:22.493889] AWS-39e9 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[11:18:22.494235] Experiment.CPUOversubscription-27dc Configuration storm-g256: resources 1769MB, policy None
+[11:18:22.923106] AWS-39e9 Waiting for Lambda function to be updated...
+[11:18:24.228111] AWS-39e9 Lambda function has been updated.
+[11:18:24.228247] AWS-39e9 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[11:18:24.228312] AWS-39e9 Sent function updates enforcing cold starts.
+[11:18:24.228361] AWS-39e9 Waiting for Lambda function to be updated...
+[11:18:24.366963] AWS-39e9 Lambda function has been updated.
+[11:18:24.367101] AWS-39e9 Finished function updates enforcing cold starts.
+[11:18:26.208728] Experiment.CPUOversubscription-27dc warmup batch 0: 8 invocations, 0 failed
+[11:18:27.866529] Experiment.CPUOversubscription-27dc measurement batch 0: 8 invocations, 0 failed
+[11:18:28.191652] AWS-39e9 Waiting for Lambda function to be updated...
+[11:18:29.470766] AWS-39e9 Lambda function has been updated.
+[11:18:29.470881] AWS-39e9 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[11:18:29.471243] Experiment.CPUOversubscription-27dc Configuration storm-g512: resources 128MB, policy None
+[11:18:29.913622] AWS-39e9 Waiting for Lambda function to be updated...
+[11:18:31.203033] AWS-39e9 Lambda function has been updated.
+[11:18:31.203119] AWS-39e9 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[11:18:31.203171] AWS-39e9 Sent function updates enforcing cold starts.
+[11:18:31.203244] AWS-39e9 Waiting for Lambda function to be updated...
+[11:18:31.340713] AWS-39e9 Lambda function has been updated.
+[11:18:31.340784] AWS-39e9 Finished function updates enforcing cold starts.
+[11:18:58.318117] Experiment.CPUOversubscription-27dc warmup batch 0: 8 invocations, 0 failed
+[11:19:23.521773] Experiment.CPUOversubscription-27dc measurement batch 0: 8 invocations, 0 failed
+[11:19:23.788925] AWS-39e9 Waiting for Lambda function to be updated...
+[11:19:25.037699] AWS-39e9 Lambda function has been updated.
+[11:19:25.037807] AWS-39e9 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[11:19:25.038162] Experiment.CPUOversubscription-27dc Configuration storm-g512: resources 512MB, policy None
+[11:19:25.523320] AWS-39e9 Waiting for Lambda function to be updated...
+[11:19:26.793590] AWS-39e9 Lambda function has been updated.
+[11:19:26.793704] AWS-39e9 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[11:19:26.793755] AWS-39e9 Sent function updates enforcing cold starts.
+[11:19:26.793796] AWS-39e9 Waiting for Lambda function to be updated...
+[11:19:26.979492] AWS-39e9 Lambda function has been updated.
+[11:19:26.979566] AWS-39e9 Finished function updates enforcing cold starts.
+[11:19:29.945472] Experiment.CPUOversubscription-27dc warmup batch 0: 8 invocations, 0 failed
+[11:19:32.705371] Experiment.CPUOversubscription-27dc measurement batch 0: 8 invocations, 0 failed
+[11:19:32.976741] AWS-39e9 Waiting for Lambda function to be updated...
+[11:19:34.247401] AWS-39e9 Lambda function has been updated.
+[11:19:34.247523] AWS-39e9 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[11:19:34.247871] Experiment.CPUOversubscription-27dc Configuration storm-g512: resources 1769MB, policy None
+[11:19:34.704990] AWS-39e9 Waiting for Lambda function to be updated...
+[11:19:35.970935] AWS-39e9 Lambda function has been updated.
+[11:19:35.971041] AWS-39e9 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[11:19:35.971097] AWS-39e9 Sent function updates enforcing cold starts.
+[11:19:35.971259] AWS-39e9 Waiting for Lambda function to be updated...
+[11:19:36.146683] AWS-39e9 Lambda function has been updated.
+[11:19:36.146776] AWS-39e9 Finished function updates enforcing cold starts.
+[11:19:38.002877] Experiment.CPUOversubscription-27dc warmup batch 0: 8 invocations, 0 failed
+[11:19:39.680279] Experiment.CPUOversubscription-27dc measurement batch 0: 8 invocations, 0 failed
+[11:19:39.961487] AWS-39e9 Waiting for Lambda function to be updated...
+[11:19:41.353193] AWS-39e9 Lambda function has been updated.
+[11:19:41.353337] AWS-39e9 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[11:19:41.353701] Experiment.CPUOversubscription-27dc Configuration storm-g1024: resources 128MB, policy None
+[11:19:41.864464] AWS-39e9 Waiting for Lambda function to be updated...
+[11:19:43.146380] AWS-39e9 Lambda function has been updated.
+[11:19:43.146489] AWS-39e9 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[11:19:43.146541] AWS-39e9 Sent function updates enforcing cold starts.
+[11:19:43.146583] AWS-39e9 Waiting for Lambda function to be updated...
+[11:19:43.278140] AWS-39e9 Lambda function has been updated.
+[11:19:43.278254] AWS-39e9 Finished function updates enforcing cold starts.
+[11:19:55.538396] Experiment.CPUOversubscription-27dc warmup batch 0: 8 invocations, 0 failed
+[11:20:07.949246] Experiment.CPUOversubscription-27dc measurement batch 0: 8 invocations, 0 failed
+[11:20:08.232224] AWS-39e9 Waiting for Lambda function to be updated...
+[11:20:09.615736] AWS-39e9 Lambda function has been updated.
+[11:20:09.615836] AWS-39e9 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[11:20:09.616193] Experiment.CPUOversubscription-27dc Configuration storm-g1024: resources 512MB, policy None
+[11:20:10.042709] AWS-39e9 Waiting for Lambda function to be updated...
+[11:20:11.300372] AWS-39e9 Lambda function has been updated.
+[11:20:11.300459] AWS-39e9 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[11:20:11.300512] AWS-39e9 Sent function updates enforcing cold starts.
+[11:20:11.300554] AWS-39e9 Waiting for Lambda function to be updated...
+[11:20:11.421444] AWS-39e9 Lambda function has been updated.
+[11:20:11.421520] AWS-39e9 Finished function updates enforcing cold starts.
+[11:20:14.619182] Experiment.CPUOversubscription-27dc warmup batch 0: 8 invocations, 0 failed
+[11:20:17.513657] Experiment.CPUOversubscription-27dc measurement batch 0: 8 invocations, 0 failed
+[11:20:17.779413] AWS-39e9 Waiting for Lambda function to be updated...
+[11:20:19.106427] AWS-39e9 Lambda function has been updated.
+[11:20:19.106534] AWS-39e9 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[11:20:19.106887] Experiment.CPUOversubscription-27dc Configuration storm-g1024: resources 1769MB, policy None
+[11:20:19.597035] AWS-39e9 Waiting for Lambda function to be updated...
+[11:20:20.846148] AWS-39e9 Lambda function has been updated.
+[11:20:20.846262] AWS-39e9 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[11:20:20.846324] AWS-39e9 Sent function updates enforcing cold starts.
+[11:20:20.846413] AWS-39e9 Waiting for Lambda function to be updated...
+[11:20:20.981694] AWS-39e9 Lambda function has been updated.
+[11:20:20.981786] AWS-39e9 Finished function updates enforcing cold starts.
+[11:20:22.932511] Experiment.CPUOversubscription-27dc warmup batch 0: 8 invocations, 0 failed
+[11:20:24.724471] Experiment.CPUOversubscription-27dc measurement batch 0: 8 invocations, 0 failed
+[11:20:25.011940] AWS-39e9 Waiting for Lambda function to be updated...
+[11:20:26.298967] AWS-39e9 Lambda function has been updated.
+[11:20:26.299082] AWS-39e9 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[11:20:26.299516] Experiment.CPUOversubscription-27dc Configuration storm-g2048: resources 128MB, policy None
+[11:20:26.727531] AWS-39e9 Waiting for Lambda function to be updated...
+[11:20:27.969697] AWS-39e9 Lambda function has been updated.
+[11:20:27.969813] AWS-39e9 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[11:20:27.969863] AWS-39e9 Sent function updates enforcing cold starts.
+[11:20:27.969902] AWS-39e9 Waiting for Lambda function to be updated...
+[11:20:28.096203] AWS-39e9 Lambda function has been updated.
+[11:20:28.096280] AWS-39e9 Finished function updates enforcing cold starts.
+[11:20:39.818813] Experiment.CPUOversubscription-27dc warmup batch 0: 8 invocations, 0 failed
+[11:20:50.436922] Experiment.CPUOversubscription-27dc measurement batch 0: 8 invocations, 0 failed
+[11:20:50.693977] AWS-39e9 Waiting for Lambda function to be updated...
+[11:20:51.969876] AWS-39e9 Lambda function has been updated.
+[11:20:51.969986] AWS-39e9 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[11:20:51.970348] Experiment.CPUOversubscription-27dc Configuration storm-g2048: resources 512MB, policy None
+[11:20:52.396216] AWS-39e9 Waiting for Lambda function to be updated...
+[11:20:53.640173] AWS-39e9 Lambda function has been updated.
+[11:20:53.640292] AWS-39e9 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[11:20:53.640483] AWS-39e9 Sent function updates enforcing cold starts.
+[11:20:53.640586] AWS-39e9 Waiting for Lambda function to be updated...
+[11:20:53.767709] AWS-39e9 Lambda function has been updated.
+[11:20:53.767821] AWS-39e9 Finished function updates enforcing cold starts.
+[11:20:57.954671] Experiment.CPUOversubscription-27dc warmup batch 0: 8 invocations, 0 failed
+[11:21:01.767750] Experiment.CPUOversubscription-27dc measurement batch 0: 8 invocations, 0 failed
+[11:21:02.040184] AWS-39e9 Waiting for Lambda function to be updated...
+[11:21:03.307424] AWS-39e9 Lambda function has been updated.
+[11:21:03.307563] AWS-39e9 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[11:21:03.307930] Experiment.CPUOversubscription-27dc Configuration storm-g2048: resources 1769MB, policy None
+[11:21:03.749631] AWS-39e9 Waiting for Lambda function to be updated...
+[11:21:05.047591] AWS-39e9 Lambda function has been updated.
+[11:21:05.047706] AWS-39e9 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[11:21:05.047761] AWS-39e9 Sent function updates enforcing cold starts.
+[11:21:05.047807] AWS-39e9 Waiting for Lambda function to be updated...
+[11:21:05.181614] AWS-39e9 Lambda function has been updated.
+[11:21:05.181735] AWS-39e9 Finished function updates enforcing cold starts.
+[11:21:07.675155] Experiment.CPUOversubscription-27dc warmup batch 0: 8 invocations, 0 failed
+[11:21:09.901484] Experiment.CPUOversubscription-27dc measurement batch 0: 8 invocations, 0 failed
+[11:21:09.948129] Experiment.CPUOversubscription-27dc Finished, results stored in results/cpu-oversubscription/20261113-111143_aws_storm
+[11:21:09.948352] Benchmark-9e3c Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/aws.json
+[11:21:09.948466] Benchmark-9e3c Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/openwhisk.json
+[11:21:09.948575] Benchmark-9e3c Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/local.json

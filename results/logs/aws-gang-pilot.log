@@ -1,0 +1,29 @@
+[12:04:47.463792] SeBS-122d Created experiment output at /home/emilio/projects/DPHPC/serverless-benchmarks/results
+[12:04:48.115057] AWS.Resources-4bab Using cached resources for AWS
+[12:04:48.115236] AWS.Config-0365 Using cached config for AWS
+[12:04:48.152596] AWS-434a Using existing resource name: 65d44790.
+[12:04:48.160046] AWS-434a Using existing resource name: 65d44790.
+[12:04:48.161386] AWS.SystemResources-4851 Initialize S3 storage instance.
+[12:04:48.184731] Benchmark-48f7 Building benchmark 506.data-parallel-sgd. Reason: no cached code package.
+[12:04:48.198020] Benchmark-48f7 Docker build of benchmark dependencies in container of image spcleth/serverless-benchmarks:build.aws.python.3.11-1.2.0
+[12:04:48.198132] Benchmark-48f7 Docker mount of benchmark code from path /home/emilio/projects/DPHPC/serverless-benchmarks/results/506.data-parallel-sgd_code/python/3.11/x64/package
+[12:04:57.245155] AWS-434a Created /home/emilio/projects/DPHPC/serverless-benchmarks/results/506.data-parallel-sgd_code/python/3.11/x64/package/506.data-parallel-sgd.zip archive
+[12:04:57.245317] AWS-434a Zip archive size 23.251360 MB
+[12:04:57.245786] Benchmark-48f7 Created code package (source hash: 517067962f283babc67a924566482ad0), for run on aws with python:3.11
+[12:04:57.253518] AWS-434a Creating new function! Reason: function sebs_65d44790_506_data_parallel_sgd_python_3_11_x64 not found in cache.
+[12:04:57.520717] AWS-434a Creating function sebs_65d44790_506_data_parallel_sgd_python_3_11_x64 from /home/emilio/projects/DPHPC/serverless-benchmarks/cache/506.data-parallel-sgd/aws/python/3.11/x64/package/506.data-parallel-sgd.zip
+[12:05:03.764036] AWS-434a Waiting for Lambda function to be created...
+[12:05:06.102128] AWS-434a Lambda function has been created.
+[12:05:06.360229] AWS-434a Waiting for Lambda function to be updated...
+[12:05:07.583156] AWS-434a Lambda function has been updated.
+[12:05:07.583283] AWS-434a Updated configuration of sebs_65d44790_506_data_parallel_sgd_python_3_11_x64 function. 
+[12:05:07.853829] AWS-434a Waiting for Lambda function to be updated...
+[12:05:09.083924] AWS-434a Lambda function has been updated.
+[12:05:09.084062] AWS-434a Updated configuration of sebs_65d44790_506_data_parallel_sgd_python_3_11_x64 function. 
+[12:05:09.084473] Experiment.GangScheduling-a2f3 Results of this run will be stored in results/gang-scheduling/20261113-120509_aws_pilot
+[12:05:12.928074] Experiment.GangScheduling-a2f3 N=2 repetition 0: 2 of 2 ranks completed, 3.8 s
+[12:05:50.049555] Experiment.GangScheduling-a2f3 N=11 repetition 0: 0 of 11 ranks completed, 32.1 s
+[12:05:55.055064] Experiment.GangScheduling-a2f3 Finished, results stored in results/gang-scheduling/20261113-120509_aws_pilot
+[12:05:55.055363] Benchmark-2a14 Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/aws.json
+[12:05:55.055496] Benchmark-2a14 Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/openwhisk.json
+[12:05:55.055604] Benchmark-2a14 Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/local.json

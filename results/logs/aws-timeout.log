@@ -1,0 +1,83 @@
+[15:26:01.698023] SeBS-2bb2 Created experiment output at /home/emilio/projects/DPHPC/serverless-benchmarks/results
+[15:26:02.310257] AWS.Resources-0d23 Using cached resources for AWS
+[15:26:02.310483] AWS.Config-adc6 Using cached config for AWS
+[15:26:02.348532] AWS-6419 Using existing resource name: 65d44790.
+[15:26:02.356344] AWS-6419 Using existing resource name: 65d44790.
+[15:26:02.357854] AWS.SystemResources-615b Initialize S3 storage instance.
+[15:26:02.382948] Benchmark-5c4a Using cached benchmark 505.cpu-oversubscription at /home/emilio/projects/DPHPC/serverless-benchmarks/cache/505.cpu-oversubscription/aws/python/3.11/x64/package/505.cpu-oversubscription.zip
+[15:26:02.383498] AWS-6419 Using cached function sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 in /home/emilio/projects/DPHPC/serverless-benchmarks/cache/505.cpu-oversubscription/aws/python/3.11/x64/package/505.cpu-oversubscription.zip
+[15:26:02.383806] AWS-6419 Updating function configuration due to changed attribute memory: cached function has value 128 whereas 1024 has been requested.
+[15:26:02.800570] AWS-6419 Waiting for Lambda function to be updated...
+[15:26:04.063803] AWS-6419 Lambda function has been updated.
+[15:26:04.063949] AWS-6419 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:26:04.065164] Experiment.CPUOversubscription-3ff8 Results of this run will be stored in results/cpu-oversubscription/20261030-152604_aws_timeout
+[15:26:04.357626] AWS-6419 Waiting for Lambda function to be updated...
+[15:26:05.610461] AWS-6419 Lambda function has been updated.
+[15:26:05.610583] AWS-6419 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:26:05.610943] Experiment.CPUOversubscription-3ff8 Configuration e4-timeout-fine-baseline: resources 128MB, policy None
+[15:26:06.072711] AWS-6419 Waiting for Lambda function to be updated...
+[15:26:07.408353] AWS-6419 Lambda function has been updated.
+[15:26:07.408488] AWS-6419 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:26:07.408542] AWS-6419 Sent function updates enforcing cold starts.
+[15:26:07.408587] AWS-6419 Waiting for Lambda function to be updated...
+[15:26:07.540071] AWS-6419 Lambda function has been updated.
+[15:26:07.540205] AWS-6419 Finished function updates enforcing cold starts.
+[15:29:13.817277] Experiment.CPUOversubscription-3ff8 measurement batch 0: 4 invocations, 0 failed
+[15:29:14.093349] AWS-6419 Waiting for Lambda function to be updated...
+[15:29:15.347586] AWS-6419 Lambda function has been updated.
+[15:29:15.347722] AWS-6419 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:29:15.348127] Experiment.CPUOversubscription-3ff8 Configuration e4-timeout-fine-oversubscribed: resources 128MB, policy None
+[15:29:15.795181] AWS-6419 Waiting for Lambda function to be updated...
+[15:29:17.045080] AWS-6419 Lambda function has been updated.
+[15:29:17.045195] AWS-6419 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:29:17.045254] AWS-6419 Sent function updates enforcing cold starts.
+[15:29:17.045328] AWS-6419 Waiting for Lambda function to be updated...
+[15:29:17.179010] AWS-6419 Lambda function has been updated.
+[15:29:17.179103] AWS-6419 Finished function updates enforcing cold starts.
+[15:34:17.528722] AWS.LibraryTrigger-3b8f Invocation of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 failed!
+[15:34:17.528878] AWS.LibraryTrigger-3b8f Input: {"grid_size": 1024, "iterations": 8000, "spin_seconds": 0.5, "idle_seconds": 0.2, "threads": [2]}
+[15:34:17.528930] AWS.LibraryTrigger-3b8f Error: RequestId: b416cd12-4959-4891-b0b9-e88e5f4020c3 Error: Task timed out after 300.00 seconds
+[15:34:17.530641] AWS.LibraryTrigger-3b8f Invocation of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 failed!
+[15:34:17.530722] AWS.LibraryTrigger-3b8f Input: {"grid_size": 1024, "iterations": 8000, "spin_seconds": 0.5, "idle_seconds": 0.2, "threads": [2]}
+[15:34:17.530767] AWS.LibraryTrigger-3b8f Error: RequestId: 326f596b-ac0f-4055-a000-d72ebc10feee Error: Task timed out after 300.00 seconds
+[15:34:17.540761] AWS.LibraryTrigger-3b8f Invocation of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 failed!
+[15:34:17.540902] AWS.LibraryTrigger-3b8f Input: {"grid_size": 1024, "iterations": 8000, "spin_seconds": 0.5, "idle_seconds": 0.2, "threads": [2]}
+[15:34:17.540948] AWS.LibraryTrigger-3b8f Error: RequestId: 53a37e4f-4a68-4b91-9d31-edb6b1bed01c Error: Task timed out after 300.00 seconds
+[15:34:17.576747] AWS.LibraryTrigger-3b8f Invocation of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 failed!
+[15:34:17.576863] AWS.LibraryTrigger-3b8f Input: {"grid_size": 1024, "iterations": 8000, "spin_seconds": 0.5, "idle_seconds": 0.2, "threads": [2]}
+[15:34:17.576911] AWS.LibraryTrigger-3b8f Error: RequestId: 2c4abb74-f088-4695-bcae-d94f60c33499 Error: Task timed out after 300.00 seconds
+[15:34:17.578754] Experiment.CPUOversubscription-3ff8 measurement batch 0: 4 invocations, 4 failed
+[15:34:17.579037] Experiment.CPUOversubscription-3ff8 Configuration e4-timeout-fine-oversubscribed: resources 128MB, policy active
+[15:34:18.070866] AWS-6419 Waiting for Lambda function to be updated...
+[15:34:19.330063] AWS-6419 Lambda function has been updated.
+[15:34:19.330251] AWS-6419 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:34:19.330325] AWS-6419 Sent function updates enforcing cold starts.
+[15:34:19.330370] AWS-6419 Waiting for Lambda function to be updated...
+[15:34:19.460415] AWS-6419 Lambda function has been updated.
+[15:34:19.461569] AWS-6419 Finished function updates enforcing cold starts.
+[15:39:19.786470] AWS.LibraryTrigger-3b8f Invocation of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 failed!
+[15:39:19.786605] AWS.LibraryTrigger-3b8f Input: {"grid_size": 1024, "iterations": 8000, "spin_seconds": 0.5, "idle_seconds": 0.2, "threads": [2], "omp_wait_policy": "active"}
+[15:39:19.786654] AWS.LibraryTrigger-3b8f Error: RequestId: 190e60ad-aeaa-407b-8c69-067b09ba2bf6 Error: Task timed out after 300.00 seconds
+[15:39:19.800674] AWS.LibraryTrigger-3b8f Invocation of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 failed!
+[15:39:19.800797] AWS.LibraryTrigger-3b8f Input: {"grid_size": 1024, "iterations": 8000, "spin_seconds": 0.5, "idle_seconds": 0.2, "threads": [2], "omp_wait_policy": "active"}
+[15:39:19.800850] AWS.LibraryTrigger-3b8f Error: RequestId: e6a2babe-0743-4e16-a42b-0dd1eb9fa6aa Error: Task timed out after 300.00 seconds
+[15:39:19.808185] AWS.LibraryTrigger-3b8f Invocation of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 failed!
+[15:39:19.808277] AWS.LibraryTrigger-3b8f Input: {"grid_size": 1024, "iterations": 8000, "spin_seconds": 0.5, "idle_seconds": 0.2, "threads": [2], "omp_wait_policy": "active"}
+[15:39:19.808356] AWS.LibraryTrigger-3b8f Error: RequestId: eedd9faa-c135-4982-bf1f-2f8ea1c8c7ab Error: Task timed out after 300.00 seconds
+[15:39:19.893147] AWS.LibraryTrigger-3b8f Invocation of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 failed!
+[15:39:19.893243] AWS.LibraryTrigger-3b8f Input: {"grid_size": 1024, "iterations": 8000, "spin_seconds": 0.5, "idle_seconds": 0.2, "threads": [2], "omp_wait_policy": "active"}
+[15:39:19.893304] AWS.LibraryTrigger-3b8f Error: RequestId: 1010ad29-71e3-4ff6-a1d5-f23f5e68d3ec Error: Task timed out after 300.00 seconds
+[15:39:19.893887] Experiment.CPUOversubscription-3ff8 measurement batch 0: 4 invocations, 4 failed
+[15:39:19.894077] Experiment.CPUOversubscription-3ff8 Configuration e4-timeout-fine-oversubscribed: resources 128MB, policy passive
+[15:39:20.352143] AWS-6419 Waiting for Lambda function to be updated...
+[15:39:21.623892] AWS-6419 Lambda function has been updated.
+[15:39:21.623997] AWS-6419 Updated configuration of sebs_65d44790_505_cpu_oversubscription_python_3_11_x64 function. 
+[15:39:21.624077] AWS-6419 Sent function updates enforcing cold starts.
+[15:39:21.624147] AWS-6419 Waiting for Lambda function to be updated...
+[15:39:21.763491] AWS-6419 Lambda function has been updated.
+[15:39:21.763579] AWS-6419 Finished function updates enforcing cold starts.
+[15:42:33.804952] Experiment.CPUOversubscription-3ff8 measurement batch 0: 4 invocations, 0 failed
+[15:42:33.817475] Experiment.CPUOversubscription-3ff8 Finished, results stored in results/cpu-oversubscription/20261030-152604_aws_timeout
+[15:42:33.817767] Benchmark-92e6 Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/aws.json
+[15:42:33.817908] Benchmark-92e6 Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/openwhisk.json
+[15:42:33.818026] Benchmark-92e6 Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/local.json

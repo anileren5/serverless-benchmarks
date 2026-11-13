@@ -1,0 +1,117 @@
+[10:32:02.382966] SeBS-542f Created experiment output at /home/emilio/projects/DPHPC/serverless-benchmarks/results
+[10:32:02.957055] AWS.Resources-0a7d Using cached resources for AWS
+[10:32:02.957245] AWS.Config-1ceb Using cached config for AWS
+[10:32:02.993941] AWS-a742 Using existing resource name: 65d44790.
+[10:32:03.001345] AWS-a742 Using existing resource name: 65d44790.
+[10:32:03.003340] AWS.SystemResources-e73f Initialize S3 storage instance.
+[10:32:03.025987] Benchmark-ed9b Using cached benchmark 412.image-recognition-onnx at /home/emilio/projects/DPHPC/serverless-benchmarks/cache/412.image-recognition-onnx/aws/python/3.11/x64/package/412.image-recognition-onnx.zip
+[10:32:03.026556] AWS-a742 Using cached function sebs_65d44790_412_image_recognition_onnx_python_3_11_x64 in /home/emilio/projects/DPHPC/serverless-benchmarks/cache/412.image-recognition-onnx/aws/python/3.11/x64/package/412.image-recognition-onnx.zip
+[10:32:03.026943] AWS-a742 Updating function configuration due to changed attribute memory: cached function has value 3008 whereas 1024 has been requested.
+[10:32:03.394173] AWS-a742 Waiting for Lambda function to be updated...
+[10:32:04.662640] AWS-a742 Lambda function has been updated.
+[10:32:04.662776] AWS-a742 Updated configuration of sebs_65d44790_412_image_recognition_onnx_python_3_11_x64 function. 
+[10:32:04.663661] Experiment.CPUOversubscription-2111 Results of this run will be stored in results/cpu-oversubscription/20261113-103204_aws_onnx
+[10:32:04.949392] AWS-a742 Waiting for Lambda function to be updated...
+[10:32:06.206198] AWS-a742 Lambda function has been updated.
+[10:32:06.206351] AWS-a742 Updated configuration of sebs_65d44790_412_image_recognition_onnx_python_3_11_x64 function. 
+[10:32:06.206755] Experiment.CPUOversubscription-2111 Configuration onnx-thread-sweep: resources 640MB, policy None
+[10:32:06.724391] AWS-a742 Waiting for Lambda function to be updated...
+[10:32:07.987995] AWS-a742 Lambda function has been updated.
+[10:32:07.988129] AWS-a742 Updated configuration of sebs_65d44790_412_image_recognition_onnx_python_3_11_x64 function. 
+[10:32:07.988186] AWS-a742 Sent function updates enforcing cold starts.
+[10:32:07.988231] AWS-a742 Waiting for Lambda function to be updated...
+[10:32:08.126623] AWS-a742 Lambda function has been updated.
+[10:32:08.126754] AWS-a742 Finished function updates enforcing cold starts.
+[10:32:53.905281] Experiment.CPUOversubscription-2111 warmup batch 0: 8 invocations, 0 failed
+[10:33:30.101833] Experiment.CPUOversubscription-2111 measurement batch 0: 8 invocations, 0 failed
+[10:34:06.678936] Experiment.CPUOversubscription-2111 measurement batch 1: 8 invocations, 0 failed
+[10:34:06.679282] Experiment.CPUOversubscription-2111 Configuration onnx-thread-sweep: resources 640MB, policy passive
+[10:34:07.223038] AWS-a742 Waiting for Lambda function to be updated...
+[10:34:08.485066] AWS-a742 Lambda function has been updated.
+[10:34:08.485201] AWS-a742 Updated configuration of sebs_65d44790_412_image_recognition_onnx_python_3_11_x64 function. 
+[10:34:08.485253] AWS-a742 Sent function updates enforcing cold starts.
+[10:34:08.485294] AWS-a742 Waiting for Lambda function to be updated...
+[10:34:08.614186] AWS-a742 Lambda function has been updated.
+[10:34:08.614325] AWS-a742 Finished function updates enforcing cold starts.
+[10:34:36.409165] Experiment.CPUOversubscription-2111 warmup batch 0: 8 invocations, 0 failed
+[10:34:56.948948] Experiment.CPUOversubscription-2111 measurement batch 0: 8 invocations, 0 failed
+[10:35:16.950024] Experiment.CPUOversubscription-2111 measurement batch 1: 8 invocations, 0 failed
+[10:35:17.220482] AWS-a742 Waiting for Lambda function to be updated...
+[10:35:18.490692] AWS-a742 Lambda function has been updated.
+[10:35:18.490825] AWS-a742 Updated configuration of sebs_65d44790_412_image_recognition_onnx_python_3_11_x64 function. 
+[10:35:18.491156] Experiment.CPUOversubscription-2111 Configuration onnx-thread-sweep: resources 1024MB, policy None
+[10:35:18.957804] AWS-a742 Waiting for Lambda function to be updated...
+[10:35:20.283366] AWS-a742 Lambda function has been updated.
+[10:35:20.283527] AWS-a742 Updated configuration of sebs_65d44790_412_image_recognition_onnx_python_3_11_x64 function. 
+[10:35:20.283613] AWS-a742 Sent function updates enforcing cold starts.
+[10:35:20.283680] AWS-a742 Waiting for Lambda function to be updated...
+[10:35:20.416858] AWS-a742 Lambda function has been updated.
+[10:35:20.417008] AWS-a742 Finished function updates enforcing cold starts.
+[10:35:48.126478] Experiment.CPUOversubscription-2111 warmup batch 0: 8 invocations, 0 failed
+[10:36:11.264484] Experiment.CPUOversubscription-2111 measurement batch 0: 8 invocations, 0 failed
+[10:36:33.072220] Experiment.CPUOversubscription-2111 measurement batch 1: 8 invocations, 0 failed
+[10:36:33.072528] Experiment.CPUOversubscription-2111 Configuration onnx-thread-sweep: resources 1024MB, policy passive
+[10:36:33.520273] AWS-a742 Waiting for Lambda function to be updated...
+[10:36:34.789587] AWS-a742 Lambda function has been updated.
+[10:36:34.789736] AWS-a742 Updated configuration of sebs_65d44790_412_image_recognition_onnx_python_3_11_x64 function. 
+[10:36:34.789818] AWS-a742 Sent function updates enforcing cold starts.
+[10:36:34.789890] AWS-a742 Waiting for Lambda function to be updated...
+[10:36:34.927341] AWS-a742 Lambda function has been updated.
+[10:36:34.927493] AWS-a742 Finished function updates enforcing cold starts.
+[10:36:51.612788] Experiment.CPUOversubscription-2111 warmup batch 0: 8 invocations, 0 failed
+[10:37:03.367974] Experiment.CPUOversubscription-2111 measurement batch 0: 8 invocations, 0 failed
+[10:37:15.048998] Experiment.CPUOversubscription-2111 measurement batch 1: 8 invocations, 0 failed
+[10:37:15.334210] AWS-a742 Waiting for Lambda function to be updated...
+[10:37:16.593479] AWS-a742 Lambda function has been updated.
+[10:37:16.593656] AWS-a742 Updated configuration of sebs_65d44790_412_image_recognition_onnx_python_3_11_x64 function. 
+[10:37:16.594109] Experiment.CPUOversubscription-2111 Configuration onnx-thread-sweep: resources 1769MB, policy None
+[10:37:17.068387] AWS-a742 Waiting for Lambda function to be updated...
+[10:37:18.339232] AWS-a742 Lambda function has been updated.
+[10:37:18.339385] AWS-a742 Updated configuration of sebs_65d44790_412_image_recognition_onnx_python_3_11_x64 function. 
+[10:37:18.339441] AWS-a742 Sent function updates enforcing cold starts.
+[10:37:18.339483] AWS-a742 Waiting for Lambda function to be updated...
+[10:37:18.483199] AWS-a742 Lambda function has been updated.
+[10:37:18.483343] AWS-a742 Finished function updates enforcing cold starts.
+[10:37:39.054671] Experiment.CPUOversubscription-2111 warmup batch 0: 8 invocations, 0 failed
+[10:37:55.859116] Experiment.CPUOversubscription-2111 measurement batch 0: 8 invocations, 0 failed
+[10:38:12.427999] Experiment.CPUOversubscription-2111 measurement batch 1: 8 invocations, 0 failed
+[10:38:12.428280] Experiment.CPUOversubscription-2111 Configuration onnx-thread-sweep: resources 1769MB, policy passive
+[10:38:12.988136] AWS-a742 Waiting for Lambda function to be updated...
+[10:38:14.247400] AWS-a742 Lambda function has been updated.
+[10:38:14.247539] AWS-a742 Updated configuration of sebs_65d44790_412_image_recognition_onnx_python_3_11_x64 function. 
+[10:38:14.247594] AWS-a742 Sent function updates enforcing cold starts.
+[10:38:14.247639] AWS-a742 Waiting for Lambda function to be updated...
+[10:38:14.381790] AWS-a742 Lambda function has been updated.
+[10:38:14.381904] AWS-a742 Finished function updates enforcing cold starts.
+[10:38:26.916350] Experiment.CPUOversubscription-2111 warmup batch 0: 8 invocations, 0 failed
+[10:38:35.859817] Experiment.CPUOversubscription-2111 measurement batch 0: 8 invocations, 0 failed
+[10:38:44.767052] Experiment.CPUOversubscription-2111 measurement batch 1: 8 invocations, 0 failed
+[10:38:45.022017] AWS-a742 Waiting for Lambda function to be updated...
+[10:38:46.271380] AWS-a742 Lambda function has been updated.
+[10:38:46.271504] AWS-a742 Updated configuration of sebs_65d44790_412_image_recognition_onnx_python_3_11_x64 function. 
+[10:38:46.271795] Experiment.CPUOversubscription-2111 Configuration onnx-thread-sweep: resources 3008MB, policy None
+[10:38:46.779382] AWS-a742 Waiting for Lambda function to be updated...
+[10:38:48.034825] AWS-a742 Lambda function has been updated.
+[10:38:48.034959] AWS-a742 Updated configuration of sebs_65d44790_412_image_recognition_onnx_python_3_11_x64 function. 
+[10:38:48.035012] AWS-a742 Sent function updates enforcing cold starts.
+[10:38:48.035048] AWS-a742 Waiting for Lambda function to be updated...
+[10:38:48.163941] AWS-a742 Lambda function has been updated.
+[10:38:48.164069] AWS-a742 Finished function updates enforcing cold starts.
+[10:39:00.582537] Experiment.CPUOversubscription-2111 warmup batch 0: 8 invocations, 0 failed
+[10:39:10.075369] Experiment.CPUOversubscription-2111 measurement batch 0: 8 invocations, 0 failed
+[10:39:20.062278] Experiment.CPUOversubscription-2111 measurement batch 1: 8 invocations, 0 failed
+[10:39:20.062605] Experiment.CPUOversubscription-2111 Configuration onnx-thread-sweep: resources 3008MB, policy passive
+[10:39:20.571882] AWS-a742 Waiting for Lambda function to be updated...
+[10:39:21.847200] AWS-a742 Lambda function has been updated.
+[10:39:21.847550] AWS-a742 Updated configuration of sebs_65d44790_412_image_recognition_onnx_python_3_11_x64 function. 
+[10:39:21.847640] AWS-a742 Sent function updates enforcing cold starts.
+[10:39:21.847705] AWS-a742 Waiting for Lambda function to be updated...
+[10:39:21.974061] AWS-a742 Lambda function has been updated.
+[10:39:21.974193] AWS-a742 Finished function updates enforcing cold starts.
+[10:39:30.151712] Experiment.CPUOversubscription-2111 warmup batch 0: 8 invocations, 0 failed
+[10:39:35.765582] Experiment.CPUOversubscription-2111 measurement batch 0: 8 invocations, 0 failed
+[10:39:41.565998] Experiment.CPUOversubscription-2111 measurement batch 1: 8 invocations, 0 failed
+[10:39:41.612058] Experiment.CPUOversubscription-2111 Finished, results stored in results/cpu-oversubscription/20261113-103204_aws_onnx
+[10:39:41.612286] Benchmark-e0c8 Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/aws.json
+[10:39:41.612425] Benchmark-e0c8 Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/openwhisk.json
+[10:39:41.612555] Benchmark-e0c8 Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/local.json

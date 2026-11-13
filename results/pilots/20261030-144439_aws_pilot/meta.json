@@ -1,0 +1,57 @@
+{
+  "sebs_version": "1.1.0",
+  "git_commit": "cd2b805e1817d7ec4687b56f5bf5e2d3707cd125",
+  "git_branch": "feature/cpu-quota-oversubscription",
+  "git_dirty_files": [
+    "M .gitignore",
+    " M benchmarks/500.scientific/505.cpu-oversubscription/README.md",
+    " M benchmarks/500.scientific/505.cpu-oversubscription/python/function.py",
+    " M benchmarks/500.scientific/505.cpu-oversubscription/python/package.sh",
+    " M benchmarks/wrappers/openwhisk/python/__main__.py",
+    " M config/cpu-oversubscription/aws.json",
+    "M  config/example.json",
+    " M dockerfiles/aws/python/Dockerfile.build",
+    " M docs/experiments.md",
+    " M sebs/aws/triggers.py",
+    " M sebs/experiments/cpu_oversubscription.py",
+    " M sebs/local/function.py",
+    " M sebs/regression.py",
+    "?? tests/test_cpu_oversubscription.py"
+  ],
+  "benchmark_hash": "78aaa364b9991cd443fd911cc1f149f9",
+  "function_name": "sebs_65d44790_505_cpu_oversubscription_python_3_11_x64",
+  "command": [
+    "./sebs.py",
+    "experiment",
+    "invoke",
+    "cpu-oversubscription",
+    "--config",
+    "config/aws_cpu.json",
+    "--deployment",
+    "aws",
+    "--architecture",
+    "x64",
+    "--language-version",
+    "3.11",
+    "--output-dir",
+    "results"
+  ],
+  "client": {
+    "hostname": "emilio-desktop2",
+    "kernel": "7.0.0-38-generic",
+    "cpus": 32,
+    "python": "3.13.13",
+    "load_average_begin": [
+      0.46044921875,
+      0.4033203125,
+      1.89501953125
+    ],
+    "load_average_end": [
+      0.1201171875,
+      0.21630859375,
+      1.14111328125
+    ]
+  },
+  "begin": "2026-10-30T14:44:39.501556",
+  "end": "2026-10-30T14:53:28.862675"
+}

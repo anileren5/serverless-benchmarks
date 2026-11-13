@@ -1,0 +1,11 @@
+13:48:38,406 INFO SeBS-62b5: Created experiment output at /home/emilio/projects/DPHPC/serverless-benchmarks/results/smoke-openwhisk
+13:48:38,407 INFO OpenWhisk-0c3a: Using existing resource name: e94eca58.
+13:48:38,413 INFO Benchmark-83fb: Building benchmark 505.cpu-oversubscription. Reason: no cached code package.
+13:48:38,421 INFO Benchmark-83fb: There is no Docker build image for openwhisk run in python, thus skipping the Docker-based installation of dependencies.
+13:48:42,501 INFO OpenWhisk-0c3a: Created /home/emilio/projects/DPHPC/serverless-benchmarks/results/smoke-openwhisk/505.cpu-oversubscription_code/python/3.11/x64/container/505.cpu-oversubscription.zip archive
+13:48:42,501 INFO OpenWhisk-0c3a: Zip archive size 0.000769 MB
+13:48:42,501 INFO Benchmark-83fb: Created code package (source hash: ec7160b47c1b938aceaa6a922f40ca88), for run on openwhisk with python:3.11
+13:48:42,516 INFO OpenWhisk-0c3a: Creating new function! Reason: function sebs-e94eca58-505.cpu-oversubscription-python-3.11 not found in cache.
+13:48:42,516 INFO OpenWhisk-0c3a: Creating function as an action in OpenWhisk.
+13:48:42,544 INFO OpenWhisk-0c3a: Creating new OpenWhisk action sebs-e94eca58-505.cpu-oversubscription-python-3.11
+13:48:42,632 INFO SeBS-62b5: Beginning repetition 1/5

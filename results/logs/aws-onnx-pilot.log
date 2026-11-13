@@ -1,0 +1,122 @@
+[10:25:06.873446] SeBS-5142 Created experiment output at /home/emilio/projects/DPHPC/serverless-benchmarks/results
+[10:25:07.546636] AWS.Resources-c9bf Using cached resources for AWS
+[10:25:07.546810] AWS.Config-944d Using cached config for AWS
+[10:25:07.584682] AWS-1ce8 Using existing resource name: 65d44790.
+[10:25:07.592493] AWS-1ce8 Using existing resource name: 65d44790.
+[10:25:07.594214] AWS.SystemResources-4775 Initialize S3 storage instance.
+[10:25:07.618656] Benchmark-b7da Building benchmark 412.image-recognition-onnx. Reason: no cached code package.
+[10:25:09.596840] Benchmark-b7da Docker build of benchmark dependencies in container of image spcleth/serverless-benchmarks:build.aws.python.3.11-1.2.0
+[10:25:09.596959] Benchmark-b7da Docker mount of benchmark code from path /home/emilio/projects/DPHPC/serverless-benchmarks/results/412.image-recognition-onnx_code/python/3.11/x64/package
+[10:25:18.311775] Benchmark-b7da Docker build: Original size 196M
+[10:25:18.311878] Benchmark-b7da Docker build: Stripped size 
+[10:25:25.811485] AWS-1ce8 Created /home/emilio/projects/DPHPC/serverless-benchmarks/results/412.image-recognition-onnx_code/python/3.11/x64/package/412.image-recognition-onnx.zip archive
+[10:25:25.811614] AWS-1ce8 Zip archive size 112.453502 MB
+[10:25:25.812052] Benchmark-b7da Created code package (source hash: 995c026df2c180acf0906bba3d348c0b), for run on aws with python:3.11
+[10:25:25.842690] AWS-1ce8 Creating new function! Reason: function sebs_65d44790_412_image_recognition_onnx_python_3_11_x64 not found in cache.
+[10:25:26.106020] AWS-1ce8 Creating function sebs_65d44790_412_image_recognition_onnx_python_3_11_x64 from /home/emilio/projects/DPHPC/serverless-benchmarks/cache/412.image-recognition-onnx/aws/python/3.11/x64/package/412.image-recognition-onnx.zip
+[10:25:26.287275] AWS.S3-8b7b Initialize a new bucket for code deployment
+[10:25:26.919548] AWS.S3-8b7b Created bucket sebs-deployment-65d44790
+[10:25:26.919693] AWS.S3-8b7b Upload /home/emilio/projects/DPHPC/serverless-benchmarks/cache/412.image-recognition-onnx/aws/python/3.11/x64/package/412.image-recognition-onnx.zip to sebs-deployment-65d44790
+[10:25:37.464101] AWS-1ce8 Uploading function sebs_65d44790_412_image_recognition_onnx_python_3_11_x64 code to sebs-deployment-65d44790
+[10:25:41.625200] AWS-1ce8 Waiting for Lambda function to be created...
+[10:25:49.516647] AWS-1ce8 Lambda function has been created.
+[10:25:49.780537] AWS-1ce8 Waiting for Lambda function to be updated...
+[10:25:51.026886] AWS-1ce8 Lambda function has been updated.
+[10:25:51.027036] AWS-1ce8 Updated configuration of sebs_65d44790_412_image_recognition_onnx_python_3_11_x64 function. 
+[10:25:51.029176] Experiment.CPUOversubscription-bf0b Results of this run will be stored in results/cpu-oversubscription/20261113-102551_aws_onnx-pilot
+[10:25:51.330716] AWS-1ce8 Waiting for Lambda function to be updated...
+[10:25:52.581139] AWS-1ce8 Lambda function has been updated.
+[10:25:52.581263] AWS-1ce8 Updated configuration of sebs_65d44790_412_image_recognition_onnx_python_3_11_x64 function. 
+[10:25:52.581557] Experiment.CPUOversubscription-bf0b Configuration onnx-thread-sweep: resources 512MB, policy None
+[10:25:53.033582] AWS-1ce8 Waiting for Lambda function to be updated...
+[10:25:54.297845] AWS-1ce8 Lambda function has been updated.
+[10:25:54.297981] AWS-1ce8 Updated configuration of sebs_65d44790_412_image_recognition_onnx_python_3_11_x64 function. 
+[10:25:54.298041] AWS-1ce8 Sent function updates enforcing cold starts.
+[10:25:54.298087] AWS-1ce8 Waiting for Lambda function to be updated...
+[10:25:54.428624] AWS-1ce8 Lambda function has been updated.
+[10:25:54.428757] AWS-1ce8 Finished function updates enforcing cold starts.
+[10:26:47.407581] Experiment.CPUOversubscription-bf0b warmup batch 0: 2 invocations, 0 failed
+[10:27:29.597795] Experiment.CPUOversubscription-bf0b measurement batch 0: 2 invocations, 0 failed
+[10:27:29.598014] Experiment.CPUOversubscription-bf0b Configuration onnx-thread-sweep: resources 512MB, policy passive
+[10:27:30.110258] AWS-1ce8 Waiting for Lambda function to be updated...
+[10:27:31.383373] AWS-1ce8 Lambda function has been updated.
+[10:27:31.383521] AWS-1ce8 Updated configuration of sebs_65d44790_412_image_recognition_onnx_python_3_11_x64 function. 
+[10:27:31.383577] AWS-1ce8 Sent function updates enforcing cold starts.
+[10:27:31.383623] AWS-1ce8 Waiting for Lambda function to be updated...
+[10:27:31.516648] AWS-1ce8 Lambda function has been updated.
+[10:27:31.516779] AWS-1ce8 Finished function updates enforcing cold starts.
+[10:28:00.830543] Experiment.CPUOversubscription-bf0b warmup batch 0: 2 invocations, 0 failed
+[10:28:23.255390] Experiment.CPUOversubscription-bf0b measurement batch 0: 2 invocations, 0 failed
+[10:28:23.561857] AWS-1ce8 Waiting for Lambda function to be updated...
+[10:28:24.842581] AWS-1ce8 Lambda function has been updated.
+[10:28:24.842715] AWS-1ce8 Updated configuration of sebs_65d44790_412_image_recognition_onnx_python_3_11_x64 function. 
+[10:28:24.843049] Experiment.CPUOversubscription-bf0b Configuration onnx-thread-sweep: resources 1024MB, policy None
+[10:28:25.406697] AWS-1ce8 Waiting for Lambda function to be updated...
+[10:28:26.670189] AWS-1ce8 Lambda function has been updated.
+[10:28:26.670327] AWS-1ce8 Updated configuration of sebs_65d44790_412_image_recognition_onnx_python_3_11_x64 function. 
+[10:28:26.670381] AWS-1ce8 Sent function updates enforcing cold starts.
+[10:28:26.670427] AWS-1ce8 Waiting for Lambda function to be updated...
+[10:28:26.808481] AWS-1ce8 Lambda function has been updated.
+[10:28:26.808617] AWS-1ce8 Finished function updates enforcing cold starts.
+[10:28:51.010807] Experiment.CPUOversubscription-bf0b warmup batch 0: 2 invocations, 0 failed
+[10:29:10.670494] Experiment.CPUOversubscription-bf0b measurement batch 0: 2 invocations, 0 failed
+[10:29:10.670683] Experiment.CPUOversubscription-bf0b Configuration onnx-thread-sweep: resources 1024MB, policy passive
+[10:29:11.120134] AWS-1ce8 Waiting for Lambda function to be updated...
+[10:29:12.399649] AWS-1ce8 Lambda function has been updated.
+[10:29:12.399804] AWS-1ce8 Updated configuration of sebs_65d44790_412_image_recognition_onnx_python_3_11_x64 function. 
+[10:29:12.399889] AWS-1ce8 Sent function updates enforcing cold starts.
+[10:29:12.399962] AWS-1ce8 Waiting for Lambda function to be updated...
+[10:29:12.523000] AWS-1ce8 Lambda function has been updated.
+[10:29:12.523149] AWS-1ce8 Finished function updates enforcing cold starts.
+[10:29:29.106991] Experiment.CPUOversubscription-bf0b warmup batch 0: 2 invocations, 0 failed
+[10:29:40.683921] Experiment.CPUOversubscription-bf0b measurement batch 0: 2 invocations, 0 failed
+[10:29:40.957477] AWS-1ce8 Waiting for Lambda function to be updated...
+[10:29:42.229566] AWS-1ce8 Lambda function has been updated.
+[10:29:42.229701] AWS-1ce8 Updated configuration of sebs_65d44790_412_image_recognition_onnx_python_3_11_x64 function. 
+[10:29:42.230018] Experiment.CPUOversubscription-bf0b Configuration onnx-thread-sweep: resources 1769MB, policy None
+[10:29:42.656408] AWS-1ce8 Waiting for Lambda function to be updated...
+[10:29:43.921957] AWS-1ce8 Lambda function has been updated.
+[10:29:43.922108] AWS-1ce8 Updated configuration of sebs_65d44790_412_image_recognition_onnx_python_3_11_x64 function. 
+[10:29:43.922191] AWS-1ce8 Sent function updates enforcing cold starts.
+[10:29:43.922263] AWS-1ce8 Waiting for Lambda function to be updated...
+[10:29:44.057104] AWS-1ce8 Lambda function has been updated.
+[10:29:44.057236] AWS-1ce8 Finished function updates enforcing cold starts.
+[10:30:03.674997] Experiment.CPUOversubscription-bf0b warmup batch 0: 2 invocations, 0 failed
+[10:30:19.174431] Experiment.CPUOversubscription-bf0b measurement batch 0: 2 invocations, 0 failed
+[10:30:19.174663] Experiment.CPUOversubscription-bf0b Configuration onnx-thread-sweep: resources 1769MB, policy passive
+[10:30:19.631618] AWS-1ce8 Waiting for Lambda function to be updated...
+[10:30:20.902961] AWS-1ce8 Lambda function has been updated.
+[10:30:20.903097] AWS-1ce8 Updated configuration of sebs_65d44790_412_image_recognition_onnx_python_3_11_x64 function. 
+[10:30:20.903169] AWS-1ce8 Sent function updates enforcing cold starts.
+[10:30:20.903247] AWS-1ce8 Waiting for Lambda function to be updated...
+[10:30:21.035229] AWS-1ce8 Lambda function has been updated.
+[10:30:21.035384] AWS-1ce8 Finished function updates enforcing cold starts.
+[10:30:30.536367] Experiment.CPUOversubscription-bf0b warmup batch 0: 2 invocations, 0 failed
+[10:30:37.232461] Experiment.CPUOversubscription-bf0b measurement batch 0: 2 invocations, 0 failed
+[10:30:37.519429] AWS-1ce8 Waiting for Lambda function to be updated...
+[10:30:38.782990] AWS-1ce8 Lambda function has been updated.
+[10:30:38.783101] AWS-1ce8 Updated configuration of sebs_65d44790_412_image_recognition_onnx_python_3_11_x64 function. 
+[10:30:38.783344] Experiment.CPUOversubscription-bf0b Configuration onnx-thread-sweep: resources 3008MB, policy None
+[10:30:39.220734] AWS-1ce8 Waiting for Lambda function to be updated...
+[10:30:40.486518] AWS-1ce8 Lambda function has been updated.
+[10:30:40.486642] AWS-1ce8 Updated configuration of sebs_65d44790_412_image_recognition_onnx_python_3_11_x64 function. 
+[10:30:40.486698] AWS-1ce8 Sent function updates enforcing cold starts.
+[10:30:40.486744] AWS-1ce8 Waiting for Lambda function to be updated...
+[10:30:40.622041] AWS-1ce8 Lambda function has been updated.
+[10:30:40.622163] AWS-1ce8 Finished function updates enforcing cold starts.
+[10:30:51.649086] Experiment.CPUOversubscription-bf0b warmup batch 0: 2 invocations, 0 failed
+[10:30:59.801164] Experiment.CPUOversubscription-bf0b measurement batch 0: 2 invocations, 0 failed
+[10:30:59.801382] Experiment.CPUOversubscription-bf0b Configuration onnx-thread-sweep: resources 3008MB, policy passive
+[10:31:00.236505] AWS-1ce8 Waiting for Lambda function to be updated...
+[10:31:01.499952] AWS-1ce8 Lambda function has been updated.
+[10:31:01.500073] AWS-1ce8 Updated configuration of sebs_65d44790_412_image_recognition_onnx_python_3_11_x64 function. 
+[10:31:01.500121] AWS-1ce8 Sent function updates enforcing cold starts.
+[10:31:01.500159] AWS-1ce8 Waiting for Lambda function to be updated...
+[10:31:01.632074] AWS-1ce8 Lambda function has been updated.
+[10:31:01.632202] AWS-1ce8 Finished function updates enforcing cold starts.
+[10:31:09.940048] Experiment.CPUOversubscription-bf0b warmup batch 0: 2 invocations, 0 failed
+[10:31:15.618893] Experiment.CPUOversubscription-bf0b measurement batch 0: 2 invocations, 0 failed
+[10:31:15.654737] Experiment.CPUOversubscription-bf0b Finished, results stored in results/cpu-oversubscription/20261113-102551_aws_onnx-pilot
+[10:31:15.654943] Benchmark-2c2a Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/aws.json
+[10:31:15.655161] Benchmark-2c2a Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/openwhisk.json
+[10:31:15.655266] Benchmark-2c2a Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/local.json

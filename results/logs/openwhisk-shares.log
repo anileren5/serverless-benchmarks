@@ -1,0 +1,104 @@
+[15:31:59.547875] SeBS-474e Created experiment output at /home/emilio/projects/DPHPC/serverless-benchmarks/results
+[15:31:59.549302] OpenWhisk.Resources-9921 Using user-provided configuration of storage type: object for openwhisk containers.
+[15:31:59.549349] OpenWhisk.Resources-9921 Deserializing access data to Minio storage
+[15:31:59.549366] OpenWhisk.Resources-9921 No NoSQL storage available
+[15:31:59.549381] OpenWhisk.Resources-9921 Using user-provided Docker registry for OpenWhisk.
+[15:31:59.549521] OpenWhisk-0f2f Using existing resource name: e94eca58.
+[15:31:59.556464] Benchmark-3b2e Building benchmark 505.cpu-oversubscription. Reason: no cached code package.
+[15:31:59.563167] Benchmark-3b2e There is no Docker build image for openwhisk run in python, thus skipping the Docker-based installation of dependencies.
+[15:31:59.563614] OpenWhisk.Container-7d9f Build the benchmark base image localhost:5000/spcleth/serverless-benchmarks:function.openwhisk.505.cpu-oversubscription.python-3.11-x64-1.2.0.
+[15:32:03.632895] OpenWhisk.Container-7d9f Push the benchmark base image localhost:5000/spcleth/serverless-benchmarks:function.openwhisk.505.cpu-oversubscription.python-3.11-x64-1.2.0 to registry: localhost:5000.
+[15:32:03.633399] OpenWhisk.Container-7d9f Pushing image function.openwhisk.505.cpu-oversubscription.python-3.11-x64-1.2.0 to localhost:5000/spcleth/serverless-benchmarks:function.openwhisk.505.cpu-oversubscription.python-3.11-x64-1.2.0
+
+[15:32:03.688521] OpenWhisk-0f2f Created /home/emilio/projects/DPHPC/serverless-benchmarks/results/505.cpu-oversubscription_code/python/3.11/x64/container/505.cpu-oversubscription.zip archive
+[15:32:03.688646] OpenWhisk-0f2f Zip archive size 0.000839 MB
+[15:32:03.689082] Benchmark-3b2e Created code package (source hash: 1dbc75bed9bb1bc5aeb6740d0ceb5cac), for run on openwhisk with python:3.11
+[15:32:03.705045] OpenWhisk-0f2f Creating new function! Reason: function sebs-e94eca58-505.cpu-oversubscription-python-3.11 not found in cache.
+[15:32:03.705123] OpenWhisk-0f2f Creating function as an action in OpenWhisk.
+[15:32:03.734313] OpenWhisk-0f2f Creating new OpenWhisk action sebs-e94eca58-505.cpu-oversubscription-python-3.11
+[15:32:03.808523] Experiment.CPUOversubscription-3435 Results of this run will be stored in results/cpu-oversubscription/20261030-153203_openwhisk_shares
+[15:32:03.816942] OpenWhisk-0f2f Update configuration of an existing OpenWhisk action sebs-e94eca58-505.cpu-oversubscription-python-3.11.
+[15:32:03.900728] Experiment.CPUOversubscription-3435 Configuration ow-idle: resources 256MB, policy None
+[15:32:03.980286] OpenWhisk-0f2f Updated actions to enforce cold starts.
+[15:32:07.138943] Experiment.CPUOversubscription-3435 warmup batch 0: 1 invocations, 0 failed
+[15:32:09.591822] Experiment.CPUOversubscription-3435 measurement batch 0: 1 invocations, 0 failed
+[15:32:12.087687] Experiment.CPUOversubscription-3435 measurement batch 1: 1 invocations, 0 failed
+[15:32:14.565309] Experiment.CPUOversubscription-3435 measurement batch 2: 1 invocations, 0 failed
+[15:32:16.988580] Experiment.CPUOversubscription-3435 measurement batch 3: 1 invocations, 0 failed
+[15:32:19.465937] Experiment.CPUOversubscription-3435 measurement batch 4: 1 invocations, 0 failed
+[15:32:21.947637] Experiment.CPUOversubscription-3435 measurement batch 5: 1 invocations, 0 failed
+[15:32:24.425354] Experiment.CPUOversubscription-3435 measurement batch 6: 1 invocations, 0 failed
+[15:32:26.922247] Experiment.CPUOversubscription-3435 measurement batch 7: 1 invocations, 0 failed
+[15:32:29.402337] Experiment.CPUOversubscription-3435 measurement batch 8: 1 invocations, 0 failed
+[15:32:31.903045] Experiment.CPUOversubscription-3435 measurement batch 9: 1 invocations, 0 failed
+[15:32:34.321830] Experiment.CPUOversubscription-3435 measurement batch 10: 1 invocations, 0 failed
+[15:32:36.779342] Experiment.CPUOversubscription-3435 measurement batch 11: 1 invocations, 0 failed
+[15:32:39.344755] Experiment.CPUOversubscription-3435 measurement batch 12: 1 invocations, 0 failed
+[15:32:41.764106] Experiment.CPUOversubscription-3435 measurement batch 13: 1 invocations, 0 failed
+[15:32:44.178972] Experiment.CPUOversubscription-3435 measurement batch 14: 1 invocations, 0 failed
+[15:32:46.745885] Experiment.CPUOversubscription-3435 measurement batch 15: 1 invocations, 0 failed
+[15:32:46.746085] OpenWhisk-0f2f Update configuration of an existing OpenWhisk action sebs-e94eca58-505.cpu-oversubscription-python-3.11.
+[15:32:46.822565] Experiment.CPUOversubscription-3435 Configuration ow-idle: resources 1024MB, policy None
+[15:32:46.897372] OpenWhisk-0f2f Updated actions to enforce cold starts.
+[15:32:49.790177] Experiment.CPUOversubscription-3435 warmup batch 0: 1 invocations, 0 failed
+[15:32:52.213134] Experiment.CPUOversubscription-3435 measurement batch 0: 1 invocations, 0 failed
+[15:32:54.640296] Experiment.CPUOversubscription-3435 measurement batch 1: 1 invocations, 0 failed
+[15:32:57.075870] Experiment.CPUOversubscription-3435 measurement batch 2: 1 invocations, 0 failed
+[15:32:59.492197] Experiment.CPUOversubscription-3435 measurement batch 3: 1 invocations, 0 failed
+[15:33:02.049376] Experiment.CPUOversubscription-3435 measurement batch 4: 1 invocations, 0 failed
+[15:33:04.579540] Experiment.CPUOversubscription-3435 measurement batch 5: 1 invocations, 0 failed
+[15:33:07.054325] Experiment.CPUOversubscription-3435 measurement batch 6: 1 invocations, 0 failed
+[15:33:09.542378] Experiment.CPUOversubscription-3435 measurement batch 7: 1 invocations, 0 failed
+[15:33:11.989140] Experiment.CPUOversubscription-3435 measurement batch 8: 1 invocations, 0 failed
+[15:33:14.519878] Experiment.CPUOversubscription-3435 measurement batch 9: 1 invocations, 0 failed
+[15:33:16.974316] Experiment.CPUOversubscription-3435 measurement batch 10: 1 invocations, 0 failed
+[15:33:19.672559] Experiment.CPUOversubscription-3435 measurement batch 11: 1 invocations, 0 failed
+[15:33:22.157912] Experiment.CPUOversubscription-3435 measurement batch 12: 1 invocations, 0 failed
+[15:33:24.571751] Experiment.CPUOversubscription-3435 measurement batch 13: 1 invocations, 0 failed
+[15:33:26.978569] Experiment.CPUOversubscription-3435 measurement batch 14: 1 invocations, 0 failed
+[15:33:29.471348] Experiment.CPUOversubscription-3435 measurement batch 15: 1 invocations, 0 failed
+[15:33:29.471535] OpenWhisk-0f2f Update configuration of an existing OpenWhisk action sebs-e94eca58-505.cpu-oversubscription-python-3.11.
+[15:33:29.530548] Experiment.CPUOversubscription-3435 Configuration ow-idle: resources 4096MB, policy None
+[15:33:29.598474] OpenWhisk-0f2f Updated actions to enforce cold starts.
+[15:33:32.397737] Experiment.CPUOversubscription-3435 warmup batch 0: 1 invocations, 0 failed
+[15:33:34.864560] Experiment.CPUOversubscription-3435 measurement batch 0: 1 invocations, 0 failed
+[15:33:37.294064] Experiment.CPUOversubscription-3435 measurement batch 1: 1 invocations, 0 failed
+[15:33:39.843217] Experiment.CPUOversubscription-3435 measurement batch 2: 1 invocations, 0 failed
+[15:33:42.329677] Experiment.CPUOversubscription-3435 measurement batch 3: 1 invocations, 0 failed
+[15:33:44.756957] Experiment.CPUOversubscription-3435 measurement batch 4: 1 invocations, 0 failed
+[15:33:47.180358] Experiment.CPUOversubscription-3435 measurement batch 5: 1 invocations, 0 failed
+[15:33:49.659295] Experiment.CPUOversubscription-3435 measurement batch 6: 1 invocations, 0 failed
+[15:33:52.119933] Experiment.CPUOversubscription-3435 measurement batch 7: 1 invocations, 0 failed
+[15:33:54.522515] Experiment.CPUOversubscription-3435 measurement batch 8: 1 invocations, 0 failed
+[15:33:56.954576] Experiment.CPUOversubscription-3435 measurement batch 9: 1 invocations, 0 failed
+[15:33:59.418137] Experiment.CPUOversubscription-3435 measurement batch 10: 1 invocations, 0 failed
+[15:34:01.819654] Experiment.CPUOversubscription-3435 measurement batch 11: 1 invocations, 0 failed
+[15:34:04.236668] Experiment.CPUOversubscription-3435 measurement batch 12: 1 invocations, 0 failed
+[15:34:06.709723] Experiment.CPUOversubscription-3435 measurement batch 13: 1 invocations, 0 failed
+[15:34:09.211141] Experiment.CPUOversubscription-3435 measurement batch 14: 1 invocations, 0 failed
+[15:34:11.809275] Experiment.CPUOversubscription-3435 measurement batch 15: 1 invocations, 0 failed
+[15:34:11.809505] OpenWhisk-0f2f Update configuration of an existing OpenWhisk action sebs-e94eca58-505.cpu-oversubscription-python-3.11.
+[15:34:11.869126] Experiment.CPUOversubscription-3435 Configuration ow-colocated-8x1024: resources 1024MB, policy None
+[15:34:11.930123] OpenWhisk-0f2f Updated actions to enforce cold starts.
+[15:34:22.745155] Experiment.CPUOversubscription-3435 warmup batch 0: 8 invocations, 0 failed
+[15:34:33.081385] Experiment.CPUOversubscription-3435 measurement batch 0: 8 invocations, 0 failed
+[15:34:42.645086] Experiment.CPUOversubscription-3435 measurement batch 1: 8 invocations, 0 failed
+[15:34:51.876184] Experiment.CPUOversubscription-3435 measurement batch 2: 8 invocations, 0 failed
+[15:35:02.475374] Experiment.CPUOversubscription-3435 measurement batch 3: 8 invocations, 0 failed
+[15:35:02.475638] Experiment.CPUOversubscription-3435 Configuration ow-colocated-8x1024: resources 1024MB, policy passive
+[15:35:02.527938] OpenWhisk-0f2f Updated actions to enforce cold starts.
+[15:35:06.703984] Experiment.CPUOversubscription-3435 warmup batch 0: 8 invocations, 0 failed
+[15:35:11.015632] Experiment.CPUOversubscription-3435 measurement batch 0: 8 invocations, 0 failed
+[15:35:15.635566] Experiment.CPUOversubscription-3435 measurement batch 1: 8 invocations, 0 failed
+[15:35:19.449597] Experiment.CPUOversubscription-3435 measurement batch 2: 8 invocations, 0 failed
+[15:35:23.578895] Experiment.CPUOversubscription-3435 measurement batch 3: 8 invocations, 0 failed
+[15:35:23.579149] OpenWhisk-0f2f Update configuration of an existing OpenWhisk action sebs-e94eca58-505.cpu-oversubscription-python-3.11.
+[15:35:23.632614] Experiment.CPUOversubscription-3435 Configuration ow-colocated-32x256: resources 256MB, policy None
+[15:35:23.688470] OpenWhisk-0f2f Updated actions to enforce cold starts.
+[15:35:40.522418] Experiment.CPUOversubscription-3435 warmup batch 0: 32 invocations, 0 failed
+[15:35:56.010145] Experiment.CPUOversubscription-3435 measurement batch 0: 32 invocations, 0 failed
+[15:36:11.328619] Experiment.CPUOversubscription-3435 measurement batch 1: 32 invocations, 0 failed
+[15:36:11.381129] Experiment.CPUOversubscription-3435 Finished, results stored in results/cpu-oversubscription/20261030-153203_openwhisk_shares
+[15:36:11.381409] Benchmark-0816 Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/aws.json
+[15:36:11.381534] Benchmark-0816 Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/openwhisk.json
+[15:36:11.381645] Benchmark-0816 Update cached config /home/emilio/projects/DPHPC/serverless-benchmarks/cache/local.json

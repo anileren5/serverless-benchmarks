@@ -1,0 +1,134 @@
+platform,run,configuration,resources,cpu_model,invocations
+aws,20261030-145728_aws,e1-resources,1024MB,Intel(R) Xeon(R) Processor,25
+aws,20261030-145728_aws,e1-resources,1024MB,Intel(R) Xeon(R) Processor @ 2.50GHz,15
+aws,20261030-145728_aws,e1-resources,128MB,Intel(R) Xeon(R) Processor,5
+aws,20261030-145728_aws,e1-resources,128MB,Intel(R) Xeon(R) Processor @ 2.50GHz,35
+aws,20261030-145728_aws,e1-resources,1536MB,Intel(R) Xeon(R) Processor,25
+aws,20261030-145728_aws,e1-resources,1536MB,Intel(R) Xeon(R) Processor @ 2.50GHz,15
+aws,20261030-145728_aws,e1-resources,1769MB,Intel(R) Xeon(R) Processor,30
+aws,20261030-145728_aws,e1-resources,1769MB,Intel(R) Xeon(R) Processor @ 2.50GHz,10
+aws,20261030-145728_aws,e1-resources,2048MB,Intel(R) Xeon(R) Processor,15
+aws,20261030-145728_aws,e1-resources,2048MB,Intel(R) Xeon(R) Processor @ 2.50GHz,25
+aws,20261030-145728_aws,e1-resources,2560MB,Intel(R) Xeon(R) Processor,25
+aws,20261030-145728_aws,e1-resources,2560MB,Intel(R) Xeon(R) Processor @ 2.50GHz,15
+aws,20261030-145728_aws,e1-resources,256MB,Intel(R) Xeon(R) Processor,10
+aws,20261030-145728_aws,e1-resources,256MB,Intel(R) Xeon(R) Processor @ 2.50GHz,25
+aws,20261030-145728_aws,e1-resources,256MB,Intel(R) Xeon(R) Processor @ 2.90GHz,5
+aws,20261030-145728_aws,e1-resources,3008MB,Intel(R) Xeon(R) Processor,15
+aws,20261030-145728_aws,e1-resources,3008MB,Intel(R) Xeon(R) Processor @ 2.50GHz,25
+aws,20261030-145728_aws,e1-resources,512MB,Intel(R) Xeon(R) Processor,10
+aws,20261030-145728_aws,e1-resources,512MB,Intel(R) Xeon(R) Processor @ 2.50GHz,30
+aws,20261030-145728_aws,e1-resources,768MB,Intel(R) Xeon(R) Processor,21
+aws,20261030-145728_aws,e1-resources,768MB,Intel(R) Xeon(R) Processor @ 2.50GHz,19
+aws,20261030-145728_aws,e2-thread-sweep-large,1769MB,Intel(R) Xeon(R) Processor,10
+aws,20261030-145728_aws,e2-thread-sweep-large,1769MB,Intel(R) Xeon(R) Processor @ 2.50GHz,30
+aws,20261030-145728_aws,e2-thread-sweep-large,3008MB,Intel(R) Xeon(R) Processor,5
+aws,20261030-145728_aws,e2-thread-sweep-large,3008MB,Intel(R) Xeon(R) Processor @ 2.50GHz,30
+aws,20261030-145728_aws,e2-thread-sweep-large,3008MB,Intel(R) Xeon(R) Processor @ 2.90GHz,5
+aws,20261030-145728_aws,e2-thread-sweep-small,128MB,Intel(R) Xeon(R) Processor,10
+aws,20261030-145728_aws,e2-thread-sweep-small,128MB,Intel(R) Xeon(R) Processor @ 2.50GHz,30
+aws,20261030-145728_aws,e2-thread-sweep-small,1769MB,Intel(R) Xeon(R) Processor,15
+aws,20261030-145728_aws,e2-thread-sweep-small,1769MB,Intel(R) Xeon(R) Processor @ 2.50GHz,20
+aws,20261030-145728_aws,e2-thread-sweep-small,1769MB,Intel(R) Xeon(R) Processor @ 2.90GHz,5
+aws,20261030-145728_aws,e2-thread-sweep-small,3008MB,Intel(R) Xeon(R) Processor,30
+aws,20261030-145728_aws,e2-thread-sweep-small,3008MB,Intel(R) Xeon(R) Processor @ 2.50GHz,5
+aws,20261030-145728_aws,e2-thread-sweep-small,3008MB,Intel(R) Xeon(R) Processor @ 2.90GHz,5
+aws,20261030-145728_aws,e2-thread-sweep-small,512MB,Intel(R) Xeon(R) Processor,30
+aws,20261030-145728_aws,e2-thread-sweep-small,512MB,Intel(R) Xeon(R) Processor @ 2.50GHz,10
+aws,20261030-145728_aws,e3-wait-policy,128MB,Intel(R) Xeon(R) Processor,12
+aws,20261030-145728_aws,e3-wait-policy,128MB,Intel(R) Xeon(R) Processor @ 2.50GHz,36
+aws,20261030-145728_aws,e3-wait-policy,1769MB,Intel(R) Xeon(R) Processor,10
+aws,20261030-145728_aws,e3-wait-policy,1769MB,Intel(R) Xeon(R) Processor @ 2.50GHz,38
+aws,20261030-145728_aws,e3-wait-policy,3008MB,Intel(R) Xeon(R) Processor,17
+aws,20261030-145728_aws,e3-wait-policy,3008MB,Intel(R) Xeon(R) Processor @ 2.50GHz,29
+aws,20261030-145728_aws,e3-wait-policy,3008MB,Intel(R) Xeon(R) Processor @ 2.90GHz,2
+aws,20261030-145728_aws,e4-timeout-baseline,128MB,Intel(R) Xeon(R) Processor,1
+aws,20261030-145728_aws,e4-timeout-baseline,128MB,Intel(R) Xeon(R) Processor @ 2.50GHz,3
+aws,20261030-145728_aws,e4-timeout-oversubscribed,128MB,Intel(R) Xeon(R) Processor @ 2.50GHz,8
+aws,20261030-152604_aws_timeout,e4-timeout-fine-baseline,128MB,Intel(R) Xeon(R) Processor,2
+aws,20261030-152604_aws_timeout,e4-timeout-fine-baseline,128MB,Intel(R) Xeon(R) Processor @ 2.50GHz,2
+aws,20261030-152604_aws_timeout,e4-timeout-fine-oversubscribed,128MB,Intel(R) Xeon(R) Processor @ 2.50GHz,4
+aws,20261113-103204_aws_onnx,onnx-thread-sweep,1024MB,Intel(R) Xeon(R) Processor,15
+aws,20261113-103204_aws_onnx,onnx-thread-sweep,1024MB,Intel(R) Xeon(R) Processor @ 2.50GHz,27
+aws,20261113-103204_aws_onnx,onnx-thread-sweep,1024MB,Intel(R) Xeon(R) Processor @ 2.90GHz,6
+aws,20261113-103204_aws_onnx,onnx-thread-sweep,1769MB,Intel(R) Xeon(R) Processor,18
+aws,20261113-103204_aws_onnx,onnx-thread-sweep,1769MB,Intel(R) Xeon(R) Processor @ 2.50GHz,30
+aws,20261113-103204_aws_onnx,onnx-thread-sweep,3008MB,Intel(R) Xeon(R) Processor,6
+aws,20261113-103204_aws_onnx,onnx-thread-sweep,3008MB,Intel(R) Xeon(R) Processor @ 2.50GHz,42
+aws,20261113-103204_aws_onnx,onnx-thread-sweep,640MB,Intel(R) Xeon(R) Processor,15
+aws,20261113-103204_aws_onnx,onnx-thread-sweep,640MB,Intel(R) Xeon(R) Processor @ 2.50GHz,33
+aws,20261113-111143_aws_storm,storm-g1024,128MB,Intel(R) Xeon(R) Processor,4
+aws,20261113-111143_aws_storm,storm-g1024,128MB,Intel(R) Xeon(R) Processor @ 2.50GHz,10
+aws,20261113-111143_aws_storm,storm-g1024,128MB,Intel(R) Xeon(R) Processor @ 2.90GHz,2
+aws,20261113-111143_aws_storm,storm-g1024,1769MB,Intel(R) Xeon(R) Processor,4
+aws,20261113-111143_aws_storm,storm-g1024,1769MB,Intel(R) Xeon(R) Processor @ 2.50GHz,12
+aws,20261113-111143_aws_storm,storm-g1024,512MB,Intel(R) Xeon(R) Processor,6
+aws,20261113-111143_aws_storm,storm-g1024,512MB,Intel(R) Xeon(R) Processor @ 2.50GHz,10
+aws,20261113-111143_aws_storm,storm-g128,128MB,Intel(R) Xeon(R) Processor,4
+aws,20261113-111143_aws_storm,storm-g128,128MB,Intel(R) Xeon(R) Processor @ 2.50GHz,12
+aws,20261113-111143_aws_storm,storm-g128,1769MB,Intel(R) Xeon(R) Processor,2
+aws,20261113-111143_aws_storm,storm-g128,1769MB,Intel(R) Xeon(R) Processor @ 2.50GHz,14
+aws,20261113-111143_aws_storm,storm-g128,512MB,Intel(R) Xeon(R) Processor,4
+aws,20261113-111143_aws_storm,storm-g128,512MB,Intel(R) Xeon(R) Processor @ 2.50GHz,8
+aws,20261113-111143_aws_storm,storm-g128,512MB,Intel(R) Xeon(R) Processor @ 2.90GHz,4
+aws,20261113-111143_aws_storm,storm-g2048,128MB,Intel(R) Xeon(R) Processor,4
+aws,20261113-111143_aws_storm,storm-g2048,128MB,Intel(R) Xeon(R) Processor @ 2.50GHz,12
+aws,20261113-111143_aws_storm,storm-g2048,1769MB,Intel(R) Xeon(R) Processor,2
+aws,20261113-111143_aws_storm,storm-g2048,1769MB,Intel(R) Xeon(R) Processor @ 2.50GHz,12
+aws,20261113-111143_aws_storm,storm-g2048,1769MB,Intel(R) Xeon(R) Processor @ 2.90GHz,2
+aws,20261113-111143_aws_storm,storm-g2048,512MB,Intel(R) Xeon(R) Processor,6
+aws,20261113-111143_aws_storm,storm-g2048,512MB,Intel(R) Xeon(R) Processor @ 2.50GHz,10
+aws,20261113-111143_aws_storm,storm-g256,128MB,Intel(R) Xeon(R) Processor,4
+aws,20261113-111143_aws_storm,storm-g256,128MB,Intel(R) Xeon(R) Processor @ 2.50GHz,10
+aws,20261113-111143_aws_storm,storm-g256,128MB,Intel(R) Xeon(R) Processor @ 2.90GHz,2
+aws,20261113-111143_aws_storm,storm-g256,1769MB,Intel(R) Xeon(R) Processor,4
+aws,20261113-111143_aws_storm,storm-g256,1769MB,Intel(R) Xeon(R) Processor @ 2.50GHz,12
+aws,20261113-111143_aws_storm,storm-g256,512MB,Intel(R) Xeon(R) Processor,4
+aws,20261113-111143_aws_storm,storm-g256,512MB,Intel(R) Xeon(R) Processor @ 2.50GHz,12
+aws,20261113-111143_aws_storm,storm-g512,128MB,Intel(R) Xeon(R) Processor,2
+aws,20261113-111143_aws_storm,storm-g512,128MB,Intel(R) Xeon(R) Processor @ 2.50GHz,14
+aws,20261113-111143_aws_storm,storm-g512,1769MB,Intel(R) Xeon(R) Processor,2
+aws,20261113-111143_aws_storm,storm-g512,1769MB,Intel(R) Xeon(R) Processor @ 2.50GHz,14
+aws,20261113-111143_aws_storm,storm-g512,512MB,Intel(R) Xeon(R) Processor,4
+aws,20261113-111143_aws_storm,storm-g512,512MB,Intel(R) Xeon(R) Processor @ 2.50GHz,10
+aws,20261113-111143_aws_storm,storm-g512,512MB,Intel(R) Xeon(R) Processor @ 2.90GHz,2
+local,20261030-145822_local,gt-aws-model,model-128MB,AMD Ryzen 9 5950X 16-Core Processor,17
+local,20261030-145822_local,gt-aws-model,model-1769MB,AMD Ryzen 9 5950X 16-Core Processor,17
+local,20261030-145822_local,gt-aws-model,model-3008MB,AMD Ryzen 9 5950X 16-Core Processor,17
+local,20261030-145822_local,gt-aws-model,model-512MB,AMD Ryzen 9 5950X 16-Core Processor,17
+local,20261030-145822_local,gt-mechanisms,cpuset-2,AMD Ryzen 9 5950X 16-Core Processor,17
+local,20261030-145822_local,gt-mechanisms,quota-2,AMD Ryzen 9 5950X 16-Core Processor,17
+local,20261030-145822_local,gt-mechanisms,shares-contended,AMD Ryzen 9 5950X 16-Core Processor,17
+local,20261030-145822_local,gt-mechanisms,shares-idle,AMD Ryzen 9 5950X 16-Core Processor,17
+local,20261030-145822_local,gt-mechanisms,unlimited,AMD Ryzen 9 5950X 16-Core Processor,17
+local,20261030-145822_local,gt-mechanisms-large,quota-2,AMD Ryzen 9 5950X 16-Core Processor,9
+local,20261030-145822_local,gt-mechanisms-large,unlimited,AMD Ryzen 9 5950X 16-Core Processor,9
+local,20261030-145822_local,gt-wait-policy,model-128MB,AMD Ryzen 9 5950X 16-Core Processor,51
+local,20261030-145822_local,gt-wait-policy,quota-2,AMD Ryzen 9 5950X 16-Core Processor,51
+local,20261030-145822_local,gt-wait-policy,unlimited,AMD Ryzen 9 5950X 16-Core Processor,51
+local,20261113-111205_local_onnx,onnx-mechanisms,cpuset-2,AMD Ryzen 9 5950X 16-Core Processor,18
+local,20261113-111205_local_onnx,onnx-mechanisms,model-640MB,AMD Ryzen 9 5950X 16-Core Processor,18
+local,20261113-111205_local_onnx,onnx-mechanisms,quota-2,AMD Ryzen 9 5950X 16-Core Processor,18
+local,20261113-111205_local_onnx,onnx-mechanisms,unlimited,AMD Ryzen 9 5950X 16-Core Processor,18
+local,20261113-113030_local_storm,storm-g1024,model-512MB,AMD Ryzen 9 5950X 16-Core Processor,7
+local,20261113-113030_local_storm,storm-g1024,quota-2,AMD Ryzen 9 5950X 16-Core Processor,7
+local,20261113-113030_local_storm,storm-g128,model-512MB,AMD Ryzen 9 5950X 16-Core Processor,7
+local,20261113-113030_local_storm,storm-g128,quota-2,AMD Ryzen 9 5950X 16-Core Processor,7
+local,20261113-113030_local_storm,storm-g2048,model-512MB,AMD Ryzen 9 5950X 16-Core Processor,7
+local,20261113-113030_local_storm,storm-g2048,quota-2,AMD Ryzen 9 5950X 16-Core Processor,7
+local,20261113-113030_local_storm,storm-g256,model-512MB,AMD Ryzen 9 5950X 16-Core Processor,7
+local,20261113-113030_local_storm,storm-g256,quota-2,AMD Ryzen 9 5950X 16-Core Processor,7
+local,20261113-113030_local_storm,storm-g512,model-512MB,AMD Ryzen 9 5950X 16-Core Processor,7
+local,20261113-113030_local_storm,storm-g512,quota-2,AMD Ryzen 9 5950X 16-Core Processor,7
+openwhisk,20261030-153203_openwhisk_shares,ow-colocated-32x256,256MB,AMD Ryzen 9 5950X 16-Core Processor,96
+openwhisk,20261030-153203_openwhisk_shares,ow-colocated-8x1024,1024MB,AMD Ryzen 9 5950X 16-Core Processor,80
+openwhisk,20261030-153203_openwhisk_shares,ow-idle,1024MB,AMD Ryzen 9 5950X 16-Core Processor,17
+openwhisk,20261030-153203_openwhisk_shares,ow-idle,256MB,AMD Ryzen 9 5950X 16-Core Processor,17
+openwhisk,20261030-153203_openwhisk_shares,ow-idle,4096MB,AMD Ryzen 9 5950X 16-Core Processor,17
+openwhisk,20261030-154303_openwhisk_user-cpus,ow-colocated-32x256,256MB,AMD Ryzen 9 5950X 16-Core Processor,96
+openwhisk,20261030-154303_openwhisk_user-cpus,ow-colocated-8x1024,1024MB,AMD Ryzen 9 5950X 16-Core Processor,80
+openwhisk,20261030-154303_openwhisk_user-cpus,ow-idle,1024MB,AMD Ryzen 9 5950X 16-Core Processor,17
+openwhisk,20261030-154303_openwhisk_user-cpus,ow-idle,256MB,AMD Ryzen 9 5950X 16-Core Processor,17
+openwhisk,20261030-154303_openwhisk_user-cpus,ow-idle,4096MB,AMD Ryzen 9 5950X 16-Core Processor,17
+openwhisk,20261113-112805_openwhisk_onnx_user-cpus,ow-onnx-colocated-8x1024,1024MB,AMD Ryzen 9 5950X 16-Core Processor,48
+openwhisk,20261113-112805_openwhisk_onnx_user-cpus,ow-onnx-idle,1024MB,AMD Ryzen 9 5950X 16-Core Processor,18

@@ -76,6 +76,7 @@ class Config:
             InvocationOverhead,
             EvictionModel,
             CPUOversubscription,
+            GangScheduling,
         )
 
         for exp in [
@@ -84,6 +85,7 @@ class Config:
             InvocationOverhead,
             EvictionModel,
             CPUOversubscription,
+            GangScheduling,
         ]:
             if exp.name() in config:
                 cfg._experiment_configs[exp.name()] = config[exp.name()]

@@ -1,7 +1,5 @@
 import json
 import os
-import platform
-import subprocess
 import sys
 import time
 from datetime import datetime
@@ -13,9 +11,9 @@ import requests
 
 from sebs.experiments.config import Config as ExperimentConfig
 from sebs.experiments.experiment import Experiment
+from sebs.experiments.recorded_run import RecordedRun
 from sebs.faas.function import ExecutionResult, Trigger
 from sebs.faas.system import System as FaaSSystem
-from sebs.version import __version__
 
 # import cycle
 if TYPE_CHECKING:
@@ -23,7 +21,7 @@ if TYPE_CHECKING:
     from sebs.local.function import LocalFunction
 
 
-class CPUOversubscription(Experiment):
+class CPUOversubscription(Experiment, RecordedRun):
     """
     Sweeps the CPU resources granted to 505.cpu-oversubscription and records every invocation.
 
@@ -311,47 +309,6 @@ class CPUOversubscription(Experiment):
         for competitor in self._competitors:
             competitor.stop(timeout=0)
         self._competitors = []
-
-    def _metadata(self) -> dict:
-        repository = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-        def git(*args: str) -> Optional[str]:
-            try:
-                return subprocess.run(
-                    ["git", *args], cwd=repository, capture_output=True, text=True, check=True
-                ).stdout.strip()
-            except (OSError, subprocess.CalledProcessError):
-                return None
-
-        status = git("status", "--porcelain")
-        meta = {
-            "sebs_version": __version__,
-            "git_commit": git("rev-parse", "HEAD"),
-            "git_branch": git("rev-parse", "--abbrev-ref", "HEAD"),
-            "git_dirty_files": status.splitlines() if status else [],
-            "benchmark_hash": self._benchmark.hash,
-            "function_name": self._function.name,
-            "command": sys.argv,
-            "client": {
-                "hostname": platform.node(),
-                "kernel": platform.release(),
-                "cpus": os.cpu_count(),
-                "python": platform.python_version(),
-            },
-        }
-        if self._is_local:
-            import docker
-
-            info = docker.from_env().info()
-            meta["docker"] = {
-                key: info.get(key)
-                for key in ("ServerVersion", "CgroupVersion", "CgroupDriver", "NCPU", "MemTotal")
-            }
-        return meta
-
-    def _write_json(self, name: str, content: dict):
-        with open(os.path.join(self._run_dir, name), "w") as out:
-            json.dump(content, out, indent=2)
 
     @staticmethod
     def process_run(run_dir: str):

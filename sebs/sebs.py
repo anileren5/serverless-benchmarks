@@ -166,6 +166,7 @@ class SeBS(LoggingBase):
             InvocationOverhead,
             EvictionModel,
             CPUOversubscription,
+            GangScheduling,
         )
 
         implementations: Dict[str, Type[Experiment]] = {
@@ -174,6 +175,7 @@ class SeBS(LoggingBase):
             "invocation-overhead": InvocationOverhead,
             "eviction-model": EvictionModel,
             "cpu-oversubscription": CPUOversubscription,
+            "gang-scheduling": GangScheduling,
         }
         if experiment_type not in implementations:
             raise RuntimeError(f"Experiment {experiment_type} not supported!")

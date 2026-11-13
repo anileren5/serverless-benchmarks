@@ -1,0 +1,18 @@
+{
+  "benchmark": "506.data-parallel-sgd",
+  "input-size": "small",
+  "memory": 2048,
+  "timeout": 60,
+  "input": {
+    "barrier_timeout": 20.0
+  },
+  "world-sizes": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "repetitions": 3,
+  "pause-seconds": 5
+}

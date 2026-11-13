@@ -217,3 +217,30 @@ Each run creates a directory `results/cpu-oversubscription/<timestamp>_<platform
 `scripts/cpu_oversubscription_plots.py --output <dir> <run-directory>...` draws the figures
 (effective CPUs, speedup, penalty heatmaps, wait policies, cost, throttling) and tables
 of CPU models, failures, and timeouts; it requires `matplotlib`.
+
+## Gang Scheduling
+
+The `gang-scheduling` experiment launches N ranks of `506.data-parallel-sgd` at the same time.
+The ranks exchange gradients through object storage at every iteration, so a run completes only if
+the platform runs all N ranks concurrently. Above the platform's concurrency cap
+(AWS: the account's concurrent executions; OpenWhisk: invoker user memory / action memory),
+the running ranks wait at the first barrier for ranks that are throttled or queued, until
+`barrier_timeout` expires.
+
+```json
+"gang-scheduling": {
+  "benchmark": "506.data-parallel-sgd",
+  "input-size": "small",
+  "memory": 1024,
+  "timeout": 120,
+  "input": {"barrier_timeout": 30.0},
+  "world-sizes": [2, 4, 8, 10, 11, 12, 16],
+  "repetitions": 3
+}
+```
+
+Plans are in `config/gang-scheduling/`; run them with
+`EXPERIMENT=gang-scheduling tools/cpu_oversubscription.sh <aws|openwhisk> <plan> [label]`.
+Each run writes `results/gang-scheduling/<timestamp>_<platform>[_<label>]/` with `config.json`,
+`meta.json`, `raw.jsonl` (one line per rank), and `summary.csv` (one row per launch: completed ranks,
+start skew, makespan, and the median fraction of time ranks spent waiting at barriers).

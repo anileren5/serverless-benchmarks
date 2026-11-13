@@ -27,6 +27,7 @@ benchmarks_python = [
     "504.dna-visualisation",
     "412.image-recognition-onnx",
     "505.cpu-oversubscription",
+    "506.data-parallel-sgd",
 ]
 benchmarks_nodejs = ["110.dynamic-html", "120.uploader", "210.thumbnailer"]
 

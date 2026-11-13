@@ -10,6 +10,7 @@
 #   STORAGE       output of `sebs.py storage start object ...` (default: out_storage.json),
 #                 needed by local and openwhisk.
 #   OUTPUT_DIR    results directory (default: results).
+#   EXPERIMENT    experiment to run (default: cpu-oversubscription; also gang-scheduling).
 #   REPETITIONS, CONCURRENCY
 #                 override all configurations of the plan, e.g. for a pilot run.
 #   WSK, REGISTRY wsk binary and image registry for openwhisk
@@ -20,7 +21,7 @@
 set -euo pipefail
 
 if [[ $# -lt 2 ]]; then
-  sed -n '3,18p' "$0" | sed 's/^# \{0,1\}//'
+  sed -n '3,19p' "$0" | sed 's/^# \{0,1\}//'
   exit 1
 fi
 
@@ -37,22 +38,24 @@ ARCHITECTURE=x64
 cd "$(dirname "${BASH_SOURCE[0]}")/.."
 STORAGE=${STORAGE:-out_storage.json}
 OUTPUT_DIR=${OUTPUT_DIR:-results}
+EXPERIMENT=${EXPERIMENT:-cpu-oversubscription}
 
 CONFIG=$(mktemp --suffix .json)
 trap 'rm -f "${CONFIG}"' EXIT
 
-FILTER='.experiments["cpu-oversubscription"] = $plan[0]'
-ARGS=(--slurpfile plan "${PLAN}")
+FILTER='.experiments[$experiment] = $plan[0]'
+ARGS=(--arg experiment "${EXPERIMENT}")
+ARGS+=(--slurpfile plan "${PLAN}")
 if [[ -n "${LABEL}" ]]; then
-  FILTER+=' | .experiments["cpu-oversubscription"].label = $label'
+  FILTER+=' | .experiments[$experiment].label = $label'
   ARGS+=(--arg label "${LABEL}")
 fi
 if [[ -n "${REPETITIONS:-}" ]]; then
-  FILTER+=' | .experiments["cpu-oversubscription"].configurations[].repetitions = ($reps | tonumber)'
+  FILTER+=' | .experiments[$experiment].configurations[].repetitions = ($reps | tonumber)'
   ARGS+=(--arg reps "${REPETITIONS}")
 fi
 if [[ -n "${CONCURRENCY:-}" ]]; then
-  FILTER+=' | .experiments["cpu-oversubscription"].configurations[]["concurrent-invocations"] = ($conc | tonumber)'
+  FILTER+=' | .experiments[$experiment].configurations[]["concurrent-invocations"] = ($conc | tonumber)'
   ARGS+=(--arg conc "${CONCURRENCY}")
 fi
 
@@ -83,5 +86,5 @@ case "${PLATFORM}" in
 esac
 
 jq "${ARGS[@]}" "${FILTER}" config/example.json > "${CONFIG}"
-./sebs.py experiment invoke cpu-oversubscription --config "${CONFIG}" "${SEBS_ARGS[@]}" \
+./sebs.py experiment invoke "${EXPERIMENT}" --config "${CONFIG}" "${SEBS_ARGS[@]}" \
   --output-dir "${OUTPUT_DIR}"

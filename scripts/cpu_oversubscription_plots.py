@@ -212,6 +212,39 @@ def plot_wait_policies(summary: pd.DataFrame, output: str):
         save(fig, output, f"wait_policy_{run}_{configuration}")
 
 
+def plot_policy_curves(summary: pd.DataFrame, output: str):
+    """Time against threads per resource setting, spinning (solid) against passive (dashed)."""
+    policies = summary.assign(policy=summary["omp_wait_policy_requested"].fillna("default"))
+    for (run, configuration), cell in policies.groupby(["run", "configuration"]):
+        if cell["policy"].nunique() < 2 or cell["threads"].nunique() < 3:
+            continue
+        fig, ax = plt.subplots(figsize=(5.5, 4))
+        colors = plt.rcParams["axes.prop_cycle"].by_key()["color"]
+        for color, resources in zip(colors, resource_order(cell["resources"])):
+            for policy, style in (("default", "-"), ("active", "-."), ("passive", "--")):
+                rows = cell[(cell["resources"] == resources) & (cell["policy"] == policy)]
+                if rows.empty:
+                    continue
+                rows = rows.sort_values("threads")
+                label = f"{resources}, {policy}"
+                ax.plot(
+                    rows["threads"],
+                    rows["penalty_vs_best"],
+                    style,
+                    color=color,
+                    marker="o",
+                    ms=3,
+                    label=label,
+                )
+        ax.set_xscale("log", base=2)
+        ax.set_xlabel("Threads")
+        ax.set_ylabel("Time / best time of the same setting")
+        ax.axhline(1, color="grey", lw=0.5)
+        ax.legend(fontsize=6, ncol=2)
+        ax.set_title(title(run, configuration), fontsize=9)
+        save(fig, output, f"policy_curves_{run}_{configuration}")
+
+
 def plot_cost(summary: pd.DataFrame, output: str):
     aws = default_policy(
         summary[(summary["platform"] == "aws") & summary["configuration"].str.startswith("e2")]
@@ -310,6 +343,7 @@ def main():
     plot_penalty_heatmaps(summary, args.output)
     plot_aws_against_model(summary, args.output)
     plot_wait_policies(summary, args.output)
+    plot_policy_curves(summary, args.output)
     plot_cost(summary, args.output)
     plot_throttling(summary, args.output)
     write_tables(processed, args.output)

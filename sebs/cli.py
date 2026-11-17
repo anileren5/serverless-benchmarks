@@ -273,7 +273,7 @@ def benchmark():
 @benchmark.command()
 @click.argument("benchmark", type=str)  # , help="Benchmark to be used.")
 @click.argument(
-    "benchmark-input-size", type=click.Choice(["test", "small", "large"])
+    "benchmark-input-size", type=click.Choice(["test", "small", "medium", "large"])
 )  # help="Input test size")
 @click.option("--repetitions", default=5, type=int, help="Number of experimental repetitions.")
 @click.option(
@@ -703,7 +703,7 @@ def local():
 
 @local.command()
 @click.argument("benchmark", type=str)
-@click.argument("benchmark-input-size", type=click.Choice(["test", "small", "large"]))
+@click.argument("benchmark-input-size", type=click.Choice(["test", "small", "medium", "large"]))
 @click.argument("output", type=str)
 @click.option("--deployments", default=1, type=int, help="Number of deployed containers.")
 @storage_params

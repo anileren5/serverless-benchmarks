@@ -20,14 +20,25 @@ _import_end = time.perf_counter()
 corpus = {}
 timings = {}
 
+# Optional, not in the reference server: keep extracted pages in the container, so that
+# reading the next slice of a page skips the download and the extraction. Pages are
+# kept per session, and only the most recent ones.
+extracted = {}
+EXTRACTED_PAGES = 16
+
 
 async def fetch_from_storage(url, user_agent, force_raw=False, **_):
     parsed = urlparse(url)
     key = os.path.join(corpus['prefix'], parsed.netloc + parsed.path + '.html')
+    cache_key = (corpus['session'], key)
+    if corpus['cache'] and not force_raw and cache_key in extracted:
+        timings['cache_hit'] = True
+        return extracted[cache_key], ''
 
     download_begin = time.perf_counter()
     try:
-        page = client.download_stream(corpus['bucket'], key)
+        # bytes locally, a memoryview on AWS
+        page = bytes(client.download_stream(corpus['bucket'], key))
     except Exception as e:
         raise ToolError(f"Failed to fetch {url}: {e!r}")
     download_end = time.perf_counter()
@@ -42,6 +53,11 @@ async def fetch_from_storage(url, user_agent, force_raw=False, **_):
     content = fetch_server.extract_content_from_html(page_raw)
     compute_end = time.perf_counter()
     timings['compute_time'] = (compute_end - compute_begin) * 1e6
+
+    if corpus['cache']:
+        extracted[cache_key] = content
+        while len(extracted) > EXTRACTED_PAGES:
+            extracted.pop(next(iter(extracted)))
     return content, ''
 
 fetch_server.fetch_url = fetch_from_storage
@@ -80,6 +96,8 @@ def handler(event):
 
     corpus['bucket'] = event.get('bucket').get('bucket')
     corpus['prefix'] = event.get('bucket').get('input')
+    corpus['cache'] = event.get('cache', False)
+    corpus['session'] = event.get('session')
     timings.clear()
 
     request_begin = time.perf_counter()
@@ -96,6 +114,7 @@ def handler(event):
         'compute_time': timings.get('compute_time', 0),
         'protocol_time': request_time - timings.get('download_time', 0) - timings.get('compute_time', 0),
         'response_size': len(response.content),
+        'cache_hit': timings.get('cache_hit', False),
     }
     # Initialization happens once per container, so report it with the first request only.
     if cold:

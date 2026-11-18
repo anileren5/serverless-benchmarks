@@ -10,7 +10,7 @@ A Model Context Protocol (MCP) server that an AI agent calls to read a web page.
 
 The tool extracts the main content of the page with readabilipy, converts it to Markdown with markdownify, and returns at most `max_length` characters. The only change to the reference server is the source of the page: it is read from object storage instead of the internet, so that runs are reproducible and outputs can be validated. robots.txt is not consulted. Without Node.js, readabilipy uses its pure-Python extractor, as on a Python-only FaaS runtime.
 
-The MCP server starts once per container, during the cold start, and serves all later requests, as with a web server behind a Lambda web adapter. Requests are passed to its ASGI application in-process.
+The MCP server starts once per container, during the cold start, and serves all later requests, as with a web server behind a Lambda web adapter. Requests are passed to its ASGI application in-process. The function keeps the state of a request in module-level variables, so it expects one request at a time per container, as on AWS Lambda, OpenWhisk and the local deployment, where it is tested. Platforms that run several requests concurrently in one instance, such as Azure Functions, are not supported yet.
 
 ## Input
 
@@ -52,3 +52,9 @@ sebs experiment process agent-sessions --config configs/example.json --deploymen
 ```
 
 The input size, the client modes and the number of sessions per mode are set under `experiments.agent-sessions` in the configuration. Each mode's sessions and invocations are written to `agent-sessions/<mode>_results.json`, and `process` writes one CSV row per invocation to `agent-sessions/agent_sessions.csv`.
+
+## Keeping the extracted page
+
+With `"cache": true` in the input, the function keeps the extracted text of each page in the container, so the next slice of the same page skips the download and the extraction. Pages are kept per agent session (the `session` field of the input) and only the 16 most recent ones. Without the field, the function behaves like the reference server. Each request reports `cache_hit` in its measurements.
+
+The `agent-sessions` experiment sets `session` itself and adds the fields of its `input` setting to every request, so `"input": {"cache": true}` under `experiments.agent-sessions` runs the sessions with the cache.

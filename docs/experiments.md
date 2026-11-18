@@ -165,4 +165,6 @@ sebs experiment invoke agent-sessions --config configs/example.json --output-dir
 sebs experiment process agent-sessions --config configs/example.json --output-dir experiments-result
 ```
 
+Every request carries a `session` field with a unique id per session. The optional `input` setting adds further fields to every request, for example `"input": {"cache": true}` to let `710.mcp-fetch` keep extracted pages within a session.
+
 Each mode writes `agent-sessions/<mode>_results.json`, with all invocations in SeBS's result format and, under `sessions`, every session with its duration, number of tool calls and invocations. Each invocation records its JSON-RPC method, HTTP status, cold start flag, client time and the measurements returned by the benchmark. The `process` command writes one row per invocation to `agent-sessions/agent_sessions.csv`.

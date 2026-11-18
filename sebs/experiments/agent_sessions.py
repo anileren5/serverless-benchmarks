@@ -22,6 +22,7 @@ import glob
 import json
 import os
 import re
+import uuid
 from datetime import datetime
 from typing import List, TYPE_CHECKING
 
@@ -61,12 +62,14 @@ class AgentSessions(Experiment):
     Attributes:
         _benchmark: The benchmark to invoke
         _benchmark_input: Input of the benchmark; its ``request`` holds the tool call
+        _extra_input: Fields added to every request's input, from the ``input`` setting
         _function: The function to invoke
         _trigger: HTTP trigger of the function
         _out_dir: Directory for storing results
         _deployment_client: The deployment client to use
         _result: Experiment result of the current mode
         _session_invocations: Invocations of the current session
+        _session_id: Unique id of the current session, sent with every request
     """
 
     def __init__(self, config: ExperimentConfig):
@@ -131,6 +134,7 @@ class AgentSessions(Experiment):
         self._out_dir = os.path.join(sebs_client.output_dir, "agent-sessions")
         os.makedirs(self._out_dir, exist_ok=True)
         self._deployment_client = deployment_client
+        self._extra_input = settings.get("input", {})
 
     def run(self) -> None:
         """Run the sessions of each client mode and store one result file per mode."""
@@ -186,6 +190,7 @@ class AgentSessions(Experiment):
         from mcp.types import TextContent
 
         self._session_invocations: List[dict] = []
+        self._session_id = uuid.uuid4().hex
         tool = self._benchmark_input["request"]["body"]["params"]
         arguments = dict(tool["arguments"])
         tool_calls = 0
@@ -229,7 +234,12 @@ class AgentSessions(Experiment):
 
         body = json.loads(request.content)
         headers = {k: v for k, v in request.headers.items() if k not in DROPPED_HEADERS}
-        payload = {**self._benchmark_input, "request": {"headers": headers, "body": body}}
+        payload = {
+            **self._benchmark_input,
+            **self._extra_input,
+            "session": self._session_id,
+            "request": {"headers": headers, "body": body},
+        }
 
         ret = await asyncio.to_thread(self._trigger.sync_invoke, payload)
         self._result.add_invocation(self._function, ret)

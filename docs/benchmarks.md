@@ -14,6 +14,9 @@
 | Scientific      | 502.graph-mst    | Python    | x64, arm64 | Minimum spanning tree (MST)  implementation with igraph. |
 | Scientific      | 503.graph-bfs    | Python, C++ | x64, arm64 | Breadth-first search (BFS) implementation with igraph. |
 | Scientific      | 504.dna-visualisation    | Python   | x64, arm64 | Creates a visualization data for DNA sequence. |
+| Agents      | 710.mcp-fetch    | Python   | x64 | MCP Fetch server that an AI agent calls to read a web page. |
+| Agents      | 720.mcp-search    | Python   | x64 | MCP tool for keyword (BM25) search over documentation. |
+| Agents      | 730.mcp-retrieval    | Python   | x64 | MCP tool for embedding search over documentation. |
 
 For more details on benchmark selection and their characterization, please refer to [our papers](../README.md#publications). Detailed information about each benchmark can be found in its respective README.md file.
 
@@ -80,6 +83,22 @@ Breadth-first search (BFS) implementation with igraph. [Details →](../benchmar
 ### 504.dna-visualisation - DNA Visualization
 
 Creates a visualization data for DNA sequence. [Details →](../benchmarks/500.scientific/504.dna-visualisation/README.md)
+
+## Agents
+
+Tools that AI agents call through the Model Context Protocol (MCP), each served by an MCP server inside the function. The `agent-sessions` experiment replays whole agent sessions against them.
+
+### 710.mcp-fetch - MCP Fetch
+
+The reference MCP Fetch server, reading web pages from object storage and returning them as Markdown. [Details →](../benchmarks/700.agents/710.mcp-fetch/README.md)
+
+### 720.mcp-search - MCP Keyword Search
+
+BM25 search over the Python standard library documentation. [Details →](../benchmarks/700.agents/720.mcp-search/README.md)
+
+### 730.mcp-retrieval - MCP Embedding Retrieval
+
+Embedding search with a static embedding model over the same documentation and queries as 720. [Details →](../benchmarks/700.agents/730.mcp-retrieval/README.md)
 
 ## Serverless Workflows
 
